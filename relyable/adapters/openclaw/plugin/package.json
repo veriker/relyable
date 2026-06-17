@@ -1,0 +1,18 @@
+{
+  "name": "relyable-recall-gate",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenClaw plugin: re-derive recalled memory at before_prompt_build via the relyable Python gate; inject only notes that still re-derive.",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "openclaw": {
+    "kind": "memory",
+    "entry": "index.mjs"
+  }
+}
