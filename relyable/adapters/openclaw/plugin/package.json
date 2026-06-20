@@ -1,0 +1,18 @@
+{
+  "name": "relyable-openclaw-gates",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "OpenClaw plugins: re-derive memory at before_prompt_build (recall, index.mjs) and outbound output at message_sending (deliver, deliver-index.mjs) via the relyable Python gate; admit only what re-derives.",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "node --test"
+  },
+  "peerDependencies": {
+    "openclaw": "*"
+  },
+  "openclaw": {
+    "kind": "memory",
+    "entry": "index.mjs"
+  }
+}

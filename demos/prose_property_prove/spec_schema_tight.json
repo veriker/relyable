@@ -1,0 +1,14 @@
+{
+  "kind": "schema_conformance",
+  "contract_fn": "flatten_obj",
+  "schema": {
+    "type": "object",
+    "required": ["a", "b.c", "b.d"],
+    "properties": {
+      "a": {"type": "integer"},
+      "b.c": {"type": "integer"},
+      "b.d": {"type": "integer"}
+    }
+  },
+  "inputs": [[{"a": 1, "b": {"c": 2, "d": 3}}]]
+}

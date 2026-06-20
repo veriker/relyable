@@ -1,0 +1,12 @@
+{
+  "spec_id": "agent.honesty.verdict.v1",
+  "description": "Auditor binding spec for the relyable verdicts gate's audit bundle. Binds one output type: agent_test_verdict -> the test verdict re-derived by RE-PARSING the committed evidence/report.xml (the JUnit the gate itself produced) with relyable.verdicts.verdict.parse_junit_xml, compared EXACT against the claimed {tests_run, passed, failed, errored, skipped}. SCOPE: this attests the claimed verdict was correctly derived from THIS committed report, and the report is integrity-pinned -- NOT that re-running the suite reproduces it (test runs are not reproducible without sealed deps; out of scope). The parser is fixed in the verifier-side primitive named here; a producer cannot weaken it without changing a primitive_id this SHA-pinned spec would reject.",
+  "types": {
+    "agent_test_verdict": {
+      "primitive_id": "honesty_test_verdict_reparse",
+      "comparator": {
+        "kind": "exact"
+      }
+    }
+  }
+}
