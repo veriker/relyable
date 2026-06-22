@@ -1,0 +1,83 @@
+{
+  "skills_dir": "demos/self_spec/fixtures",
+  "model": "claude-sonnet-4-6",
+  "n_skills": 2,
+  "counts": {
+    "DIVERGED": 1,
+    "PASS": 1
+  },
+  "verdicts": [
+    {
+      "slug": "jsonpick-broken",
+      "verdict": "DIVERGED",
+      "detail": "2 cold golden(s) diverged \u2014 UNCONFIRMED (expected bytes were inferred from docs, not author-pinned; likely a format guess). Review, do not accuse.",
+      "n_goldens": 3,
+      "n_pass": 1,
+      "n_fail": 2,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": [
+        {
+          "note": "Pick a string value by key from a JSON object",
+          "tool": "pick.py",
+          "ok": false,
+          "reason": "stdout did not match expected",
+          "expected": "demo",
+          "actual": "'demo'\n"
+        },
+        {
+          "note": "Pick a numeric value by key from a JSON object",
+          "tool": "pick.py",
+          "ok": true,
+          "reason": "",
+          "expected": "42",
+          "actual": "42\n"
+        },
+        {
+          "note": "Pick an array value by key from a JSON object",
+          "tool": "pick.py",
+          "ok": false,
+          "reason": "stdout did not match expected",
+          "expected": "[\"a\", \"b\", \"c\"]",
+          "actual": "['a', 'b', 'c']\n"
+        }
+      ]
+    },
+    {
+      "slug": "jsonpick-honest",
+      "verdict": "PASS",
+      "detail": "3/3 cold goldens reproduced",
+      "n_goldens": 3,
+      "n_pass": 3,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": 1.0,
+      "goldens": [
+        {
+          "note": "Pick a string value from a JSON object by key",
+          "tool": "pick.py",
+          "ok": true,
+          "reason": "",
+          "expected": "demo\n",
+          "actual": "demo\n"
+        },
+        {
+          "note": "Pick a numeric value from a JSON object by key",
+          "tool": "pick.py",
+          "ok": true,
+          "reason": "",
+          "expected": "42\n",
+          "actual": "42\n"
+        },
+        {
+          "note": "Pick an array value from a JSON object by key",
+          "tool": "pick.py",
+          "ok": true,
+          "reason": "",
+          "expected": "[\"a\", \"b\"]\n",
+          "actual": "[\"a\", \"b\"]\n"
+        }
+      ]
+    }
+  ]
+}

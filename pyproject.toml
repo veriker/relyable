@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "relyable"
+version = "0.1.0"
+description = "A trusted gate that re-derives an agent's test verdict and ratchets against test-gaming. Framework-agnostic via JUnit-XML."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "Apache-2.0" }
+# relyable is the first product built on the veriker substrate: its re-derivation
+# gate (relyable.gate) and the skills/memory bindings re-derive verdicts THROUGH
+# veriker's BundleVerifier, so veriker is a real dependency. The verdict
+# re-derivation path itself (relyable.verdicts.verdict) is stdlib-only — a test
+# verdict can be re-derived with no third-party trust.
+dependencies = ["veriker"]
+
+[project.optional-dependencies]
+# diff-coverage ratchet reads coverage XML + a unified diff (stdlib-parseable),
+# so no hard dep; these are the *recommended* per-ecosystem report producers.
+dev = ["pytest>=7"]
+# The MCP server shell (mcp_server.py) needs the SDK; the core never does.
+mcp = ["mcp>=1.0"]
+# Mutation adapters need no pip dep (they shell the engine, mutmut / Stryker), so
+# they are install-it-yourself, not declared here. The veriker substrate is a
+# core dependency (above), not an extra — the gate path needs it at install.
+# `prove` (relyable-skills prove — the anti-vacuity gate) shells mutmut; declared
+# here for discoverability only. The gate fails CLOSED if mutmut is absent
+# regardless of this extra (installing a package is not user friction).
+prove = ["mutmut>=3"]
+# The Hermes skills adapter is a pure in-process Python import (Hermes is Python
+# 3.13 and imports relyable, not the reverse) — it needs NO harness SDK pip dep.
+# The extra exists for symmetry / discoverability; relyable is installed as a
+# dependency of the Hermes deployment. See relyable/adapters/hermes/DISCOVERY.md.
+hermes = []
+# The OpenClaw memory adapter spans a TS plugin (in OpenClaw's Node runtime) and a
+# Python recall-gate CLI it spawns. The Python side is stdlib-only; the TS plugin's
+# openclaw SDK dep lives in its own plugin/package.json, not here. See
+# relyable/adapters/openclaw/DISCOVERY.md.
+openclaw = []
+
+[project.scripts]
+relyable = "relyable.verdicts.cli:main"
+relyable-mcp = "relyable.verdicts.mcp_server:main"
+# The skills binding: re-derive a stored skill's claimed verdict before admitting
+# it. Rides relyable.gate -> veriker (the `audit` extra), like the gate module.
+relyable-skills = "relyable.skills.cli:main"
+# The memory binding: re-derive a recalled note against a sealed first-party
+# reference at recall. Rides relyable.gate -> veriker, like the skills binding.
+relyable-memory = "relyable.memory.cli:main"
+# The OpenClaw memory adapter's Python side: the batch recall-gate the TS plugin
+# spawns (stdin JSON of candidate notes -> which re-derive). See the adapter's
+# DISCOVERY.md for the before_prompt_build hook it rides.
+relyable-openclaw-recall = "relyable.adapters.openclaw.cli:main"
+# The OpenClaw deliver-edge adapter's Python side: the batch deliver-gate the TS
+# message_sending plugin spawns (stdin JSON of candidate deliverables -> which
+# re-derive). Suppresses fabricated output (openclaw#49876). See the openclaw adapter's DISCOVERY.md.
+relyable-openclaw-deliver = "relyable.adapters.openclaw.deliver_cli:main"
+# The OpenClaw skill-install gate: a security.installPolicy command (stdin/stdout
+# JSON protocol) that packs a staged native skill and admits iff it re-derives
+# against the consumer's grader. Point security.installPolicy.exec.command here.
+relyable-installpolicy = "relyable.adapters.installpolicy:main"
+
+[tool.setuptools.packages.find]
+include = ["relyable*"]
+
+[tool.setuptools.package-data]
+# Ship the auditor binding spec used by audit_emit (bundle spec + anchor bytes).
+"relyable.verdicts" = ["audit_assets/*.json"]
+
+[tool.ruff]
+line-length = 88

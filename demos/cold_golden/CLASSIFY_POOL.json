@@ -1,0 +1,1005 @@
+{
+  "sample_dir": "/tmp/clawhub_pool",
+  "model": "claude-haiku-4-5-20251001",
+  "counts": {
+    "PROSE": 104,
+    "NETWORK": 62,
+    "LOCAL_DETERMINISTIC": 21,
+    "STOCHASTIC": 7
+  },
+  "local_deterministic": [
+    "93pct",
+    "abaddon",
+    "agent-namer",
+    "axiom-json-canonicalizer",
+    "axiom-url-canonicalizer",
+    "calctool",
+    "comprehensive-divination-skill",
+    "daai-xianzun-persona",
+    "data-labeler",
+    "eam",
+    "echarts-master",
+    "gemini-watermark-remover",
+    "jarvis-chief-of-ai-staff",
+    "obsidian-conversation-backup",
+    "popular-web-designs",
+    "rename-session",
+    "skill-policy-enforcer",
+    "test1-232qe11",
+    "thesis-workflow",
+    "validator-tool",
+    "xeonasr"
+  ],
+  "rows": [
+    {
+      "slug": "01-product-selection",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "01-tomato-ip-parse",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly states it requires 'API_KEY, API_BASE, MODEL_NAME' configuration to interface with 'universal large models' (\u901a\u7528\u5927\u6a21\u578b). This indicates it calls external LLM APIs to par"
+    },
+    {
+      "slug": "1-click-woa",
+      "category": "NETWORK",
+      "why": "The skill calls external APIs (WeChat Official Accounts API for token retrieval, image upload, and draft submission). It requires API credentials (app_id, app_secret) and makes HTTP requests to WeChat"
+    },
+    {
+      "slug": "1688-item-title-optimizer",
+      "category": "NETWORK",
+      "why": "The skill requires an API key (AK) configuration via `configure` command and makes calls to external services via CLI commands like `optimize_title`, `optimize_title_llm`, and `get_keyword_info`. The "
+    },
+    {
+      "slug": "1688-to-ozon",
+      "category": "NETWORK",
+      "why": "The skill fetches product data from 1688.com (step1-1688.js), uploads images to an image hosting service (step2-img.js), and uploads products to OZON platform via API (step4-upload.js). These require "
+    },
+    {
+      "slug": "3d-vision-research",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "3daistudio-integration",
+      "category": "NETWORK",
+      "why": "The skill requires an API key (THREE_D_AI_STUDIO_API_KEY) and makes HTTP requests to external endpoints (https://api.3daistudio.com) to generate 3D models. Output depends on remote API responses and c"
+    },
+    {
+      "slug": "3dgs-visualizer",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "4claw",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "4to1-planner",
+      "category": "NETWORK",
+      "why": "The skill documentation extensively describes connecting to external services (Notion API, Todoist API, Google Calendar/Tasks OAuth, and others) with API keys and network calls. Multiple curl commands"
+    },
+    {
+      "slug": "550w-ai-subtitle-remover",
+      "category": "NETWORK",
+      "why": "The skill requires API credentials (SUBTITLE_REMOVER_USER_NO, SUBTITLE_REMOVER_API_KEY) and calls an external 550W AI API service (https://qzm.550wai.cn) to process video subtitle removal. All documen"
+    },
+    {
+      "slug": "93pct",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The tool is a self-contained CLI (suggest.py) that analyzes context and returns ranked suggestions based on deterministic scoring (Shannon entropy, effort, blockers). No network calls, API keys, or ra"
+    },
+    {
+      "slug": "a-share-hypothesis-intake",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "abaddon",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The skill is a self-contained bash/shell-based security audit tool (cron-seed.sh) that runs locally on macOS. It performs deterministic checks (file permissions, port scanning, config inspection, depe"
+    },
+    {
+      "slug": "abductive-reasoning",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "aegis-security-hackathon",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "afrexai-qa-test-plan",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "agent-09770e",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "agent-namer",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The tool (manage_name.py) is a self-contained CLI that manages a local name registry with deterministic operations: checking availability, adding/removing names from a local data structure, and listin"
+    },
+    {
+      "slug": "ah-backend-developer",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "ah-fullstack-developer",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "ai-car-master",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "ai-first-aid",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "ai-hallucination-detector",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "ai-ski-snowboard",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "angular-frontend",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "answeroverflow-1-0-3",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "anysearch",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly states that search queries, URLs, and API keys are sent to 'https://api.anysearch.com' \u2014 an external API endpoint. Commands like 'search', 'batch_search', 'extract',"
+    },
+    {
+      "slug": "arabic-family-app-rtl-skill",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "auto-llm-1644-1db0d0",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "autoglm-file-upload",
+      "category": "NETWORK",
+      "why": "The skill makes HTTP requests to external endpoints: (1) http://127.0.0.1:18432/get_token to retrieve a token from a local service, and (2) https://autoglm-api.autoglm.ai/agentdr/v1/assistant/upload-m"
+    },
+    {
+      "slug": "axiom-json-canonicalizer",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "Self-contained CLI tool that transforms JSON to canonical form per RFC 8785 using pure stdlib, no network calls, no randomness, no LLM. Input \u2192 output is deterministic and reproducible offline."
+    },
+    {
+      "slug": "axiom-url-canonicalizer",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "Self-contained CLI tool that transforms URLs locally using pure stdlib. No network calls, no API keys, no randomness, no LLM. Documentation explicitly states 'Pure stdlib, no LLM' and 'Byte-to-byte st"
+    },
+    {
+      "slug": "b2b-cold-email-coach",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "baby-care",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "babymoon",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "backend-interview-designer",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "backlink-analyzer",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "backlog-grooming",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "backtester",
+      "category": "NETWORK",
+      "why": "The tool fetches historical OHLCV data from Yahoo Finance (yfinance) by default, which requires network access to retrieve data. Without external data input, the backtest cannot run \u2014 it must call an "
+    },
+    {
+      "slug": "backup-2-github",
+      "category": "NETWORK",
+      "why": "The skill requires GitHub API access via Personal Access Token to push/pull commits. It cannot function offline \u2014 backup and restore operations inherently require network calls to GitHub repositories."
+    },
+    {
+      "slug": "basecred-8004-registration",
+      "category": "NETWORK",
+      "why": "The skill executes on-chain registration via agent0-sdk, requiring wallet private keys, RPC endpoints, and blockchain transaction signing. Step 5 explicitly calls `register.mjs` which interacts with s"
+    },
+    {
+      "slug": "bex-nano-banana-pro",
+      "category": "NETWORK",
+      "why": "The tool requires REPLICATE_API_TOKEN environment variable and calls the Replicate API to generate images via Google's Nano Banana Pro model on remote servers. Image generation output is neither repro"
+    },
+    {
+      "slug": "byted-kickart-subtitle-extractor",
+      "category": "NETWORK",
+      "why": "The skill requires calling external APIs (\u706b\u5c71\u5f15\u64ce/Volcano Engine services) for authentication, plan validation, video upload, and subtitle extraction. It needs AK/SK credentials or Bearer tokens to acces"
+    },
+    {
+      "slug": "byted-kickart-video-subtitler",
+      "category": "NETWORK",
+      "why": "The skill requires API calls to external Volcengine/Bytedance services for authentication (ARK_SKILL_API_BASE, ARK_SKILL_API_KEY), video upload via `upload.py`, and subtitle addition via `subtitler.py"
+    },
+    {
+      "slug": "cachyos-expert",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "calctool",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "CalcTool is a self-contained bash CLI that logs and retrieves data locally in ~/.local/share/calctool/. It uses only standard POSIX utilities (date, grep, tail, etc.), requires no network access, no e"
+    },
+    {
+      "slug": "calculus-homework-assignment",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "call-doubao1-5-llm",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "cb-community-building-strategy",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "claudeemailmarketing",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "clawbus-facebook-pages",
+      "category": "NETWORK",
+      "why": "The skill calls external APIs: MyBrandMetrics API and Facebook Graph API. All documented commands require network access to remote services (connect Pages, publish posts, read feeds, manage comments, "
+    },
+    {
+      "slug": "cnsdoce",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly requires HUNYUAN_API_KEY and DOUBAO_API_KEY environment variables for LLM semantic matching (llm_semantic_match.py). The core workflows (Step 0, Flow 1-3) call exter"
+    },
+    {
+      "slug": "compound-eng-md-docs",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "compound-eng-nodejs-backend",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "comprehensive-divination-skill",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "All five tool files (common.py, da_liuren.py, liuyao_yaogua.py, meihua_qigua.py, xiao_liuren.py) are self-contained divination calculation scripts that transform input parameters (lunar month/day/hour"
+    },
+    {
+      "slug": "daai-xianzun-persona",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The skill is a persona/character roleplay tool with a single documented CLI entrypoint (speak.js) that takes text input and outputs character-consistent responses. It transforms input to output locall"
+    },
+    {
+      "slug": "daily-ai-briefing",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "dajiala-article-fetcher",
+      "category": "NETWORK",
+      "why": "The tool calls an external API (\u5927\u5496\u5566 API) and requires an API key (DAJIALA_KEY) to fetch WeChat article data. API calls cannot be re-derived offline."
+    },
+    {
+      "slug": "data-labeler",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The skill is a self-contained bash CLI that logs data operations locally to ~/.local/share/data-labeler/ with timestamps. All operations (ingest, transform, query, filter, aggregate, export, search, s"
+    },
+    {
+      "slug": "deep-research-v50",
+      "category": "NETWORK",
+      "why": "The skill explicitly documents using PubMed API to retrieve structured data (extract-pmc.py), which requires external API calls to PubMed/PMC services. This network dependency means the output cannot "
+    },
+    {
+      "slug": "design-swarm",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "dex-quote",
+      "category": "NETWORK",
+      "why": "The skill fetches real-time swap quotes from OKX DEX Aggregator API (https://web3.okx.com/api/v6/dex/aggregator/quote), which requires network access, API authentication credentials (OKX_ACCESS_KEY, O"
+    },
+    {
+      "slug": "doctorclaw-lead-qualifier",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "dota2-coach",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly states it fetches data from external sources (OpenDota API via fetch_item_popularity.py, fetch_ability_details.py, fetch_hero.py, etc.). While it defaults to reading"
+    },
+    {
+      "slug": "douyin-video-to-txt",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "due-diligence-dataroom",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "eam",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The skill is a self-contained CLI tool (script.sh) that manages local data stored in ~/.eam/ using JSONL format. All documented commands (status, add, list, search, remove, export, stats, config, help"
+    },
+    {
+      "slug": "earthquake-phase-association-gamma-phase-associator",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "echarts-master",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "This is a client-side HTML/JavaScript chart generation tool using echarts.min.js. It takes user data as input, generates a static HTML file with embedded ECharts configuration, and renders it locally "
+    },
+    {
+      "slug": "excalidraw-tech-illustration",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "fabric-cli",
+      "category": "NETWORK",
+      "why": "The skill's core functionality requires network access to Fabric.so: live operations depend on the Fabric CLI executable making authenticated API calls to remote workspaces, saving/searching/managing "
+    },
+    {
+      "slug": "facebook-ads-library-search",
+      "category": "NETWORK",
+      "why": "The skill accesses Meta Ad Library via browser automation (browser-act), which requires a live browser connection to Facebook.com and fetches data from Meta's servers. This is not reproducible offline"
+    },
+    {
+      "slug": "game-audio-feedback-audit",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "game-design-bartle-archetype-audit",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "game-design-molyneux-lens",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "gemini-watermark-remover",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The skill is a pure Python image processor using only Pillow and NumPy. It performs deterministic mathematical reverse alpha blending on local image files with no network calls, API keys, randomness, "
+    },
+    {
+      "slug": "gingiris-b2b-growth",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "github-flow",
+      "category": "NETWORK",
+      "why": "The skill documentation extensively references GitHub API interactions (GraphQL mutations for dependencies, GitHub issue/PR operations, auth via GH_TOKEN, CI checks, and merge operations). These requi"
+    },
+    {
+      "slug": "glmv-resume-screen",
+      "category": "NETWORK",
+      "why": "The skill requires ZHIPU_API_KEY environment variable and calls the ZhiPu GLM-V external API to screen resumes. The output depends on remote API responses, making it impossible to re-derive offline wi"
+    },
+    {
+      "slug": "go-vuln-dos",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "google-classroom",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "google-docs",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "google-maps-reviews-scraper",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "google-slides",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "growth-hacking",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "h",
+      "category": "NETWORK",
+      "why": "This skill is a hub/search tool for discovering and managing skills on ClawHub.ai. The documentation describes it as accessing a remote skill repository with features like searching, recommendations, "
+    },
+    {
+      "slug": "hacker-news",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "hfmirror-trending-en",
+      "category": "NETWORK",
+      "why": "The skill's core functionality requires calling an external API (`https://hf-mirror.com/api/trending`) to fetch real-time trending data. The documentation explicitly states the script calls this publi"
+    },
+    {
+      "slug": "huawei-cloud-cce-network-failure-diagnoser",
+      "category": "NETWORK",
+      "why": "This skill executes diagnosis via Python scripts that call Huawei Cloud SDKs to fetch remote data (CCE clusters, Services, Ingresses, ELB status, security groups, VPC ACLs, NAT gateways, metrics from "
+    },
+    {
+      "slug": "huawei-cloud-swr-image-governance",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "humanoid-robot-tracker",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "i18n-seo-geo",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "iam-integration",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "iautopay",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "ibiza",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "jarvis-chief-of-ai-staff",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "Both scripts (deploy-workspace.sh and security-harden.sh) are documented as self-contained bash utilities that perform local file operations, configuration setup, and system management tasks entirely "
+    },
+    {
+      "slug": "jarvis-ci-flake-hunter-01",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "jarvis-skills",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "jianying-editor-skill",
+      "category": "NETWORK",
+      "why": "The skill controls JianYing Pro (a desktop video editing application) via `jy_wrapper.py` and requires API communication with JianYing's cloud services. Files like `cloud_manager.py`, `build_cloud_mus"
+    },
+    {
+      "slug": "k8s-network-policy-generator",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "kalshalyst",
+      "category": "NETWORK",
+      "why": "Kalshalyst requires Kalshi API credentials (kalshi.com), Anthropic API key for Claude, and optional Polygon.io API key. The core functionality calls external APIs: Kalshi for market data, Claude for p"
+    },
+    {
+      "slug": "kalshi-eth-gas-correlation-trader",
+      "category": "NETWORK",
+      "why": "The skill requires SIMMER_API_KEY and SOLANA_PRIVATE_KEY credentials to execute trades on Kalshi (an external prediction market platform via DFlow). It calls external APIs to fetch gas prices, market "
+    },
+    {
+      "slug": "kipris-cli",
+      "category": "NETWORK",
+      "why": "Every subcommand calls the KIPRIS Plus OpenAPI (plus.kipris.or.kr/kipo-api) and requires a KIPRIS_PLUS_KEY credential. Output is fetched from a remote authoritative Korean IP database, not computed lo"
+    },
+    {
+      "slug": "lab-interpret",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "lab2startup-ecosystem",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "langgraph-architecture",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "lark-approval",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "letta",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "lingzao",
+      "category": "NETWORK",
+      "why": "The skill requires an API key (`LINGZAO_API_KEY`) and connects to an external Lingzao API endpoint (`LINGZAO_BASE_URL`). All documented commands (search-notes, get-user-info, analyze-user-profile, get"
+    },
+    {
+      "slug": "machiavelli-skill",
+      "category": "STOCHASTIC",
+      "why": "This skill's output is LLM-generated and role-play dependent. The 'digital twin' persona, credos, analysis, and responses are generated by an LLM at inference time, making them non-reproducible byte-f"
+    },
+    {
+      "slug": "macos-automator-services",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "memory-layered",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "mimic-skill",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "mimo-short-video-script",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "mysql-skill-1-0-0-3",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "n8n-openclaw-bridge",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "nak",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "naming-expert",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "nano-banana-pro-openrouter",
+      "category": "NETWORK",
+      "why": "The tool calls OpenRouter's external API (https://openrouter.ai/api/v1/chat/completions) to generate images. It requires an API key (OPENROUTER_API_KEY) and network access to produce output. Output ca"
+    },
+    {
+      "slug": "nm-attune-project-planning",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "nm-conjure-delegation-core",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "nm-sanctum-tutorial-updates",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "nm-scribe-doc-generator",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "nm-scribe-session-replay",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "nm-scry-gif-generation",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "oasis-audio-pro",
+      "category": "NETWORK",
+      "why": "The skill explicitly sends composed text prompts to an external API endpoint (https://eagle-api.xplai.ai) for audio generation. While local context processing occurs via Python scripts, the core funct"
+    },
+    {
+      "slug": "obsidian-conversation-backup",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "All documented tools are shell scripts that read local session files, process them with jq, and write markdown to a local Obsidian vault. No network calls, API keys, LLM generation, or randomness\u2014pure"
+    },
+    {
+      "slug": "oo-datadog",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "oo-yelp",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "openclaw-dreaming-setup",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "openclaw-timebox",
+      "category": "NETWORK",
+      "why": "The skill requires network access for multiple integrations: TickTick API calls (create/update/complete tasks at api.ticktick.com), Feishu/Google Calendar APIs, Notion API, Flomo API, dida-cli authent"
+    },
+    {
+      "slug": "pack-medici-investments",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "pairing-agent-core",
+      "category": "NETWORK",
+      "why": "The skill manages decentralized identities on the Billions Network, linking agents to human identities via ERC-8004 Registry and Attestation Registries. Commands like linkHumanToAgent.js, signChalleng"
+    },
+    {
+      "slug": "popular-web-designs",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The skill is a CLI tool that loads pre-defined HTML/CSS templates from local storage and generates static output files. No network calls, API keys, or external services are involved in template genera"
+    },
+    {
+      "slug": "product-validation-planner-122817",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "qa-ai-output-critique",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "qianfan-usage",
+      "category": "NETWORK",
+      "why": "The skill queries an external API endpoint (https://console.bce.baidu.com/api/qianfan/charge/codingPlan/quota) to retrieve quota and usage data from Baidu Qianfan's remote service. Even though it uses"
+    },
+    {
+      "slug": "qinglong-skill",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "qingming-flight",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "quant-data-platform",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly describes fetching real-time quotes, tick data, news, sentiment, fundamentals, and other data from external sources (Tushare, Akshare, Eastmoney). It requires API to"
+    },
+    {
+      "slug": "raai-content-master-pro",
+      "category": "STOCHASTIC",
+      "why": "The skill's documentation extensively describes LLM-based content generation across 10 modes (strategy, plans, posts, email sequences, etc.). It explicitly references 'AI' in output generation, uses t"
+    },
+    {
+      "slug": "rename-session",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The tool is a self-contained CLI that reads/writes to a local sessions.json file and generates random labels using standard Python random module. While it uses randomness for label generation (--rando"
+    },
+    {
+      "slug": "review-vague-fixes",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "rewrite-question",
+      "category": "STOCHASTIC",
+      "why": "The skill performs LLM-based pronoun resolution, time alignment, and entity completion ('\u4ee3\u8bcd\u6d88\u89e3 \u2192 \u65f6\u95f4\u5bf9\u9f50 \u2192 \u5b9e\u4f53\u8865\u5168'). These operations inherently involve language model inference, which is non-deterministic "
+    },
+    {
+      "slug": "rich-dad-poor-dad-kiyosaki",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "rss-generator-skill",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "s2-light-perception",
+      "category": "NETWORK",
+      "why": "The skill explicitly performs real UDP broadcasts (port 38899), SSDP multicast (port 1900), and local HTTP/UDP socket calls to discover and query smart lighting devices (Philips Hue, Wiz) on the LAN. "
+    },
+    {
+      "slug": "s3-threat-modeling",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "saas-founder-content-writer",
+      "category": "STOCHASTIC",
+      "why": "The skill includes a render-image.js tool that uses headless Chrome to generate images from HTML/CSS. While the tool itself is deterministic (same HTML \u2192 same PNG), the skill's primary function is to "
+    },
+    {
+      "slug": "safari-browser-control",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "safe-multisig",
+      "category": "NETWORK",
+      "why": "The skill interacts with Safe Transaction Service (external API) and executes transactions onchain via RPC endpoints. Multiple scripts require `--rpc-url` and external API calls to read/write Safe mul"
+    },
+    {
+      "slug": "sec-insider-trades-company-financials",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "sketch2cad",
+      "category": "STOCHASTIC",
+      "why": "The skill requires AI image recognition to extract shape and dimensions from hand-drawn sketches ('AI\u8bc6\u522b\u56fe\u5f62'). This computer vision step is ML/LLM-based and time/seed-dependent, making the output non-re"
+    },
+    {
+      "slug": "skill-policy-enforcer",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "A standalone CLI script that reads a skill folder and a policy YAML file, applies deterministic rule-matching checks (file existence, size limits, forbidden patterns, text searches), and produces a de"
+    },
+    {
+      "slug": "skillet-skillify",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "smyx-family-conflict-aftercare-suggest-analysis",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly describes calling an external API service for conflict analysis, storing/retrieving historical reports from cloud endpoints, and making network requests to download "
+    },
+    {
+      "slug": "smyx-kitchen-stove-left-on-detection-analysis",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly states it calls external APIs ('\u8c03\u7528 API \u8fdb\u884c\u8001\u5e74\u4eba\u53a8\u623f\u5fd8\u5173\u706b\u8bc6\u522b\u5206\u6790'), requires an API key/open-id for authentication, uploads files to cloud services, queries cloud endpoints for"
+    },
+    {
+      "slug": "smyx-payment",
+      "category": "NETWORK",
+      "why": "The skill's documentation extensively describes integration with external cloud APIs (creating recharge orders, querying account balances, verifying payment status with Alipay, and handling payment ca"
+    },
+    {
+      "slug": "smyx-pet-scratch-frequency-intensity-analysis",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly states it 'calls server-side APIs for scratch behavior recognition' and the operational steps require calling `python -m scripts.smyx_pet_scratch_frequency_intensity"
+    },
+    {
+      "slug": "smyx-pet-stool-morphology-recognition-analysis",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly describes calling 'server-side APIs for pet stool morphology recognition' and requires network URLs or file uploads to API services. The scripts invoke `python -m sc"
+    },
+    {
+      "slug": "smyx-plant-nutrition-diagnosis-analysis",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly describes calling external APIs for plant nutrition diagnosis analysis. The SKILL.md states tools call `scripts.plant_nutrition_diagnosis_analysis` which invokes rem"
+    },
+    {
+      "slug": "tai-alpha-stock",
+      "category": "NETWORK",
+      "why": "The skill fetches stock market data via yfinance (yahoo_adapter.py, yfinance_utils.py) and optionally sends alerts to Telegram (TAI_ALPHA_TELEGRAM_WEBHOOK). These require external API calls to Yahoo F"
+    },
+    {
+      "slug": "tailwind-v4",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "telnyx-10dlc",
+      "category": "NETWORK",
+      "why": "The skill requires TELNYX_API_KEY environment variable and makes calls to Telnyx's external API via the telnyx CLI tool. All documented commands (brand create, campaign create, assign, status checks) "
+    },
+    {
+      "slug": "test1-232qe11",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "The skill provides shell scripts (activator.sh, error-detector.sh, extract-skill.sh) and a JavaScript handler that create and append markdown files to a local .learnings/ directory. All operations are"
+    },
+    {
+      "slug": "text-toolkit",
+      "category": "NETWORK",
+      "why": "The skill explicitly requires an API key (XBY_APIKEY) to function and calls external APIs via call_api.py. The documentation states 'API \u5bc6\u94a5\u662f\u5fc5\u9700\u7684' (API key is required) and all tool functions route thro"
+    },
+    {
+      "slug": "therapy-prep",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "thesis-review-pro",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "thesis-workflow",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "All documented tools are self-contained CLI scripts (orchestrator.py, loop_self_check.py, md2docx_strict.py, state_manager.py) that process local files deterministically. While the skill description m"
+    },
+    {
+      "slug": "toutiao-news-trends",
+      "category": "NETWORK",
+      "why": "The skill fetches live data from www.toutiao.com (Toutiao news trends), which requires making HTTP requests to an external website. The documentation explicitly states the data source is 'toutiao.com'"
+    },
+    {
+      "slug": "uapi-get-misc-weather",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "ub2-web-research-assistant",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "union-ad-retro",
+      "category": "STOCHASTIC",
+      "why": "The skill uses `image_generate` tool to create images for each slide, which is LLM/generative-model based and time/seed-dependent. Image generation output is not reproducible byte-for-byte offline, ev"
+    },
+    {
+      "slug": "v19-code-memory-triplet-store",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "vagus-mcp",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "validator-tool",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "validate.py is a self-contained CLI tool that validates data formats (JSON, email, URL, IP, phone, paths) purely locally without network calls, API keys, randomness, or LLM generation. All validation "
+    },
+    {
+      "slug": "veo-3-1",
+      "category": "NETWORK",
+      "why": "The skill submits requests to an external API endpoint (https://api.poyo.ai/api/generate/submit) and requires an API key (POYO_API_KEY) for authentication. Output depends on remote service responses a"
+    },
+    {
+      "slug": "vn-skill-for-windows",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "vwu-doubao",
+      "category": "NETWORK",
+      "why": "The skill requires an API key (VWU_API_KEY) and calls an external vwu.ai service to invoke LLM models. The documentation explicitly states it calls remote API endpoints and requires network access to "
+    },
+    {
+      "slug": "wake-meup-ai",
+      "category": "NETWORK",
+      "why": "The skill requires calls to external APIs (wake.meup.ai endpoints for verify, schedule, and contact), network access for phone verification and call scheduling, API credentials (Solana keypair for x40"
+    },
+    {
+      "slug": "wanjie-openclaw-video-v2-0-1",
+      "category": "NETWORK",
+      "why": "The skill requires an API Key configured in ~/.openclaw/openclaw.json and calls external Veo video generation services. Documentation explicitly states 'API Key' configuration is necessary and referen"
+    },
+    {
+      "slug": "wutrix",
+      "category": "NETWORK",
+      "why": "The skill requires INSPIRESTUDIO_URL and INSPIRESTUDIO_API_KEY environment variables to call external wutrix backend APIs. All five tools (save_idea, list_projects, list_scenes, list_characters, searc"
+    },
+    {
+      "slug": "x-social-manager-dist",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "x-twitter-by-altf1be",
+      "category": "NETWORK",
+      "why": "The tool requires API credentials (X_CONSUMER_KEY, X_CONSUMER_SECRET, X_ACCESS_TOKEN, X_ACCESS_TOKEN_SECRET) and makes authenticated HTTP calls to the X/Twitter API v2 to post tweets, threads, and med"
+    },
+    {
+      "slug": "xby-review-code",
+      "category": "NETWORK",
+      "why": "The skill explicitly requires an API key to function (documented as mandatory with `.env` variable `XBY_APIKEY` and a URL to obtain it). The tools call external APIs via `call_api.py` and cannot produ"
+    },
+    {
+      "slug": "xclawskill",
+      "category": "NETWORK",
+      "why": "The skill interacts with an external XClaw AI Agent network via HTTP endpoints and WebSocket connections (base-url defaults to https://xclaw.network). Actions like register, health, discover, send-mes"
+    },
+    {
+      "slug": "xeonasr",
+      "category": "LOCAL_DETERMINISTIC",
+      "why": "All documented tools are self-contained CLI scripts (bash/Node.js) for local installation, configuration, and service management. The skill runs two local services (Flask on 5002, Node on 9002) that p"
+    },
+    {
+      "slug": "yandexgpt-skill",
+      "category": "NETWORK",
+      "why": "The skill requires YANDEX_API_KEY and YANDEX_FOLDER_ID environment variables and runs a proxy that translates requests to the YandexGPT API (Yandex Cloud Foundation Models). The proxy.js tool makes ex"
+    },
+    {
+      "slug": "yaoyao-cloud-backup",
+      "category": "NETWORK",
+      "why": "The skill documentation explicitly describes integration with multiple external cloud services (Jianguoyun WebDAV, Aliyun OSS, IMA, SFTP, Samba) and requires API keys/credentials stored in secrets.env"
+    },
+    {
+      "slug": "yeeth-claw",
+      "category": "NETWORK",
+      "why": "The skill optionally submits blocked packages to the Argus API for full static analysis when OPENCLAW_ARGUS_URL and OPENCLAW_ARGUS_KEY environment variables are configured. This external API call is a"
+    },
+    {
+      "slug": "yumfu",
+      "category": "STOCHASTIC",
+      "why": "Multiple tools generate AI images (generate_image.py, generate_storybook*.py), AI-generated narrative text (build_gameplay_context.py, generate_turn_tts.py), and LLM-dependent story content. These out"
+    },
+    {
+      "slug": "zan-gongde",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    },
+    {
+      "slug": "zmt-browser-matrix",
+      "category": "PROSE",
+      "why": "no executable entrypoint"
+    }
+  ]
+}

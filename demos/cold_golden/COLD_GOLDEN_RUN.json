@@ -1,0 +1,270 @@
+{
+  "skills_dir": "~/.openclaw/skills",
+  "model": "claude-sonnet-4-6",
+  "n_skills": 19,
+  "counts": {
+    "OUT_OF_SCOPE": 16,
+    "ABSTAIN": 2,
+    "PASS": 1
+  },
+  "verdicts": [
+    {
+      "slug": ".openclaw-install-backups",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "no SKILL.md",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "case-convert",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "clean-json-toolkit",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin exact output formats: JSON indentation levels, key ordering, exact messages for success/failure from validate.py, exact tree structure format for inspect.py, and whether --lines/--raw modes for non-string primitives produce raw or JSON-encoded output are all unspecified. Without seeing any exact output examples beyond the command invocations in the docs, it is impossible to construct test cases with reliably correct expected_stdout values.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "convert-units",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "csv",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "csv-analyzer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes features and behaviors at a high level but does not pin the exact output format, column headers, decimal precision, whitespace, or labeling for any command. I cannot derive expected stdout with confidence for any input.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "data-format-converter",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "expanso-csv-to-json",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "image",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "json",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "json-formatter",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "json-linter",
+      "verdict": "PASS",
+      "detail": "6/6 cold goldens reproduced",
+      "n_goldens": 6,
+      "n_pass": 6,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": 0.3333333333333333,
+      "goldens": [
+        {
+          "note": "Single valid JSON file: counts and empty errors array",
+          "tool": "index.js",
+          "ok": true,
+          "reason": "",
+          "expected": "\"errors\": []",
+          "actual": "{\n  \"scanned_at\": \"2026-06-21T19:46:31.743Z\",\n  \"root_dir\": \"/tmp/cold-golden-in2n1fjm/testdata\",\n  \"total_files\": 1,\n  \"valid_files\": 1,\n  \"invalid_files\": 0,\n  \"errors\": []\n}\n"
+        },
+        {
+          "note": "Single valid JSON file: total_files is 1",
+          "tool": "index.js",
+          "ok": true,
+          "reason": "",
+          "expected": "\"total_files\": 1",
+          "actual": "{\n  \"scanned_at\": \"2026-06-21T19:46:31.821Z\",\n  \"root_dir\": \"/tmp/cold-golden-iwb6_osi/testdata2\",\n  \"total_files\": 1,\n  \"valid_files\": 1,\n  \"invalid_files\": 0,\n  \"errors\": []\n}\n"
+        },
+        {
+          "note": "Single valid JSON file: invalid_files is 0",
+          "tool": "index.js",
+          "ok": true,
+          "reason": "",
+          "expected": "\"invalid_files\": 0",
+          "actual": "{\n  \"scanned_at\": \"2026-06-21T19:46:31.854Z\",\n  \"root_dir\": \"/tmp/cold-golden-hv907y_4/testdata3\",\n  \"total_files\": 1,\n  \"valid_files\": 1,\n  \"invalid_files\": 0,\n  \"errors\": []\n}\n"
+        },
+        {
+          "note": "Invalid JSON file: invalid_files is 1",
+          "tool": "index.js",
+          "ok": true,
+          "reason": "",
+          "expected": "\"invalid_files\": 1",
+          "actual": "{\n  \"scanned_at\": \"2026-06-21T19:46:31.882Z\",\n  \"root_dir\": \"/tmp/cold-golden-1xdsfmp9/testdata4\",\n  \"total_files\": 1,\n  \"valid_files\": 0,\n  \"invalid_files\": 1,\n  \"errors\": [\n    {\n      \"path\": \"testdata4/broken.json\",\n      \"error\": \"Expected property name or '}' in JSON at position 1 (line 1 column 2)\"\n    }\n  ]\n}\n"
+        },
+        {
+          "note": "Invalid JSON file: path appears in errors",
+          "tool": "index.js",
+          "ok": true,
+          "reason": "",
+          "expected": "broken.json",
+          "actual": "{\n  \"scanned_at\": \"2026-06-21T19:46:31.906Z\",\n  \"root_dir\": \"/tmp/cold-golden-r53tsxys/testdata5\",\n  \"total_files\": 1,\n  \"valid_files\": 0,\n  \"invalid_files\": 1,\n  \"errors\": [\n    {\n      \"path\": \"testdata5/broken.json\",\n      \"error\": \"Expected property name or '}' in JSON at position 1 (line 1 column 2)\"\n    }\n  ]\n}\n"
+        },
+        {
+          "note": "Two valid JSON files: total_files is 2, valid_files is 2",
+          "tool": "index.js",
+          "ok": true,
+          "reason": "",
+          "expected": "\"valid_files\": 2",
+          "actual": "{\n  \"scanned_at\": \"2026-06-21T19:46:31.926Z\",\n  \"root_dir\": \"/tmp/cold-golden-i4hxtg_w/testdata6\",\n  \"total_files\": 2,\n  \"valid_files\": 2,\n  \"invalid_files\": 0,\n  \"errors\": []\n}\n"
+        }
+      ]
+    },
+    {
+      "slug": "markdown",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "markdown-converter",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "markdown-table-generator",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "pandoc-convert-openclaw",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "scrape",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "sql",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "sql-toolkit",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "kind": "schema_conformance",
+  "contract_fn": "flatten_obj",
+  "schema": {"type": "object"},
+  "inputs": [
+    [{"a": 1, "b": {"c": 2, "d": 3}}],
+    [{"x": {"y": {"z": "hi"}}}],
+    [{"k": [1, 2, 3]}]
+  ]
+}

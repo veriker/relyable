@@ -1,0 +1,773 @@
+{
+  "skills_dir": "/tmp/clawhub_powered",
+  "n_prose": 127,
+  "counts": {
+    "LLM_EXECUTED": 78,
+    "NETWORK_API": 35,
+    "OTHER_COMMAND": 14
+  },
+  "records": [
+    {
+      "slug": "16-self-improving-agent-proactive-self-reflection",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "2020117",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "curl -X POST https://2020117.xyz/api/auth/register -H \"Content-Type: application/json\" -d '{\"name\":\""
+    },
+    {
+      "slug": "20206-02-10-clawhub-summarize-1-0-0",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "summarize \"https://example.com\" --model google/gemini-3-flash-preview"
+    },
+    {
+      "slug": "3",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "3dgs-engineering-guide",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "npx glb-to-navmesh scene.collision.glb navmesh.bin"
+    },
+    {
+      "slug": "a-share-market-researcher",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "a-share-market-sweep",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "a2a-market-google-oauth",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "afrexai-food-truck",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "agent-code-no7-audit-eagle",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "agentic-atlas-frontend-design",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "ai-09ed64",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "ai-aquascaping",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "ai-cheese",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "npx tsx scripts/ai-cheese.ts search --location london --skills spanish --max-price 0.50"
+    },
+    {
+      "slug": "ai-hair-styling",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "ai-illustration-art",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "ai-logistics-commander",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "ai-official-doc",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "ai-output-failure-triage",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "aios-self-improving-agent",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "mkdir -p .learnings"
+    },
+    {
+      "slug": "alibabacloud-ecs-disaster-recovery-image",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "aliyun ecs describe-instances --biz-region-id cn-hangzhou --user-agent AlibabaCloud-Agent-Skills/ali"
+    },
+    {
+      "slug": "arabic-localization-reviewer-skill",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "arxiv-paper-diagram",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "curl -s \"https://api.crossref.org/works/https://doi.org/10.48550/arXiv.XXXXXXX\" -H \"User-Agent: Mozi"
+    },
+    {
+      "slug": "automation-token-optimizer",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "b2b-saas-positioning",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "background-delivery-sop",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "backtesting-framework",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "book-nails",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "bye",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "cairn-cli",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "npm install -g cairn-work"
+    },
+    {
+      "slug": "cb-platform-selection-guide",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "china-tts",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "curl --location 'https://api.siliconflow.cn/v1/audio/speech' --header \"Authorization: Bearer $SILICO"
+    },
+    {
+      "slug": "clawpenflow",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "curl \"https://www.clawpenflow.com/api/auth/challenge\""
+    },
+    {
+      "slug": "codia-design-skills",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "npm install -g @codia-ai/codia-design-cli"
+    },
+    {
+      "slug": "compound-eng-postgresql",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "crypto-2",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "dad-jokes",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "url = f'https://datasets-server.huggingface.co/rows?dataset=shuttie%2Fdadjokes&config=default&split="
+    },
+    {
+      "slug": "daily-news-cn",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "devrel-playbook",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "clawhub install devrel-playbook"
+    },
+    {
+      "slug": "download-guard",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "eastmoney-stock-analysis",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "easy-testcase",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "emaildesignskill",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "enterprise-due-diligence-plus",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "evolutionary-iteration",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "f5tts-monitor",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "ssh Local-LLM \"nvidia-smi\""
+    },
+    {
+      "slug": "fable-dev",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "npm run dev:electron     # Dev mode (Vite + Electron)"
+    },
+    {
+      "slug": "fact-check-verify",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "npm info @anthropic-ai/sdk version"
+    },
+    {
+      "slug": "failsafe-secureclaw",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "clawhub install secureclaw"
+    },
+    {
+      "slug": "fairy-team-skills",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "game-design-fogg-behavior-audit",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "game-servers",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "curl -H \"Authorization: Bearer <JWT>\" https://claws.supercraft.host/servers"
+    },
+    {
+      "slug": "gen-z-lingo",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "get-public-ip",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "gingiris-growth-finder",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "npx skills add Gingiris/gingiris-launch"
+    },
+    {
+      "slug": "gingiris-kol-outreach",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "gingiris-opensource",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "gocreative-llm",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "google-apps-script",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "req = urllib.request.Request('https://api.maton.ai/google-apps-script/v1/projects', data=data, metho"
+    },
+    {
+      "slug": "google-workspace-admin",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "req = urllib.request.Request('https://api.maton.ai/google-workspace-admin/admin/directory/v1/users?c"
+    },
+    {
+      "slug": "gworkspace",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "git clone https://github.com/gworkspace/gworkspace.git ~/Workspace"
+    },
+    {
+      "slug": "highlevel-api",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "curl -s -X GET \"https://api.maton.ai/highlevel-pit/contacts/?locationId={locationId}&limit=10\" -H \"A"
+    },
+    {
+      "slug": "hot-product-analyzer",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "k8s-backup",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "kaifaskillfz01",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "lab2startup-ecosystem",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "mac-remote-access",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "nc -vz <Mac-IP> 5900"
+    },
+    {
+      "slug": "machine-commander-query",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "mcporter call MachineCommander get_construction_machines_data 'question=\u4f60\u7684\u95ee\u9898'"
+    },
+    {
+      "slug": "macos",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "mactop",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "mactop --format toon --headless --count 1"
+    },
+    {
+      "slug": "microsoft-to-do",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "req = urllib.request.Request('https://api.maton.ai/microsoft-to-do/v1.0/me/todo/lists')"
+    },
+    {
+      "slug": "mimo-ai-art-prompt",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "mimo-feishu-automation",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "modesty-generate-customer-support-ad-creative-brief",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "mysql-database-skill",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "mysql -h <host> -u <user> --database <db> -s -r -e \"SELECT * FROM users LIMIT 10;\" 2>$null"
+    },
+    {
+      "slug": "naif",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "export VIBETRADER_API_KEY=\"vt_your_api_key_here\""
+    },
+    {
+      "slug": "nano-pdf",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "nano-pdf edit deck.pdf 1 \"Change the title to 'Q3 Results' and fix the typo in the subtitle\""
+    },
+    {
+      "slug": "nerua1-publishing-guide",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "npx clawhub search <skill-name>"
+    },
+    {
+      "slug": "nm-attune-war-room",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "/attune:war-room --from-brainstorm"
+    },
+    {
+      "slug": "nm-memory-palace-knowledge-locator",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "python scripts/palace_manager.py search \"authentication\" --type semantic"
+    },
+    {
+      "slug": "oauth-debugger",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "curl -s \"https://$AUTH_DOMAIN/.well-known/openid-configuration\" | python3 -c \""
+    },
+    {
+      "slug": "obsidian-semantic-search",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "bash <(curl -fsSL https://raw.githubusercontent.com/celstnblacc/obsidian-semantic-mcp/main/install.s"
+    },
+    {
+      "slug": "openclaw-fact-checker",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "pactflow",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "pan-pac",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "prd-skill2026030303",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "pricing-tester",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "qa-test-skills",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "git clone https://github.com/Kokxi/qa-test-skills.git"
+    },
+    {
+      "slug": "qbo-automation",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "export QBO_BASE_URL=\"https://quickbooks.api.intuit.com\"  # Production"
+    },
+    {
+      "slug": "qqyougit-ai-art-prompt",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "qsr-audit-readiness-countdown",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "raci-analysis",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "redbook-daihuo",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "refinement-loop",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "restaurant-food-service",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "review-vague-fixes",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "rpsls-game",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "runapi-veo-3-1",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "runapi veo-3-1 --help"
+    },
+    {
+      "slug": "secops-by-joes",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "settle-agent-invoice",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "openclaw secrets set CAI_API_KEY \"your_dashboard_api_key\""
+    },
+    {
+      "slug": "skill-creator-promax",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "skillet-skillify",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "solana-token-distribution",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "speediance",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "go install github.com/stozo04/speediance-cli/cmd/speediance-cli@latest"
+    },
+    {
+      "slug": "stress-manager",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "supermom-parenting-guide-0-12",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "supply-chain-logistics-hub",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "swarmrecall-dream",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "swipenode-2",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "~/.openclaw/workspace/skills/swipenode/swipenode extract --url https://shop.example.com | jq '.props"
+    },
+    {
+      "slug": "telegram-api",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "req = urllib.request.Request('https://api.maton.ai/telegram/:token/getMe')"
+    },
+    {
+      "slug": "typecho-ai-kb",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "uandai-ai",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "update-jamdesk",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "jamdesk validate     # Check docs.json schema"
+    },
+    {
+      "slug": "validator-correlated-judgment",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "valuemining-lengthybooks",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "- Use PDFs with selectable text (not scanned images)"
+    },
+    {
+      "slug": "vancouver",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "w3connect",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "wage-theft-defense",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "walkie-talkie-mode",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "bin/sherpa-onnx-tts /tmp/reply.ogg \"Tu mensaje aqu\u00ed\""
+    },
+    {
+      "slug": "wang-wei-perspective-v2",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "word-docx-formatting-repair-helper-180322",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "wrike-api",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "req = urllib.request.Request('https://api.maton.ai/wrike/api/v4/tasks')"
+    },
+    {
+      "slug": "x-openclaw",
+      "model": "NETWORK_API",
+      "bins": [],
+      "evidence": "curl -L -o \"../../intel/x/media/{folder}/image_{postId}_{index}.jpg\" \"https://pbs.twimg.com/media/xx"
+    },
+    {
+      "slug": "x-scraper",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    },
+    {
+      "slug": "xerg",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "xerg init"
+    },
+    {
+      "slug": "yes-md-zh",
+      "model": "OTHER_COMMAND",
+      "bins": [],
+      "evidence": "cp file.yaml file.yaml.bak-{\u63cf\u8ff0}"
+    },
+    {
+      "slug": "yonghengrisheng-supplier-en",
+      "model": "LLM_EXECUTED",
+      "bins": [],
+      "evidence": "no command block"
+    }
+  ]
+}
