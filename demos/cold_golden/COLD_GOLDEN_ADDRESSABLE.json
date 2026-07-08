@@ -1,0 +1,302 @@
+{
+  "skills_dir": "/tmp/clawhub_addressable",
+  "model": "claude-sonnet-4-6",
+  "n_skills": 21,
+  "counts": {
+    "ABSTAIN": 18,
+    "UNJUDGEABLE": 1,
+    "DIVERGED": 2
+  },
+  "verdicts": [
+    {
+      "slug": "93pct",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact stdout output for any invocation. The output format describes fields (Shannon score, Effort, Blocker, Job ID, command/action) but does not specify the exact formatting, ordering, number of suggestions, separator characters, or content of the suggestions themselves. The suggestions are dynamically generated based on unspecified context, so there is no way to predict the exact bytes printed without guessing.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "abaddon",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes cron-seed.sh as a setup script that modifies ~/.openclaw/cron/jobs.json, but does not specify any stdout output the script produces. Without knowing the exact stdout (success messages, formatting, etc.), any expected_stdout would be a guess.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "agent-namer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes the behavioral logic for each command (check, add, kill, list) but does not pin the exact stdout format/strings for any of them. Without verbatim example outputs, the expected_stdout cannot be determined unambiguously from the documentation alone.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "axiom-json-canonicalizer",
+      "verdict": "UNJUDGEABLE",
+      "detail": "harness error: HTTPError: HTTP Error 529: <none>",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "axiom-url-canonicalizer",
+      "verdict": "DIVERGED",
+      "detail": "diverged \u2014 UNCONFIRMED (inferred golden; verified false positive: correct logic, format the docs never pinned)",
+      "n_goldens": 4,
+      "n_pass": 0,
+      "n_fail": 4,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": [
+        {
+          "note": "Lowercase host, sort query params, strip default HTTPS port 443, preserve path case",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": false,
+          "reason": "stdout did not match expected",
+          "expected": "https://example.com/Path/?a=1&b=2\n",
+          "actual": "Original:  HTTPS://Example.com:443/Path/?b=2&a=1\nCanonical: https://example.com/Path/?a=1&b=2\n"
+        },
+        {
+          "note": "Strip tracking params (utm_*) with --strip-tracking flag, lowercase host, sort remaining params",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": false,
+          "reason": "stdout did not match expected",
+          "expected": "https://example.com/?a=1&b=2\n",
+          "actual": "Original:  HTTPS://Example.com/?b=2&utm_source=tw&a=1\nCanonical: https://example.com/?a=1&b=2\n"
+        },
+        {
+          "note": "Strip default port 80 for HTTP, lowercase host",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": false,
+          "reason": "stdout did not match expected",
+          "expected": "http://example.com/page?a=1&z=3\n",
+          "actual": "Original:  http://Example.COM:80/page?z=3&a=1\nCanonical: http://example.com/page?a=1&z=3\n"
+        },
+        {
+          "note": "Strip all tracking params (utm_*, fbclid, gclid) with --strip-tracking",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": false,
+          "reason": "stdout did not match expected",
+          "expected": "https://example.com/?q=hello\n",
+          "actual": "Original:  https://example.com/?q=hello&fbclid=abc&gclid=xyz\nCanonical: https://example.com/?q=hello\n"
+        }
+      ]
+    },
+    {
+      "slug": "calctool",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact stdout for any command. Commands like 'version' could print the version string in multiple plausible formats, 'stats' output depends on existing log file contents and timestamps, 'help' output is unspecified, and logging commands produce output that includes timestamps which are non-deterministic. There is no unambiguous, reproducible expected output that can be derived from the documentation alone for any fresh input.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "comprehensive-divination-skill",
+      "verdict": "ABSTAIN",
+      "detail": "constructor emitted unparseable JSON",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "daai-xianzun-persona",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact stdout for given inputs. The examples show representative phrases but do not specify the exact output format, whether the text is quoted, prefixed, or what exact string is printed for specific --target values. The tool's behaviour for arbitrary --target and --text combinations cannot be determined unambiguously from the docs alone.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "data-labeler",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact stdout format for any command unambiguously. The 'version' command is described as 'Show version (v2.0.0)' but the exact output string (e.g., just 'v2.0.0', 'Data Labeler v2.0.0', 'Version: v2.0.0', etc.) is not specified. All other commands (stats, status, help, data operations, search, recent) similarly lack pinned output formats. Without knowing the exact bytes printed to stdout, any expected_stdout value would require guessing.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "eam",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact stdout for any command. Commands like 'status', 'list', 'stats', 'version', 'help', etc. are described only at a high level (e.g., 'Show current status', 'List all entries') with no specified output format, column headers, wording, or structure. Without knowing the exact output strings, any expected_stdout I construct would be a guess, risking false accusations.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "echarts-master",
+      "verdict": "ABSTAIN",
+      "detail": "The tool filenames provided (echarts.min.js) are a JavaScript library asset, not a command-line executable that produces deterministic stdout output. The SKILL.md describes an AI agent workflow (analyzing data, generating HTML files, starting HTTP servers) rather than a CLI tool with documented input\u2192stdout mappings. There is no command-line invocation pattern with pinned stdout output that can be derived from the documentation alone.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "gemini-watermark-remover",
+      "verdict": "ABSTAIN",
+      "detail": "The tool's exact stdout output is not documented anywhere in SKILL.md. The documentation describes what the tool does (removes watermarks from images) but does not specify what text, if any, is printed to stdout during processing. Without knowing the exact stdout format (success messages, progress indicators, error messages, etc.), any expected_stdout value would be a guess.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "jarvis-chief-of-ai-staff",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes two shell scripts (deploy-workspace.sh and security-harden.sh) but does not specify any command-line arguments they accept, nor does it pin their exact stdout output. The docs only describe at a high level what the scripts do (create files, configure firewall, etc.) without specifying any deterministic output strings that would allow constructing test cases with exact expected stdout.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "obsidian-conversation-backup",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes shell scripts that depend on external configuration files, session files, tracking files, and an Obsidian vault path set up during installation. The scripts' stdout output is not pinned in the documentation for any invocation that doesn't require this external state. The documented 'Examples' in the docs show only output filenames created (not stdout text), and the actual stdout of each script when invoked with specific arguments is not specified. Without being able to pin exact stdout for any fresh invocation, I cannot construct reliable test cases.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "popular-web-designs",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation only shows one example invocation ('popular-web-designs load stripe-style --name \"MySaaS\"') and does not specify the exact stdout for any other template or flag combination. The output format for other templates (Linear, Vercel, etc.) is not pinned \u2014 colors, fonts, components, and file paths would all vary. I cannot construct a novel test case (different from the verbatim example) whose exact stdout is unambiguously determined by the documentation alone.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "rename-session",
+      "verdict": "DIVERGED",
+      "detail": "diverged \u2014 UNCONFIRMED (inferred golden; verified false positive: correct logic, format the docs never pinned)",
+      "n_goldens": 3,
+      "n_pass": 0,
+      "n_fail": 1,
+      "n_error": 2,
+      "mutation_killrate": null,
+      "goldens": [
+        {
+          "note": "Missing sessions.json prints documented error message and exits with code 1",
+          "tool": "rename_session.py",
+          "ok": false,
+          "reason": "exit 1: ERROR: sessions.json not found at /tmp/nonexistent_root_xyz123/main/sessions/sessions.json",
+          "expected": "sessions.json not found at /tmp/nonexistent_root_xyz123/main/sessions/sessions.json",
+          "actual": ""
+        },
+        {
+          "note": "Session key not found prints documented error message",
+          "tool": "rename_session.py",
+          "ok": false,
+          "reason": "exit 1: ERROR: session key 'agent:myagent:missing_key' not found.\nAvailable keys: ['agent:myagent:session1']",
+          "expected": "session key 'agent:myagent:missing_key' not found",
+          "actual": ""
+        },
+        {
+          "note": "--list with single agent lists session keys",
+          "tool": "rename_session.py",
+          "ok": false,
+          "reason": "stdout did not match expected",
+          "expected": "agent:solo:abc\nagent:solo:def",
+          "actual": "# Sessions under agent 'solo'  (total: 2)\n# agents/solo/sessions/sessions.json\n\nSESSION KEY                               LABEL\n--------------------------------------------------------------------------------\nagent:solo:abc                            Alpha\nagent:solo:def                            Beta\n"
+        }
+      ]
+    },
+    {
+      "slug": "skill-policy-enforcer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation specifies only the final status tokens (PASS, PASS_WITH_WARNINGS, FAIL) but does not pin the exact stdout format, message text, JSON schema, or what minimal file structure satisfies 'required files' under the default policy. Without knowing the required files for a passing check or the exact output format of findings, any expected_stdout value would require guessing formatting, ordering, and message text \u2014 violating the integrity rules.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "test1-232qe11",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes the purpose and configuration of each script (activator.sh, error-detector.sh, extract-skill.sh, handler.js) but never specifies the exact stdout output for any given input. The activator.sh and error-detector.sh are hook scripts whose output format is not documented. The extract-skill.sh creates files but its stdout is not specified. handler.js has no documented CLI interface or output format. Without pinned expected output, any test case would require guessing.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "thesis-workflow",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a high-level workflow orchestration system with complex multi-agent interactions, file-based state management, and numerous external dependencies. It does not pin the exact stdout output for any specific command-line invocation of the provided scripts (loop_self_check.py, md2docx_strict.py, orchestrator.py, state_manager.py, install.sh). The docs show command-line usage patterns but never specify the exact text printed to stdout for any given input. Without knowing the exact output format, error messages, success messages, or JSON schema returned by these scripts, any expected_stdout value would be a guess, which violates the integrity rules.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "validator-tool",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact stdout format for any invocation. It describes exit codes, JSON output mode, and verbose mode but never shows the precise text printed for a valid or invalid input (e.g., whether it prints 'Valid', 'VALID', 'OK', the input echoed back, a JSON object structure, etc.). Without knowing the exact output strings, any expected_stdout value would be a guess, risking false accusations.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "xeonasr",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a complex multi-service skill with shell scripts and a Node.js server, but does not pin the exact stdout output for any of the listed tools (configure_openclaw_integration.sh, install.sh, install_systemd_services.sh, self_check.sh, server.js, setup_env.sh, start_all.sh, start_tts_service.sh, stop_tts.sh) when invoked with specific arguments. The docs describe high-level behavior, installation steps, and API endpoints, but do not specify exact stdout text for any command invocation. Constructing test cases would require guessing output formats, which violates the integrity rules.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    }
+  ],
+  "pool": "194 random skills seed=11; Haiku-classified to 21 LOCAL_DETERMINISTIC (addressable)"
+}

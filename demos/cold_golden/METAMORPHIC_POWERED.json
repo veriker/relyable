@@ -1,0 +1,1836 @@
+{
+  "skills_dir": "/tmp/clawhub_powered",
+  "model": "claude-sonnet-4-6",
+  "counts": {
+    "ABSTAIN": 107,
+    "OUT_OF_SCOPE": 127,
+    "DIVERGED": 3,
+    "UNJUDGEABLE": 2,
+    "HOLDS": 2,
+    "HOLDS_VACUOUS": 1
+  },
+  "verdicts": [
+    {
+      "slug": "12306-ticket-purchase-search",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes an API-calling service with no documented normalization, canonicalization, idempotence, or round-trip properties. The tools make external API calls (12306 ticket availability, station codes, current date) whose outputs depend on real-time external state. No two inputs are documented as equivalent/normalized forms of each other, no tool is documented to be idempotent when its output is fed back as input, and no forward/inverse pair is described as reversible or round-trip-safe. Proposing any metamorphic relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "16-self-improving-agent-proactive-self-reflection",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "1688-item-select",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a business intelligence CLI tool that queries live data, applies scoring algorithms, and returns results that depend entirely on external state (shop data, product inventory, sales figures). None of the documented commands are described as normalizers, canonicalizers, idempotent transformers, or reversible encode/decode pairs. The 'configure' command stores an AK but the docs do not say reading it back yields the same output as writing it. The scoring and search commands depend on live external data and are explicitly not deterministic across runs. There are no two documented equivalent input forms (invariance), no documented idempotent transformation, and no documented round-trip/lossless pair. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "2020117",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "20206-02-10-clawhub-summarize-1-0-0",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "3",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "3d-image-generator",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a multi-step async image generation pipeline (submit \u2192 poll \u2192 download) that makes network calls and writes files. There are no documented normalization, canonicalization, or idempotence properties on any of the listed tool files (normalize-input.js, normalize.js, etc.) with enough specificity to assert input equivalence. The 'normalize' tools are mentioned only by filename with no documented contract about what inputs they treat as equivalent. No encode/decode or forward/inverse pair is documented as lossless/round-trip-safe. The re-run behavior described ('same --image path overwrites') is not idempotence in the f(f(x))==f(x) sense because it involves network API calls whose results are non-deterministic. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "3dgs-engineering-guide",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "a-share-daily-report",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a report-generation pipeline that fetches live market data, calls external APIs, and writes dated output files. It does not document any normalization/canonicalization behavior (invariance), idempotent re-processing of output (idempotence), or explicitly reversible/round-trip-safe transforms (round_trip). The only plausible candidate would be idempotence of rendering, but the docs do not state that feeding a rendered report back through the tool reproduces it \u2014 in fact the tool fetches live data each run, so the same input would not be guaranteed to produce the same output. Without a documented equivalence, idempotency guarantee, or lossless encode/decode pair, no metamorphic relation can be honestly proposed.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "a-share-market-researcher",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "a-share-market-sweep",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "a-share-short-decision",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a market-data-driven trading decision tool whose outputs depend on live A-share market data, external APIs, and time-varying signals. The docs do not describe any normalization/canonicalization (so no invariance), do not describe any encode/decode or lossless round-trip pair (so no round_trip), and the tools are not described as idempotent (running the signal engine twice on the same date may produce different results if market data changes, and run_prediction_for_date appends to a log file, so re-running changes state). None of the three relation kinds are genuinely implied by the documentation, so proposing any would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "a2a-market-google-oauth",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "afrexai-food-truck",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "agent-code-no7-audit-eagle",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "agentic-atlas-frontend-design",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-09ed64",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-aquascaping",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-cheese",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-hair-styling",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-illustration-art",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-kujiale-design",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a multi-step interactive workflow (search, upload, layout, render) where each tool produces unique outputs (design IDs, task IDs, render images) that depend on external API state and user inputs. The docs do not describe any normalization/canonicalization behavior (invariance), any idempotent transforms (idempotence), or any explicitly documented reversible/round-trip-safe encode-decode pairs (round_trip). Proposing any such relation would be a false accusation not grounded in the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-logistics-commander",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-official-doc",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ai-output-failure-triage",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "aios-self-improving-agent",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "alibabacloud-ecs-disaster-recovery-image",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "arabic-localization-reviewer-skill",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "archunit-architecture-guard",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes scan_packages.py as a utility script invoked with 'python references/scan_packages.py <source_root> --base <base_package>' that produces a package dependency graph. The docs do not specify that this tool is idempotent (feeding its output back as input would be meaningless \u2014 it takes a source directory, not its own output format), do not describe any inverse/round-trip operation, and do not describe any two distinct inputs that must produce identical output (no normalization, case-insensitivity, or canonicalization is documented for this tool). There is therefore no metamorphic relation the documentation genuinely implies for scan_packages.py.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "arxiv-paper-diagram",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "automation-token-optimizer",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "axiom-luhn-check",
+      "verdict": "DIVERGED",
+      "detail": "a doc-implied invariant diverged \u2014 UNCONFIRMED (likely embedded run-specific noise or a proposer fluke, not a defect). Review, do not accuse.",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "invariance",
+          "tool": "axiom_luhn_check.py",
+          "doc_basis": "Handles spaces and dashes in input \u2014 the docs show '4532 0151 1283 0366' as equivalent to the raw digits.",
+          "status": "VIOLATE",
+          "detail": "out(a)!=out(b) [echo-masked]: '{\\n  \"valid\": true,\\n  \"luhn_ok\": true,\\n  ' vs '{\\n  \"valid\": true,\\n  \"luhn_ok\": true,\\n  '",
+          "killrate": null
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_luhn_check.py",
+          "doc_basis": "Handles spaces and dashes in input \u2014 dashes are stripped the same way spaces are.",
+          "status": "VIOLATE",
+          "detail": "out(a)!=out(b) [echo-masked]: '{\\n  \"valid\": true,\\n  \"luhn_ok\": true,\\n  ' vs '{\\n  \"valid\": true,\\n  \"luhn_ok\": true,\\n  '",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "b2b-saas-positioning",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes two tools (search.mjs and extract.mjs) that make live API calls to the Tavily external service. There are no documented normalisation/canonicalisation behaviours that would make two different inputs produce identical outputs (invariance), no documented idempotency guarantees on the output format that would survive a second pass, and no documented forward/inverse pair that is explicitly called reversible or lossless (round-trip). The -n flag changes result count (lossy), --deep changes depth (not invertible), and extract.mjs has no paired inverse. Proposing any of these relations would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "background-delivery-sop",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "backtesting-framework",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "bili-ai-feed",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a data-fetching and report-generation tool that hits external APIs and produces HTML reports with live data. No relation documented implies invariance (no two different inputs are said to yield the same output), idempotence (re-running on its own output is not described as producing the same result \u2014 in fact re-running would re-fetch live data), or a lossless round-trip (no inverse/decode operation is described). The tool is purely a forward pipeline: fetch \u2192 cluster \u2192 generate HTML. There is no normalization step, no canonicalizer, no encoder/decoder pair, and no documented equivalence between any two inputs.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "book-nails",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "bye",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "cad-batch-processing",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not explicitly imply any of the three relation kinds with sufficient confidence. (1) No normalization/canonicalization is described that would make two different inputs produce identical output (invariance). (2) No tool is documented as idempotent \u2014 e.g. re-extracting an already-extracted JSON would require a DXF/DWG input, not JSON. (3) No round-trip pair is described as reversible or lossless \u2014 cad_utils.py extracts data from DXF to JSON (lossy), batch_modify.py mutates files in-place without a documented inverse, and generate_dwg.py only generates DXF with no documented parse-back step. Proposing any of these relations without explicit doc support would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "cad-skill",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not describe any normalization/canonicalization of inputs that would make two different inputs yield identical outputs (invariance), does not describe any transform that is its own inverse (idempotence), and does not describe any forward/inverse pair that is explicitly lossless or round-trip-safe (round_trip). The skill is a stateful imperative controller for Windows CAD applications; its outputs depend on live process state, filesystem state, and config files rather than on deterministic pure transformations of the input payload. No metamorphic relation between two runs of the tool is implied by the documentation alone.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "cairn-cli",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "cb-customer-service-localizer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a descriptive/generative skill that produces customer service localization frameworks in JSON. It does not document any normalization (case-insensitive matching, canonical forms), idempotent transformation (the output JSON is rich advisory content, not a normalized form of the input), or explicitly reversible/round-trip operations. The handle() function takes natural language and returns structured advisory JSON \u2014 there is no documented inverse, no documented equivalence between different input forms, and no documented idempotence property. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "cb-platform-selection-guide",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "china-tts",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "claw-land",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes stateful, network-dependent blockchain operations (wallet creation, on-chain transactions, minting, betting). None of the scripts are described as normalizers, canonicalizers, encoders/decoders, or pure functions. There is no documented equivalence between two different inputs that should produce the same output, no tool documented as idempotent, and no forward/inverse pair documented as lossless or round-trip-safe (redeem is explicitly lossy with a 5% fee). No metamorphic relation is genuinely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "clawpenflow",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "cn-todo-tracker",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not describe any normalization/canonicalization of equivalent inputs (invariance), does not state that running the tool on its own output is idempotent (the tool mutates a persistent JSON store, so re-running the same command changes state), and does not describe any reversible/lossless round-trip pair. The operations (add, done, list, stats) are stateful mutations of a shared file, not pure transformations with the properties required for any of the three relation kinds.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "codia-design-skills",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "company-headlines",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes render.js as a one-way HTML-to-PNG renderer with no documented input equivalence classes, no normalization behavior, no idempotence guarantee (the tool's PNG output cannot be fed back as HTML input), and no inverse operation. No metamorphic relation can be proposed without false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "compound-eng-postgresql",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "crypto-2",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "cultural-intelligence-builder",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a conversational/generative AI skill for cultural intelligence coaching. It does not describe any deterministic transformation, normalization, encoding/decoding, or idempotent processing of structured inputs. There are no documented input equivalences that would imply invariance, no documented idempotent operations on the tool's own output, and no documented reversible/round-trip transformations. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "dad-jokes",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "daily-ai-brief-skill",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a news aggregation tool that fetches live data from external sources and generates timestamped reports. No metamorphic relations are implied: (1) No invariance \u2014 the tool does not normalize equivalent inputs; it fetches live, time-sensitive data so two runs with the same config will not produce the same output. (2) No idempotence \u2014 running the tool on its own output is not meaningful; the tool reads a YAML config and writes to files, not a pipeline that re-ingests its own reports. (3) No round_trip \u2014 the docs do not describe any lossless encode/decode or serialize/deserialize pair; the Markdown and JSON outputs are described as different format representations but no inverse (Markdown/JSON \u2192 original news items) is documented or implied as lossless.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "daily-ai-news",
+      "verdict": "DIVERGED",
+      "detail": "a doc-implied invariant diverged \u2014 UNCONFIRMED (likely embedded run-specific noise or a proposer fluke, not a defect). Review, do not accuse.",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "invariance",
+          "tool": "news.sh",
+          "doc_basis": "The docs show two equivalent ways to specify a date: `./scripts/news.sh --date 2024-03-01` and `./scripts/news.sh 2024-03-01` \u2014 'If this is the only argument pr",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.0
+        },
+        {
+          "kind": "invariance",
+          "tool": "news.sh",
+          "doc_basis": "The docs show `-e` as a short form of `--encoding`. Both `--encoding markdown -d 2024-03-01` and `-e markdown -d 2024-03-01` are shown as equivalent in the exam",
+          "status": "VIOLATE",
+          "detail": "out(a)!=out(b) [echo-masked]: 'error code: 1102' vs '{\"code\":200,\"message\":\"\u83b7\u53d6\u6210\u529f\u3002\u5f53\u524d\u90e8\u7f72\u5e73\u53f0\u5df2\u8fc1\u79fb\u5230 C'",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "daily-brief",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a tool that fetches live external data (real-time weather from wttr.in and live news feeds) on every invocation. Its output inherently varies between runs based on current weather, current news, and the current date. No metamorphic relation (invariance, idempotence, or round-trip) can be reliably pinned: (1) Two runs with the same input will not produce the same output due to live data; (2) The tool is not documented as idempotent \u2014 running the output back through the tool makes no sense; (3) There is no encode/decode or forward/inverse pair described anywhere in the docs. Proposing any relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "daily-cost-report",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes three scripts that generate reports from live session data (querying 'openclaw sessions --all-agents --json'), write output to files in /tmp, and depend on the current date/time. None of the three tools are described as normalizers, canonicalizers, idempotent formatters, or reversible transforms. The docs do not describe any two distinct inputs as semantically equivalent (e.g. there is no case-insensitive input or aliased flag pair that yields identical output \u2014 'yesterday', 'today', and 'YYYY-MM-DD' are explicitly different dates). The HTML-wrapping by daily-cost-report-email.sh is a lossy one-way transformation (markdown \u2192 HTML), not documented as reversible. Running any script a second time on its own output is not meaningful because the tools read live session data, not their prior output. Therefore no invariance, idempotence, or round-trip relation is implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "daily-news-cn",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "daily-stock-analysis",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes two scripts (calc_accuracy.py and report_manager.py) that read from and write to a filesystem, interact with external report files, and produce outputs that depend on the state of those files. Neither script is documented as a normalizer/canonicalizer (no invariance pairs implied), neither is documented as idempotent over its own output (the plan/migrate subcommands produce path plans or perform migrations, not fixed-point transformations), and no forward/inverse pair is described as lossless or round-trip-safe. Proposing any of the three relation kinds here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "data-labeling-studio",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a data labeling and annotation toolkit but does not explicitly imply any metamorphic relations among the four available tool files (annotate_images.py, basic_usage.py, quality_check.py, test_labeling.py). Specifically: (1) No normalization/canonicalization is described that would make two different inputs produce identical outputs (invariance). (2) No tool is documented to be idempotent \u2014 running quality_check.py on its own output, for example, is not described as producing the same output. (3) No round-trip pair is documented as lossless/reversible among the listed tools. The export/import cycle is not described as lossless, and the inverse tool is not among the listed filenames. Proposing any relation without a clear doc basis would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "devrel-playbook",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "dont-be-scary",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes safe-update.sh as a side-effectful, stateful shell script that performs system operations (brew cask install, snapshots, gateway restarts, Telegram notifications). It has no inputs from stdin or argv files that could form equivalent pairs (invariance), it is explicitly not idempotent (each run snapshots, updates, and modifies system state), and the docs describe no reversible/lossless encode-decode or round-trip transformation. No metamorphic relations of kind invariance, idempotence, or round_trip are implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "dotfile",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all proposed relations errored",
+      "n_relations": 1,
+      "relations": [
+        {
+          "kind": "idempotence",
+          "tool": "link-shared-ai-configs.sh",
+          "doc_basis": "Bootstrap script is documented as 'Idempotent' \u2014 running it multiple times produces the same symlink layout.",
+          "status": "ERROR",
+          "detail": "exit 2: /tmp/clawhub_powered/dotfile/scripts/link-shared-ai-configs.sh: 2: set: ",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "download-guard",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "drivethru-odoo",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a client that proxies calls to a remote Odoo MCP server and prints whatever JSON that server returns. It does not document any normalisation, canonicalisation, idempotent transformation, or reversible encode/decode operation performed locally by the scripts. The 'tools' subcommand simply lists what the server exposes (non-deterministic across deployments), and 'call' forwards arguments and relays the server's response verbatim. There is no documented invariance (no equivalent input forms the scripts normalise away), no documented idempotence (the tool is a passthrough, not a transformer), and no documented round-trip (no encode/decode or serialise/parse pair). Proposing any of these relations would be a false accusation not supported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "e2b-sandbox",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a sandbox management tool that interacts with external cloud services (E2B sandboxes). None of the documented behaviors imply invariance (no normalization of equivalent inputs is described), idempotence (operations like create, exec, kill, snapshot are not described as idempotent), or round-trip losslessness (no encode/decode or serialize/deserialize pair is described). The tool is fundamentally side-effectful and stateful, and the docs do not claim any of the required metamorphic properties.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "eastmoney-stock-analysis",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "easy-testcase",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ec-price-monitor-pro-plus",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a price-monitoring tool that fetches live, external data (prices from Taobao, Pinduoduo, JD, Amazon) which changes over time. No normalization, canonicalization, encode/decode, or idempotent transformation is documented. The tool has no documented input equivalence (invariance), no documented idempotent transform, and no documented reversible/round-trip operation. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ecloud-long-term-memory",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a cloud-backed memory system with no documented normalization, canonicalization, idempotence, or round-trip guarantees. The 'save' command stores raw user text to a remote service; 'search' and 'list-all' retrieve from it. There is no documented equivalence between any two distinct inputs, no guarantee that running the tool on its own output reproduces that output (the tool interacts with a remote mutable store, so re-running is not idempotent), and no documented forward/inverse lossless transform pair. Proposing any metamorphic relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ecommerce-scraper-pro",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a web-scraping tool that fetches live data from external URLs/APIs. Its outputs depend on network responses, timestamps ('scrapedAt'), and external state \u2014 none of which are deterministic or controllable in a metamorphic test. The docs do not describe any normalization, canonicalization, encoding/decoding, or round-trip-safe transforms between two locally-controlled inputs. There is no equivalence relation between any two locally-supplied inputs (e.g. no case-insensitive mode, no synonym handling), no idempotent transformation on a static payload, and no explicitly documented lossless forward/inverse pair. Proposing any relation would require predicting or controlling network outputs, which is impossible, or fabricating an equivalence the docs do not imply.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "emaildesignskill",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "enterprise-due-diligence-plus",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "eval-repo",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a multi-step pipeline where each script performs distinct, non-reversible operations (fetching, saving, evaluating, syncing). None of the documented tool pairs are described as reversible/lossless inverses of each other, no tool is documented as a normalizer/canonicalizer that would make two different inputs yield identical output, and no tool is documented as idempotent (re-running on its own output is not mentioned). The only candidate might be check_duplicate.py or kb_read.py, but neither is documented to produce output that feeds back into itself in a defined way. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "evolutionary-iteration",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "f5tts-monitor",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "fable-dev",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "facebook-fanpage-manager",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes check-connection.sh as a script that checks connection to the Facebook Graph API using environment variables FACEBOOK_PAGE_ID and FACEBOOK_ACCESS_TOKEN. It produces a live network call result that depends on external API state and credentials. The docs do not describe the tool as a normalizer/canonicalizer (no invariance pairs implied), do not describe its output as idempotent (running its output back through it makes no sense as it reads env vars not stdin/file output), and do not describe any forward/inverse round-trip pair. No metamorphic relation is genuinely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "fact-check-verify",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "factoriago",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a network-facing API client tool that makes authenticated HTTP calls to a remote server, analyzes reviewer comments, manages projects/files, and performs AI-driven text generation. None of the documented behaviors imply invariance (no documented input normalization or equivalence classes), idempotence (operations like login, file edits, compilations, and AI chats are not documented as idempotent), or round-trip invertibility (no documented encode/decode or serialize/deserialize pair). The tool's outputs depend on remote server state and LLM responses, making any metamorphic relation between two local runs unprovable without running a live server. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "failsafe-secureclaw",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "fairscale-solana",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a CLI shell script (check_wallet.sh) that wraps a remote API, but it does not document any normalization, canonicalization, idempotence, or explicit round-trip/lossless invertibility properties for the tool's inputs or outputs. All documented endpoints are stateful network calls whose responses depend on live external data (reputation scores, wallet ages, transaction counts, etc.), so there are no input pairs the docs say must produce identical outputs, no output that the docs say can be fed back as input to reproduce itself, and no forward/inverse transform pair described as lossless. Proposing any relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "fairy-team-skills",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "fakerjs",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a static reference tool that outputs fixed plain-text documentation for each command. It implies no normalization (no equivalence between different inputs), no idempotence (the tool reads a command keyword, not its own output), and no round-trip/inverse operations. None of the three metamorphic relation kinds are genuinely implied by the documented behaviour.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "free-web-search",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a web search tool that makes live network requests to external search engines (Bing, DuckDuckGo) and optionally scrapes web pages. Its outputs depend on live, changing external data sources, so no two runs can be guaranteed to produce the same output (ruling out invariance and idempotence). The tool has no documented inverse operation and is not described as reversible or round-trip-safe, so no round_trip relation applies. The documentation does not imply any metamorphic relation between the tool's own outputs that could be reliably asserted without predicting exact output bytes.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "g0atbot-fitness-recipes",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a pipeline that calls external APIs (fal.ai, ElevenLabs, Shotstack) to generate images, audio, and video. There are no documented normalization, canonicalization, idempotence, or round-trip/lossless properties implied for any of the tools. The outputs are non-deterministic media files dependent on external AI services and timestamps (e.g., '{recipe_name}_{timestamp}.mp4'). No metamorphic relation can be honestly derived from the documentation without making false accusations.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "game-account-price-trends",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a two-step pipeline (fetch \u2192 generate) but does not document any normalization equivalences, idempotent behaviour, or explicitly reversible/round-trip-safe transforms. The fetch script produces JSON from a live remote source (non-deterministic), and the generate script converts JSON to Markdown in a one-way (lossy) transform. No invariance pairs, idempotent re-runs, or lossless round-trips are implied by the docs.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "game-design-fogg-behavior-audit",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "game-servers",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gen-z-lingo",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "get-public-ip",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gingiris-growth-finder",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gingiris-kol-outreach",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gingiris-opensource",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "git-workflows-advanced",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes tools that perform live Git operations (rebase, worktree creation, reflog recovery, PR creation, changelog generation) against a real repository. None of the tools are documented as normalizers, canonicalizers, or invertible transforms. There are no two documented inputs that are explicitly equivalent (no case-insensitivity, no alternate equivalent forms), no tool whose output is documented to be idempotent when fed back as input, and no forward/inverse pair documented as lossless/round-trip-safe. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "glmv-pdf-to-web",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a multi-phase pipeline (PDF\u2192images\u2192crop\u2192HTML) but does not document any of the individual scripts (pdf_to_images.py, crop.py, generate_web.py) as being idempotent, invariance-preserving between equivalent inputs, or forming an explicit lossless round-trip pair. pdf_to_images.py is a lossy rasterization (PDF\u2192PNG at DPI 120), crop.py is a lossy crop, and generate_web.py produces HTML \u2014 none of these are documented as invertible or as normalizing away a specific dimension of variation. No metamorphic relation is genuinely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gocreative-llm",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "google-apps-script",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "google-workspace-admin",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gstack-openclaw-skills",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a high-level skill/workflow orchestration system whose tools (command_router.py, install.sh, state_manager.py) are not documented with any specific input/output contracts, normalization behavior, idempotence guarantees, or round-trip invertibility. The SKILL.md only describes 15 sub-skills conceptually and a recommended workflow, without specifying what inputs/outputs any of the three tool files produce or how they relate. There is no documented basis for asserting invariance (no equivalent input forms described), idempotence (no documented self-stabilizing behavior), or round-trip (no documented encode/decode or forward/inverse pair). Proposing any relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gumtree-uk-pets",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes two read-only scraping tools (search.js and listing.js) that fetch live web pages. It does not document any normalization/canonicalization (invariance), idempotence (re-running the tool on its own output), or round-trip/lossless inverse pair. The tools produce structured JSON from external Gumtree pages whose content can change between calls, and no relation is implied between two different inputs yielding the same output, nor is any inverse operation described.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gworkspace",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "halaoluan-openclaw-restore",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes restore scripts that interact with live system state (stopping services, moving directories, reading files from the filesystem, prompting for passwords interactively). None of the three tools are documented as normalizers/canonicalizers (invariance), idempotent transforms (idempotence), or reversible encode/decode pairs (round_trip). The scripts perform destructive one-way operations (restore from backup), and the documentation does not imply any of the three metamorphic relation kinds that can be safely and accurately proposed.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "heartflow-engine",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a complex cognitive/AI system with many internal modules, but it does not explicitly document any normalization, canonicalization, idempotent transforms, or lossless round-trip encode/decode pairs that would allow me to construct verifiable metamorphic relations between inputs and outputs. The memory layers, self-healing RL, dream engine, and other features are stateful and non-deterministic by design (personality is 'event-driven', dreams are 'alchemy of experience', Q-table learning is adaptive). There are no documented invariances (e.g., case-insensitive inputs), no documented idempotent operations (running the tool on its own output is not described as reproducing the same output), and no documented lossless round-trip pairs. Proposing any such relation without explicit documentation basis would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "highlevel-api",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "hot-product-analyzer",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ibkr-trader-toolkit",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation explicitly states this skill is deprecated and instructs users not to run any scripts. It describes no tool behaviors, input/output formats, normalization, invertibility, or idempotence properties that would imply any metamorphic relations. There is no documented behavior to test.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "iblai-openclaw-router",
+      "verdict": "ABSTAIN",
+      "detail": "The documented tools are install.sh, server.js, and uninstall.sh \u2014 a setup/teardown script pair and a server process. None of the documented behaviors imply invariance (no normalization/canonicalization), idempotence (the server reads stdin/files and routes HTTP requests, not a data transformer), or round_trip (install/uninstall are not inverses of each other in a data-transformation sense, and the docs do not describe them as reversible/lossless in any testable output sense). The documentation describes an infrastructure installer and a proxy server, not a data-processing tool with comparable input/output relationships that could be tested metamorphically via stdin/stdout.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "icecube-diary",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a creative content generation skill (AI diary entries) with no documented normalization, idempotence, or round-trip properties. The outputs are generative/stochastic diary entries \u2014 the docs make no claim that two equivalent inputs produce the same output, that running output back through the tool reproduces it, or that any forward/inverse pair is lossless. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "jail",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a purely read-only reference/display tool (each subcommand prints static informational text like overviews, guides, cheat sheets). No subcommand takes user-provided data input, normalizes equivalent forms, is documented as idempotent over its own output, or describes any encode/decode round-trip. There is no documented relationship between any two inputs or between input and output that would constitute a valid invariance, idempotence, or round_trip metamorphic relation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "jar-conflict-detector",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a detection/analysis tool that scans Maven/Gradle projects and produces conflict reports. It does not document any normalization, canonicalization, equivalence of different inputs, idempotent re-processing of its own output, or explicit round-trip/invertible operations. There is no basis in the docs to assert that two different inputs yield the same output (invariance), that running the tool on its own output reproduces it (idempotence), or that a forward/inverse pair is lossless (round_trip). Proposing any such relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "jasper-configguard",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not imply any invertible (round-trip lossless), normalizing (invariance), or idempotent relationships between inputs and outputs that can be reliably tested via the command-line interface. The 'patch' command performs a deep merge and triggers side effects (restart, health check, rollback); 'restore' reverts to a backup but depends on filesystem state not controllable via argv/stdin alone; 'list', 'diff', 'validate', and 'doctor' are informational commands with no documented equivalence between distinct inputs or idempotent output properties. No explicit round-trip guarantee (e.g. 'patch then restore returns original') is stated in a way that is testable without controlling external gateway state. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "jd-link-converter",
+      "verdict": "DIVERGED",
+      "detail": "a doc-implied invariant diverged \u2014 UNCONFIRMED (likely embedded run-specific noise or a proposer fluke, not a defect). Review, do not accuse.",
+      "n_relations": 3,
+      "relations": [
+        {
+          "kind": "invariance",
+          "tool": "jd_link_converter.py",
+          "doc_basis": "\u79fb\u52a8\u7aef\u5546\u54c1\u9875 item.m.jd.com/product/{id}.html?utm_*=... \u548c PC\u7aef\u5546\u54c1\u9875 item.jd.com/{id}.html?cu=true \u90fd\u5e94\u8f6c\u6362\u4e3a\u540c\u4e00\u4e2a item.jd.com/{id}.html\uff0c\u8bf4\u660e\u4e0d\u540c\u683c\u5f0f\u542b\u76f8\u540c\u5546\u54c1ID\u7684\u94fe\u63a5\u4ea7\u751f\u76f8\u540c\u8f93\u51fa\u3002",
+          "status": "VIOLATE",
+          "detail": "out(a)!=out(b) [echo-masked]: '[\\n  {\\n    \"original\": \"\",\\n    \"resolved\"' vs '[\\n  {\\n    \"original\": \"\",\\n    \"resolved\"'",
+          "killrate": null
+        },
+        {
+          "kind": "invariance",
+          "tool": "jd_link_converter.py",
+          "doc_basis": "\u7eaf\u5546\u54c1ID\uff086-12\u4f4d\u6570\u5b57\uff09\u76f4\u63a5\u62fc\u63a5\u4e3a item.jd.com/{id}.html\uff1b\u79fb\u52a8\u7aef\u94fe\u63a5 item.m.jd.com/product/{id}.html \u4e5f\u63d0\u53d6\u540c\u4e00ID\u62fc\u63a5\uff0c\u4e24\u8005\u5e94\u4ea7\u751f\u76f8\u540c\u8f93\u51fa\u3002",
+          "status": "VIOLATE",
+          "detail": "out(a)!=out(b) [echo-masked]: '[\\n  {\\n    \"original\": \"\",\\n    \"resolved\"' vs '[\\n  {\\n    \"original\": \"\",\\n    \"resolved\"'",
+          "killrate": null
+        },
+        {
+          "kind": "invariance",
+          "tool": "jd_link_converter.py",
+          "doc_basis": "\u4e24\u79cd\u79fb\u52a8\u7aef\u5546\u54c1URL\u683c\u5f0f item.m.jd.com/product/{id}.html \u548c item.m.jd.com/{id}.html \u90fd\u88ab\u6587\u6863\u5217\u4e3a\u53ef\u76f4\u63a5\u63d0\u53d6ID\u7684\u79fb\u52a8\u7aef\u5546\u54c1\u9875\u683c\u5f0f\uff0c\u5e94\u4ea7\u751f\u76f8\u540c\u7684PC\u7aef\u94fe\u63a5\u8f93\u51fa\u3002",
+          "status": "VIOLATE",
+          "detail": "out(a)!=out(b) [echo-masked]: '[\\n  {\\n    \"original\": \"\",\\n    \"resolved\"' vs '[\\n  {\\n    \"original\": \"\",\\n    \"resolved\"'",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "k8s-backup",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "kai-business-blueprint",
+      "verdict": "HOLDS",
+      "detail": "2 load-bearing relation(s) hold",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "idempotence",
+          "tool": "validate.py",
+          "doc_basis": "The --validate command validates a blueprint and prints JSON results. A structurally valid blueprint validated twice should produce the same result \u2014 validation",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.16666666666666666
+        },
+        {
+          "kind": "idempotence",
+          "tool": "normalize.py",
+          "doc_basis": "The normalize.py tool, by its name and typical normalizer semantics, should produce a canonical form such that running it again on its own output yields the sam",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "slug": "kaifaskillfz01",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "kalshalyst",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not imply any invariance (no canonicalization/normalization of equivalent inputs documented), idempotence (all tools are either stateful pipeline runners, AI estimators, or database trackers \u2014 none documented as idempotent), or round-trip (no encode/decode or forward/inverse lossless pair described). Proposing any such relation would be a false accusation not grounded in the documented behaviour.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "kubernetes-runbooks",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a Kubernetes runbook lookup service backed by an external API. None of the three documented tool functions (fetch_runbook, search_runbooks, list_topics) are described as normalizers, canonicalizers, idempotent transforms, or reversible encode/decode pairs. There is no claim that two different inputs yield the same output (invariance), no claim that re-running the tool on its own output reproduces the output (idempotence), and no forward/inverse pair described as lossless or round-trip-safe (round_trip). The tools are read-only API wrappers whose outputs depend entirely on external API state, making no metamorphic relation safely assertable from the documentation alone.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "lab2startup-ecosystem",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "linkfoxagent",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a remote AI agent orchestration tool (linkfox.py) that submits tasks to an external API and returns non-deterministic, LLM-generated results. The other scripts (lingxing.py, upload_image.py) are thin CLI wrappers for external APIs. None of the three tools are described as normalizers, canonicalizers, idempotent transforms, or reversible encode/decode pairs. The docs explicitly note results are AI-generated (non-deterministic), tasks take 1-5 minutes with variable outputs, and upload_image.py returns a public URL valid only 24h (lossy/ephemeral). There is no documented invariance (no two inputs said to yield identical output), no idempotence (running output back through the tool would submit a new task prompt), and no round-trip pair (no inverse operation documented). Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "lygo-resonance",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all proposed relations errored",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "idempotence",
+          "tool": "lygo_profile.py",
+          "doc_basis": "LYGO Profile Generator is described as 'Deterministic (same image = exact same output every time \u2014 ideal for libraries/batch/study)'. Running it on the same ima",
+          "status": "ERROR",
+          "detail": "exit 1: Traceback (most recent call last):\n  File \"/tmp/clawhub_powered/lygo-res",
+          "killrate": null
+        },
+        {
+          "kind": "invariance",
+          "tool": "resonance_engine.py",
+          "doc_basis": "'Reproducibility: --seed for exact same output every time (great for albums/collabs).' Two runs of the resonance engine on the same image with the same seed mus",
+          "status": "ERROR",
+          "detail": "a:exit 1: Traceback (most recent call last):\n  File \"/tmp/claw b:exit 1: Traceback (most recent call last):\n  File \"/tmp/claw",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "m365-mailbox",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a mailbox automation skill that interacts with external Microsoft Graph APIs and requires authentication (device code flow, token caches, live mailbox state). None of the documented behaviors imply invariance (no normalization/canonicalization is described), idempotence (the tools create drafts, send email, list unread \u2014 none are documented as idempotent re-runners of their own output), or round_trip (no tool is documented as the inverse of another, and no encode/decode or serialize/deserialize pair is described). Proposing any such relation would be a false accusation not grounded in the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "mac-remote-access",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "mac-wechat-sender",
+      "verdict": "ABSTAIN",
+      "detail": "The tool is a macOS desktop automation script that sends messages/files via WeChat using AppleScript and cliclick. It produces no deterministic, inspectable output \u2014 it drives a GUI application and its 'output' is side effects (messages sent, WeChat window state). The documentation describes no normalization, canonicalization, idempotence, or round-trip/lossless behavior. There are no two inputs described as equivalent in output, no output that can be fed back as input, and no encode/decode pair. Proposing any metamorphic relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "macaron-card-generator",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a tool that generates HTML files from JSON content (a text-to-visual transform). It does not document any normalization equivalences (invariance), idempotence (feeding HTML output back as input), or explicitly reversible/round-trip-safe operations (there is no inverse/decode step described). Proposing any of these relations without doc basis would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "machine-commander-query",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "macos",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "mactop",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "mem0-1-0-0",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a stateful memory service (Mem0) where outputs depend on a shared, mutable external store (vector store + history DB). No relation can be safely proposed: (1) Invariance would require two inputs that produce identical outputs, but results depend on the current state of the memory store, not just the input. (2) Idempotence for mem0-add.js is explicitly broken by design \u2014 the docs say 'Mem0's LLM automatically extracts, deduplicates, and merges related memories', meaning re-adding changes state; and mem0-list.js/mem0-search.js outputs change as memories accumulate. (3) Round-trip: while delete-all could logically undo add, the docs do not describe this pair as lossless/reversible, and the add step uses an LLM to transform/extract memories (lossy). No metamorphic relation is genuinely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "microsoft-to-do",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "mimo-ai-art-prompt",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "mimo-feishu-automation",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "mimo-web-search",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a skill that wraps a live external API (MiMo web search). It documents no normalization, canonicalization, idempotence, or round-trip/inverse relationship between inputs and outputs. The tool makes non-deterministic network calls whose results depend on real-time web content, so no metamorphic relation between two runs can be asserted from the documentation alone. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "modesty-generate-customer-support-ad-creative-brief",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "morfeo-nano-banana-pro",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a generative image API tool whose outputs are images produced by a remote AI model. The docs do not imply any invariance (no two different inputs are guaranteed to produce the same output \u2014 prompts are not normalized/canonicalized), no idempotence (feeding the output image back as --input-image with the same prompt does not guarantee reproducing that same image), and no round-trip/lossless inversion (there is no documented inverse operation). The filename format includes a timestamp, making even repeated runs differ. No metamorphic relation the docs genuinely imply can be pinned.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "moving-checklist",
+      "verdict": "HOLDS_VACUOUS",
+      "detail": "relations hold but survived every mutation (not load-bearing)",
+      "n_relations": 1,
+      "relations": [
+        {
+          "kind": "invariance",
+          "tool": "checklist.py",
+          "doc_basis": "Prompt 5 shows JSON output with 'city_tier': 'Tier 2' for \u6210\u90fd\u9ad8\u65b0\u533a. The --output json flag is described as producing the same structured data as the human-readable",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.0
+        }
+      ]
+    },
+    {
+      "slug": "mysql-database-skill",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "mysql-slow-query-analyzer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a one-way analysis tool (SQL/EXPLAIN input \u2192 text reports output). It does not imply any input equivalences that would produce identical outputs (invariance), does not suggest the output format matches any input format that could be fed back (idempotence), and does not describe any reversible/lossless/round-trip-safe transformations (round_trip). Proposing any such relation would be a false accusation not grounded in the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "naif",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "nano-banana-2-direct",
+      "verdict": "ABSTAIN",
+      "detail": "The tool generates images via an external AI API (Gemini 3.1 Flash Image Preview). Its outputs are stochastic/non-deterministic image files. The documentation describes no normalization, canonicalization, idempotent transformation, or explicitly reversible/lossless round-trip operation. There is no documented relationship between two different inputs that guarantees identical outputs, no idempotency guarantee (re-running on the output image with the same prompt would call the AI again and produce a different result), and no inverse operation described. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "nano-pdf",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "nerua1-publishing-guide",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "nm-attune-war-room",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "nm-memory-palace-knowledge-locator",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "nuclei-analysis",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not explicitly imply any invariance, idempotence, or round-trip relationships for this tool. The tool is a one-way analyzer/reporter (raw scan input \u2192 Markdown report) with no documented normalization of equivalent inputs, no documented idempotent behavior (running the output back through the tool would be meaningless as the output is a Markdown report, not a nuclei scan file), and no documented reversible/lossless transform pair. Proposing any of these relations would be a false accusation not supported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "oauth-debugger",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "obscure-package-master",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes generate_mirror.py as a one-way generator that downloads a package from PyPI and creates a local mirror/skill directory. It does not document any normalization (making two different inputs equivalent), idempotence (the tool is not described as normalizing its own output when re-run on it), or a reversible round-trip (there is no inverse/decode operation described). Proposing any of these relations would be a false accusation not supported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "observability-lgtm",
+      "verdict": "ABSTAIN",
+      "detail": "The two tool files (observability.py and register_app.sh) are setup/instrumentation utilities \u2014 observability.py instruments a FastAPI app at runtime and register_app.sh registers a service with Prometheus. Neither tool is documented as a normalizer, canonicalizer, idempotent transformer, or reversible encoder/decoder. The documentation describes no equivalence classes of inputs that must yield identical outputs, no idempotence guarantee on re-running the tools on their own output, and no round-trip (encode/decode) pair. Proposing any such relation would be a false accusation not grounded in the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "obsidian-semantic-search",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ontology-bidir",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not explicitly describe any normalization (invariance), idempotent operations on the tool's own output, or round-trip reversible encode/decode pairs that would allow safe metamorphic relation proposals. The 'create' command generates entities with auto-assigned IDs and timestamps (created/updated fields), so running it twice does not produce the same output. The 'validate' command produces a check result but is not documented as idempotent in the f(f(x))==f(x) sense applicable here. There is no documented inverse/decode operation that would make a round_trip relation safe to assert. Proposing any of these relations would risk a false accusation given the lack of explicit documentation support.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "openclaw-fact-checker",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "package-skill",
+      "verdict": "ABSTAIN",
+      "detail": "The tools operate on filesystem directories (not stdin/stdout), so the harness model of feeding output back as stdin or a named argv-file does not apply. update.py reads sub/*/SKILL.md (not its own output), so idempotence in the harness sense cannot be constructed. No invariance relations are implied (no normalization of equivalent inputs is documented). The documented reversibility of 'remove' restoring a sub-skill to top-level involves full directory-tree state that cannot be captured in a single named file comparison, and create.py also mutates the package SKILL.md during creation, making a clean round-trip unprovable. No safe relation can be pinned without risking a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "pactflow",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "pager-triage",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a live PagerDuty API integration tool whose outputs depend on external API state (live incidents, on-call schedules, service statuses). There are no documented normalization, canonicalization, case-insensitivity, idempotency, or lossless round-trip properties that would allow asserting output(a)==output(b) or f(f(x))==f(x) independently of external state. The 'without --confirm' dry-run behavior is close to an invariance, but the docs say it shows live incident details fetched from the API, so two runs could differ if state changes. No genuine metamorphic relation can be pinned from the documentation alone.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "pan-pac",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "path-alerts-main",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a real-time data-fetching tool (live train alerts and arrivals from external APIs). It does not document any normalization, canonicalization, encoding/decoding, or idempotent transformation behavior. Every invocation fetches live, time-varying data from external sources, so no two runs can be asserted to produce the same output, and no round-trip or idempotence relationship is implied. There is no documented equivalence between any two inputs, no documented invertible transform, and no documented idempotent operation. Proposing any relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ppt-generator-skill",
+      "verdict": "HOLDS",
+      "detail": "1 load-bearing relation(s) hold",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "idempotence",
+          "tool": "validator.py",
+          "doc_basis": "validator.py \u2014 'Sanitize LLM slide plan' with --out flag. Running a valid, already-sanitized plan through the validator again should produce the same output, si",
+          "status": "ERROR",
+          "detail": "exit 1: {\"status\": \"error\", \"message\": \"Invalid JSON: Expecting value: line 1 co",
+          "killrate": null
+        },
+        {
+          "kind": "invariance",
+          "tool": "validator.py",
+          "doc_basis": "Step 3.3: validator.py sanitizes the LLM slide plan. The docs say hex colors must never have a '#' prefix ('NEVER use \"#\" prefix in hex colors'). The validator ",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        }
+      ]
+    },
+    {
+      "slug": "prd-skill2026030303",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "prediction-market",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a blockchain interaction tool (reading on-chain market state and placing bets). Neither tool filename (tempmarket.js, vm.py) has documented behavior that implies invariance (equivalent inputs), idempotence (output fed back yields same output), or a lossless round-trip pair. The tools interact with live blockchain state and external APIs, so no metamorphic relation between two runs can be pinned from the docs alone without risking a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "pricing-tester",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "q",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes high-level AI-assistant capabilities (query routing, creative thinking, quality checking, quick tools) with natural language interfaces. It does not describe any deterministic, reversible, normalizing, or idempotent transformations between specific inputs and outputs that would allow pinning metamorphic relations. There are no documented encoding/decoding pairs described as lossless/round-trip-safe, no canonicalization behavior that would make two different inputs yield identical outputs, and no idempotency guarantees stated for any tool. Proposing relations based on speculation would constitute false accusations.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "qa-test-skills",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "qbo-automation",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "qbo-mileage",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a CLI tool that generates QuickBooks mileage CSV files from external data sources (Airtable, Outlook, Google Calendar). It does not document any normalization/canonicalization of equivalent inputs, any idempotent operation on the tool's own output, or any explicitly reversible/round-trip-safe transformation. The tool is generative (calendar records \u2192 CSV), not a normalizer, encoder/decoder, or invertible transform. No metamorphic relation is genuinely implied by the documented behaviour.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "qq-zone-photo",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a tool that interacts with external network services (QQ Zone) requiring authentication cookies and live API calls. None of the documented actions are described as normalizers, canonicalizers, idempotent transforms, or lossless round-trip pairs that operate purely on local data in a way that implies metamorphic relations between runs. The tool's outputs (album lists, photo lists, downloads) depend entirely on remote server state and valid credentials, making it impossible to assert output(a)==output(b) or f(f(x))==f(x) based solely on the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "qqyougit-ai-art-prompt",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "qsr-audit-readiness-countdown",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "raai-content-master-pro",
+      "verdict": "ABSTAIN",
+      "detail": "The three tool files (build.sh, install.sh, smoke-test.sh) are infrastructure scripts for installing/building/testing the skill, not content-transformation tools. The documentation describes a content marketing system operated through conversational AI prompts, not a CLI tool that reads stdin/files and produces deterministic stdout. There are no documented normalization, canonicalization, encoding/decoding, or idempotent transformation behaviors that would apply to these shell scripts. No metamorphic relations between script inputs and outputs can be inferred from the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "raci-analysis",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "read-pdf",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a PDF reading service that calls an external API. None of the documented tools are described as normalizers/canonicalizers (no invariance), idempotent when their output is fed back as input (no idempotence), or as forming a reversible/lossless round-trip pair (no round_trip). The tools read PDFs and return API results; there is no documented equivalence between two different inputs, no documented self-stabilizing behavior, and no documented inverse operation. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "redbook-daihuo",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "refinement-loop",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "restaurant-food-service",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "review-vague-fixes",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "room-418",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a networked, stateful game system where all tools interact with an external server (room-418.escapemobius.cc) and depend on credentials, match state, and server-side logic. None of the tools perform local, deterministic transformations that the docs describe as normalizing-equivalent, idempotent, or losslessly invertible. The docs do not imply any of the three relation kinds for any of these tools in a way that could be tested purely from outputs.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "rpe-grafana",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a read-only Grafana client skill with no normalization, canonicalization, encoding/decoding, or invertible transforms. The three tools (grafana_list_dashboards, grafana_list_panels, grafana_query_panel) all make live network calls to an external Grafana instance and return current metric values \u2014 their outputs depend on external state and time, not on deterministic transformations of their inputs. The docs imply no equivalence classes of inputs, no idempotent output-as-input cycle (the tools take UIDs/IDs as parameters, not their own output format), and no round-trip pair. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "rpsls-game",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "runapi-veo-3-1",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "secops-by-joes",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "settle-agent-invoice",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "shortvideo-hook",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a creative text-generation tool that produces 10 short-video hook lines based on a topic, type, and platform. The docs do not imply any normalization/canonicalization (so no invariance), do not state the output is idempotent (LLM-based generation is inherently non-deterministic), and do not describe any encode/decode or forward/inverse pair (so no round-trip). None of the three metamorphic relation kinds are genuinely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "skill-creator-promax",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "skillet-skillify",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "skills-security-check",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a security-auditing skill that reads files and produces a human-readable report. It does not describe any normalization/canonicalization of inputs (no invariance), does not state that running the tool on its own output reproduces that output (no idempotence \u2014 the output is a report, not a skill directory), and does not describe any reversible/round-trip-safe transformation (scan.sh is a one-way scanner, not an encoder/decoder pair). Proposing any of the three relation kinds here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "smart-router",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a complex routing system with multiple tools, but does not explicitly imply any invariance (no two described inputs are guaranteed to produce identical outputs), idempotence (no tool is documented to be idempotent when fed its own output), or round-trip (no lossless encode/decode pair is documented). Proposing any such relation would risk a false accusation not supported by the docs.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "smyx-aquarium-analysis",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a tool that calls external server-side APIs for video analysis and health report generation. The outputs depend on video content, server-side ML inference, and dynamic API responses \u2014 none of which are deterministic or normalizable in ways the docs guarantee. The docs do not describe any canonicalization, normalization, encoding/decoding round-trips, or idempotent transformations. There is no documented equivalence between two different inputs, no lossless invertible transform pair, and no guarantee that re-running the tool on its own output reproduces the same output. Proposing any metamorphic relation here would be a false accusation not grounded in the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "smyx-classroom-engagement-analysis-analysis",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a video analysis tool that calls an external API to analyze classroom footage and produce engagement scores, heatmaps, and alerts. The outputs depend on video content and API responses, which are neither deterministic nor invertible from the documentation's perspective. The doc does not describe any normalization/canonicalization (invariance), idempotent re-processing of output (idempotence), or explicitly lossless round-trip encoding/decoding pair (round_trip). Proposing any such relation would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "smyx-elderly-long-term-immobility-analysis",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a video-analysis monitoring system that calls a remote API and produces alert reports based on video stream content. It does not document any normalization, canonicalization, idempotence, or round-trip/invertible transform properties. The tool's outputs depend on external video content and a remote API, so no metamorphic relations between inputs/outputs are implied by the documentation. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "smyx-infant-sleep-monitoring-analysis",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a tool that calls external APIs, processes video files, and returns analysis reports. It does not describe any normalization, canonicalization, idempotent transformation, or explicitly reversible/round-trip-safe operation. There are no two inputs the docs say must yield identical outputs, no documented idempotent pipeline, and no documented encode/decode or serialize/deserialize pair. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "smyx-phone-usage-monitoring-analysis",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a skill that calls external APIs, performs computer vision analysis on video/image inputs, and returns structured reports. It does not document any normalization, canonicalization, idempotence, or round-trip/lossless invertibility properties. There are no two inputs documented as equivalent (invariance), no output that when fed back produces the same output (idempotence), and no encode/decode or flatten/unflatten pair documented as reversible (round_trip). Proposing any such relation would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "solana-token-distribution",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "speediance",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "stock-review-ai",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a complex, AI-driven, network-dependent pipeline that fetches live market data, calls external APIs (Gemini, WeChat, AkShare), and writes files with date-stamped names. None of the documented behaviors imply: (1) invariance \u2014 no two distinct inputs are documented to produce identical outputs; (2) idempotence \u2014 re-running the tool on its own output would invoke AI analysis on an AI-analysis markdown file, which is not a documented idempotent operation; (3) round_trip \u2014 no lossless/invertible encoding pair is documented. The tool is a data-fetch-analyze-publish pipeline, not a normalizer, codec, or formatter. Proposing any of these relations would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "story-long-scan",
+      "verdict": "ABSTAIN",
+      "detail": "The documented tools are web scraping scripts that fetch live data from external platforms (Qidian, Fanqie, Jjwxc, Qimao, etc.) and produce Markdown files with real-time ranking data. The documentation describes no normalization, canonicalization, encoding/decoding round-trip, or idempotent transformation. Each run fetches fresh live data whose content depends on the current state of external websites, making invariance and idempotence relations impossible to assert. There is no documented inverse/decode operation to propose a round_trip. The documentation implies no metamorphic relations between tool outputs that would hold independently of external state.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "story-review",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes normalize-punctuation.js only as a check/report tool invoked with --check, not as a normalizer/transformer. No two inputs are documented to be equivalent (invariance), no idempotent transform is described (the --check flag reports but does not transform output fed back as input), and no inverse/round-trip operation is documented. Proposing any relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "stress-manager",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "supermom-parenting-guide-0-12",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "supply-chain-logistics-hub",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "swarmrecall-dream",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "swipenode-2",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "telegram-api",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "travel-esim-compare",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes three query/lookup tools (esim_search, wifi_rental, data_tips) that return informational results about eSIM plans, WiFi rentals, and travel tips. The docs do not describe any normalization/canonicalization (so no invariance pairs are implied), do not describe the output as idempotent when fed back as input (the tools take destination strings, not their own output), and do not describe any forward/inverse transform pair that is explicitly lossless or round-trip-safe. There are no metamorphic relations the documentation genuinely implies.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "trtc-ai-customer-service",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes an application scaffold/startup system with no tools that perform normalization, canonicalization, encoding/decoding, or any other transformation that is explicitly documented as invertible, idempotent, or input-equivalent. scaffold.py generates files from parameters (a lossy, one-way transform), start.sh configures and launches a service, and the other files are library/application code. No metamorphic relations (invariance, idempotence, or round_trip) are implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "typecho-ai-kb",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "uandai-ai",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "ue-datatable-editor",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a workflow of distinct, non-invertible transformation steps (discover \u2192 search \u2192 modify \u2192 import). None of the four tools are documented as canonicalizers/normalizers that make two different inputs equivalent, none are documented as idempotent (dt_modify creates a timestamped backup on each run, meaning repeated runs produce different side effects; dt_search is read-only but its output format is not documented to be stable when fed back to itself), and no pair of tools is documented as a lossless round-trip inverse of each other (the JSON\u2192.uasset import via dt_import_ue.py is explicitly one-way into the UE binary format, and no export/extract tool is provided). Therefore no metamorphic relation can be proposed with genuine doc basis.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "update-jamdesk",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "validator-correlated-judgment",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "validator-tool",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not explicitly describe any normalization, canonicalization, or round-trip-safe (lossless invertible) transforms that would imply invariance (two different inputs that must produce the same output), idempotence (feeding the tool's output back in as input produces the same output), or round-trip relations. The tool is a validator/linter that produces pass/fail results and error reports \u2014 it does not normalize its input, and its output (validation results / JSON reports) is not described as a valid input format for the tool itself. Proposing any of these relations would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "valuemining-lengthybooks",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "vancouver",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "veo",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a video generation tool that calls an external API (Google Veo) to produce MP4 files. There are no documented normalization, canonicalization, idempotence, or lossless round-trip properties implied. Each invocation makes a live API call that produces a new video; the same prompt is not guaranteed to yield the same bytes. No inverse operation is described. There is no documented equivalence between different inputs. Proposing any metamorphic relation here would be a false accusation not supported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "volcengine-video",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes two tools: one for submitting video generation tasks (volcengine_video.py) and one for querying task status (query_task.py). The docs do not describe any normalization, canonicalization, idempotence, or explicitly lossless round-trip relationship between inputs and outputs. The submit tool produces a task ID (not re-submittable for idempotence), the query tool fetches external state (not deterministic or invertible), and no pair of inputs is documented to be equivalent. There is no basis in the docs to propose any of the three relation kinds without false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "vwu-openai",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a chat completion tool that calls an external LLM API. It does not document any normalization, canonicalization, idempotence, or round-trip/inverse behavior. LLM responses are non-deterministic, so there are no invariance or idempotence relations the docs imply. No metamorphic relation can be responsibly proposed.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "w3connect",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "wage-theft-defense",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "walkie-talkie-mode",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "wang-wei-perspective-v2",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "wanjie-openclaw-video-v2-0-1",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a video-generation skill that intercepts natural language prompts and produces video outputs via background processes. It does not document any normalization, canonicalization, idempotency, or explicitly lossless round-trip properties between inputs or outputs. There is no basis in the docs to assert that two different inputs yield the same output (invariance), that re-feeding the output reproduces it (idempotence), or that a forward+inverse pair is lossless (round_trip). Proposing any such relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "web-browser",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a CLI skill (cdp-trace.js) that performs browser automation and CDP-based shadow DOM diagnosis. It does not document any normalization/canonicalization behavior (invariance), idempotent re-processing of its own output (idempotence), or any explicitly reversible/lossless encode-decode pair (round_trip). The tool produces diagnostic output (DOM trees, matched styles, snapshots) that is not documented as normalizing equivalent inputs to the same output, nor as being safely fed back into itself, nor as having a documented inverse. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "word-docx-formatting-repair-helper-180322",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "work-journal",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a multi-step AI-powered pipeline (parser \u2192 classifier \u2192 quantifier \u2192 LLM \u2192 formatter \u2192 storage) where outputs are LLM-generated, probabilistic, and context-dependent. The docs do not claim any of the individual scripts are idempotent, do not describe any encode/decode or forward/inverse round-trip pair, and do not identify any two distinct inputs that are guaranteed to produce identical outputs (no normalization/canonicalization contract is stated). The pipeline is explicitly lossy and generative (quantifier 'transforms fuzzy descriptions into measurable outcomes', LLM 'polishes' text), so no invariance, idempotence, or round-trip relation is genuinely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "wrike-api",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "x-extract",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a browser-automation workflow that fetches live data from x.com URLs. It does not describe any normalization, canonicalization, idempotent transformation, or reversible encode/decode pair. The output is determined by live external page content (which can change at any time), not by deterministic processing of the input. There is no invariance (no two inputs documented as yielding identical output), no idempotence (running the markdown output back through the tool would fetch the same live URL again, not reproduce the markdown), and no round-trip pair (no inverse operation is described). Proposing any of these relations would be a false accusation not supported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "x-openclaw",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "x-scraper",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "x-search-bwm",
+      "verdict": "ABSTAIN",
+      "detail": "The tool queries an external live API (xAI/Grok) whose responses are non-deterministic and depend on real-time X content. The documentation describes no normalization, canonicalization, encoding/decoding, or other transformation that would make two different inputs yield identical outputs, make the output idempotent, or form a reversible round-trip. There is no documented invariance (e.g. case-insensitive query matching), no idempotent transform, and no encode/decode pair. Proposing any such relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "x-search-x402",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a tool that performs AI-powered, real-time X/Twitter searches with payment per request. None of the three metamorphic relation kinds apply: (1) No invariance \u2014 there are no two different inputs documented to produce the same output; the tool is a live search that returns AI-processed, real-time results which will naturally vary. (2) No idempotence \u2014 the tool is not documented as a normalizer or formatter whose output fed back as input would reproduce itself; re-running any output as a query would yield a different search. (3) No round_trip \u2014 there is no inverse operation documented, and the docs make no claim of reversibility or losslessness. Proposing any of these relations would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "x-tweet-speedread-skill",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a network-dependent, charge-first tool that calls external billing and X post fetching services. The output depends on live network state (billing balance, X post content), making it impossible to identify any inputs the docs say are equivalent, idempotent, or round-trip invertible. The tool is also not described as a normalizer, canonicalizer, encoder/decoder, or any other transform for which metamorphic relations could be reliably inferred from the documentation alone.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "x-webmcp",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a skill for operating X (Twitter) through a browser bridge. Neither `ensure-links.sh` nor `validate.sh` are documented as normalizers, canonicalizers, idempotent transforms, or round-trip pairs. The docs mention `ensure-links.sh` only as a link-creation helper (a side-effecting setup script), and `validate.sh` is listed as a tool filename but not described at all in the documentation. There is no documented equivalence between inputs, no documented idempotence guarantee, and no documented forward/inverse pair. Proposing any relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "xdrop",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes an upload tool and a download tool that together could form a round-trip, but the docs do not explicitly state the pair is lossless/round-trip-safe \u2014 upload requires a live Xdrop server and network access, and the download depends on a dynamically generated share URL with an encryption key fragment returned by the server. There is no documented invariance (no normalization/canonicalization is described) and no documented idempotence (running upload or download on its own output is not described as producing the same result). Proposing any of these relations without explicit doc support would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "xeontts",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a TTS skill with installation scripts, runtime services, and workflow rules. It does not document any normalizer, canonicalizer, idempotent transform, or explicitly reversible (round-trip-safe/lossless) operation among the listed tool files. The shell scripts (install.sh, self_check.sh, start_all.sh, stop_tts.sh, etc.) perform side-effectful system operations with no documented equivalence between alternate inputs, no documented idempotence guarantee on re-running their own output, and no documented inverse/decode counterpart. Proposing any metamorphic relation here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "xerg",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "xiaolongxia-deepseek",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a stateful multi-turn conversational tool that calls an external LLC API (DeepSeek). Its outputs are non-deterministic LLM responses. There are no normalization/canonicalization steps, no encode/decode pairs documented as lossless/round-trip-safe, and no idempotent transformation documented. The --history and --clear flags manage side-effects but do not imply any metamorphic relation between outputs. Proposing any relation would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "yanpan-finance",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a remote MCP server with no local computation, normalization, canonicalization, or invertible transforms. The tool (server.py) is a client connector to an external HTTP API. The docs describe no equivalences between inputs (no case-insensitivity, no canonicalization), no idempotent transforms on data (results are live financial data, not deterministic re-processable outputs), and no encode/decode or round-trip pairs. Proposing any metamorphic relation would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "yes-md-zh",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "yield-farm-payment",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes an on-chain DeFi payment tool that interacts with live blockchain networks (Base Mainnet) and requires real private keys, RPC URLs, and USDC balances. The tool's outputs are on-chain transactions and their confirmations, not deterministic text transformations. The docs do not describe any normalizer, canonicalizer, case-insensitive matcher, idempotent formatter, or explicitly reversible encode/decode pair. The --dry-run flag is described as 'no on-chain execution' simulation, but the docs do not state that running --dry-run twice produces the same output (APY, balances, and gas prices are live data). No metamorphic relation of the kinds invariance, idempotence, or round_trip is genuinely implied by the documentation without risking a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "yield-shark",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not explicitly imply any invariance (equivalent inputs that must yield identical output), idempotence (running output back through the tool reproduces it), or round-trip (lossless forward/inverse pair) relationships. The tools fetch live data from external APIs (DeFiLlama), so even the same invocation repeated will likely produce different output. No normalization, canonicalization, or encode/decode reversibility is described anywhere in the docs. Proposing any metamorphic relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "yonghengrisheng-supplier-en",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "zai-web-search",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a web search tool that makes live API calls to an external service (ZHIPU AI). The outputs are inherently non-deterministic \u2014 search results change over time, vary by engine, and depend on external state. The docs do not describe any canonicalization, normalization, encoding/decoding, or idempotent transformation that would allow two runs to be compared for equality. The output formats (markdown, JSON, compact) are different views of live search results, not invertible transforms. There are no documented invariances (e.g., no case-insensitive query normalization is guaranteed), no idempotent pipeline steps, and no round-trip pairs. Proposing any metamorphic relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "zettelkasten",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a note-taking tool that captures ideas and generates AI insights with timestamps and random elements. There are no documented normalization/canonicalization behaviors (no invariance), no documented idempotence property (each run generates new timestamps/AI content), and no documented round-trip/inverse operation. Proposing any metamorphic relation here would be a false accusation unsupported by the docs.",
+      "n_relations": 0,
+      "relations": []
+    }
+  ]
+}

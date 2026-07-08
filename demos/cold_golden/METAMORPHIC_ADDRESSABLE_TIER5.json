@@ -1,0 +1,242 @@
+{
+  "skills_dir": "/tmp/clawhub_addressable",
+  "model": "claude-sonnet-4-6",
+  "counts": {
+    "ABSTAIN": 18,
+    "UNJUDGEABLE": 1,
+    "DIVERGED": 1,
+    "HOLDS": 1
+  },
+  "verdicts": [
+    {
+      "slug": "93pct",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not imply any invariance (no two inputs are documented to be equivalent/normalized forms of each other), idempotence (running the tool on its own output is not described as reproducing the same output \u2014 the tool reads context and produces ranked suggestions, not a canonical form), or round_trip (no inverse/decode operation is described). The tool is a generative planning/autocomplete tool whose output depends on live context, and the docs describe no lossless encode/decode pair, no normalization of equivalent inputs, and no self-stabilizing property. Proposing any relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "abaddon",
+      "verdict": "ABSTAIN",
+      "detail": "The only tool filename provided is cron-seed.sh, which is a setup/installation script that adds a cron job entry to a JSON file. The documentation describes it as performing a one-way side-effect (writing a cron entry) with no documented normalization, equivalence classes, idempotence guarantee, or invertible/round-trip operation. There is no basis in the documentation to assert that two different inputs yield the same output (invariance), that running the script on its own output reproduces that output (idempotence), or that any forward/inverse pair is lossless and reversible (round_trip). Proposing any of these relations would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "agent-namer",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all proposed relations errored",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "round_trip",
+          "tool": "manage_name.py",
+          "doc_basis": "add adds a name as active; kill sets it to '\u5df2\u9635\u4ea1'; add on a '\u5df2\u9635\u4ea1' name revives it to active. So add\u2192kill\u2192add is a round-trip that restores the active state, and ",
+          "status": "ERROR",
+          "detail": "forward: exit 1: Traceback (most recent call last):\n  File \"/tmp/clawhub_pool/a",
+          "killrate": null
+        },
+        {
+          "kind": "invariance",
+          "tool": "manage_name.py",
+          "doc_basis": "check returns '\u2705 \u53ef\u7528\uff08\u5168\u65b0\uff09' for a name not in the dictionary regardless of when it is checked, as long as it has never been added. Two distinct never-added names s",
+          "status": "ERROR",
+          "detail": "a:exit 1: Traceback (most recent call last):\n  File \"/tmp/claw b:exit 1: Traceback (most recent call last):\n  File \"/tmp/claw",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "axiom-json-canonicalizer",
+      "verdict": "DIVERGED",
+      "detail": "a doc-implied invariant diverged \u2014 UNCONFIRMED (likely embedded run-specific noise or a proposer fluke, not a defect). Review, do not accuse.",
+      "n_relations": 4,
+      "relations": [
+        {
+          "kind": "invariance",
+          "tool": "axiom_json_canonicalizer.py",
+          "doc_basis": "Object keys sorted lexicographically (post-NFC); No insignificant whitespace; Output: UTF-8 bytes (byte-to-byte stable). Two JSON objects with the same keys/val",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.0
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_json_canonicalizer.py",
+          "doc_basis": "No insignificant whitespace; byte-to-byte stable. Two JSON inputs that are semantically identical but differ only in whitespace must produce identical canonical",
+          "status": "VIOLATE",
+          "detail": "out(a)!=out(b) [echo-masked]: '\\n' vs '{\"a\":1,\"b\":2}\\n'",
+          "killrate": null
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_json_canonicalizer.py",
+          "doc_basis": "Object keys sorted lexicographically AND no insignificant whitespace. Two semantically equivalent JSON documents differing in both key order and whitespace must",
+          "status": "VIOLATE",
+          "detail": "out(a)!=out(b) [echo-masked]: '{\"a\":null,\"m\":[1,2,3],\"z\":true}\\n' vs '\\n'",
+          "killrate": null
+        },
+        {
+          "kind": "idempotence",
+          "tool": "axiom_json_canonicalizer.py",
+          "doc_basis": "Determinism: Byte-to-byte stable. A canonical form run through the canonicalizer again must produce the same bytes: f(f(x)) == f(x).",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "slug": "axiom-url-canonicalizer",
+      "verdict": "HOLDS",
+      "detail": "4 load-bearing relation(s) hold",
+      "n_relations": 4,
+      "relations": [
+        {
+          "kind": "invariance",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Lowercases host; strips default ports (80, 443); sorts query parameters \u2014 so HTTPS://Example.com:443/Path/?b=2&a=1 should canonicalize the same as https://examp",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Strips default ports (80 for HTTP) \u2014 HTTP://Example.COM:80/?z=1&a=2 must equal http://example.com/?a=2&z=1",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.18181818181818182
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Sorts query parameters \u2014 two URLs identical except parameter order must produce the same canonical URL",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        },
+        {
+          "kind": "idempotence",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Determinism: Byte-to-byte stable; the tool normalizes URLs to canonical form, so running it on already-canonical output must reproduce the same output",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        }
+      ]
+    },
+    {
+      "slug": "calctool",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a logging/journaling tool that appends timestamped entries to log files. Every command invocation writes a new entry with the current timestamp, so running the same command twice produces different log state (different timestamps, more entries). There is no documented normalization, canonicalization, or equivalence between different inputs. The 'export' helper is described as producing JSON/CSV/txt output but no inverse (import/restore) is documented as lossless or round-trip-safe. The 'stats' and 'version' commands are read-only but their output depends on accumulated mutable state (entry counts, data size) that changes with each write, so idempotence cannot be guaranteed. No metamorphic relation the documentation genuinely implies can be pinned without risk of false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "comprehensive-divination-skill",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes four one-way divination computation scripts (xiao_liuren.py, liuyao_yaogua.py, meihua_qigua.py, da_liuren.py) and a time-anchor utility (common.py). None of the documented behaviors imply: (1) invariance \u2014 no two distinct inputs are documented to produce the same output (no normalization/canonicalization is described); (2) idempotence \u2014 no tool is documented to accept its own output as input and reproduce it; (3) round_trip \u2014 no tool pair is documented as reversible, lossless, or forming an encode/decode or forward/inverse relationship. Proposing any of these relations would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "daai-xianzun-persona",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a persona/character tool that generates natural language responses based on a character's personality. There are no documented normalization, canonicalization, idempotence, or round-trip properties implied. The tool's output is generative and context-dependent (speech in character), so no metamorphic relation between inputs and outputs can be reliably inferred from the documentation alone without risking false accusations.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "data-labeler",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a stateful logging tool that appends new entries on each run and reads from a shared local store (~/.local/share/data-labeler/). No operation is documented as a normalizer/canonicalizer (invariance), idempotent transformer (idempotence), or reversible encode/decode pair (round_trip). The 'export' command writes data out but there is no documented inverse 'import' that is described as lossless/round-trip-safe. Proposing any of the three relation kinds without genuine doc support would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "eam",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a stateful enterprise asset management tool with commands like add, list, remove, export, search, etc. None of the commands are documented as canonicalizers, normalizers, case-insensitive matchers, or round-trip/inverse pairs. The 'export' command exports data to a file but there is no corresponding 'import' command documented, so no round-trip can be established. No two distinct inputs are documented to produce the same output (invariance), and no command is documented to be idempotent in the f(f(x))==f(x) sense on its output. Without a genuine doc basis for any metamorphic relation, proposing one would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "echarts-master",
+      "verdict": "ABSTAIN",
+      "detail": "The tool file is `echarts.min.js`, which is a static JavaScript library asset (ECharts), not a command-line tool that takes inputs and produces outputs. The documentation describes a skill that uses this file as a local resource for rendering charts in HTML, but there is no documented command-line interface, stdin/stdout behavior, or input/output contract for `echarts.min.js` itself. No metamorphic relations (invariance, idempotence, or round-trip) can be meaningfully proposed for a static JS library file.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gemini-watermark-remover",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a lossy, one-way image transformation (reverse alpha blending to remove a watermark). It does not describe any normalization that makes two different inputs equivalent, does not claim the operation is idempotent (applying it twice would attempt to remove a watermark that is no longer present, yielding a different result), and does not describe any inverse operation or round-trip guarantee. Proposing any of the three relation kinds would be a false accusation not supported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "jarvis-chief-of-ai-staff",
+      "verdict": "ABSTAIN",
+      "detail": "The two tool files (deploy-workspace.sh and security-harden.sh) are imperative setup/configuration scripts that write files to the filesystem and configure system services. The documentation describes no normalisation, canonicalisation, idempotence guarantee, or encode/decode round-trip for either script. There is no documented relationship between the output of one run and the output of another run that would constitute a metamorphic relation of the invariance, idempotence, or round_trip kinds. Proposing any such relation would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "obsidian-conversation-backup",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes shell scripts that write files to disk (Obsidian vault markdown files, tracking state files) and depend on external state (session JSONL files, cron, tracking files, Obsidian vault path). None of the tools described are pure transformers with predictable equivalent inputs (invariance), self-normalizing outputs (idempotence), or explicitly documented reversible/round-trip pairs. The scripts produce timestamped output files whose names and content depend on wall-clock time, session file contents, and tracking file state \u2014 making it impossible to assert output(a)==output(b) or f(f(x))==f(x) without controlling all that external state. The documentation explicitly warns that deleting tracking files causes duplication, confirming the tools are stateful and not idempotent. No round-trip pairs are documented. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "popular-web-designs",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a code-generation tool (producing HTML/CSS files from templates) with no documented normalization, canonicalization, idempotency, or round-trip/inverse operations. The three tool files (catalog.py, cli.py, setup.py) are not documented to produce equivalent outputs for different inputs, nor is any output feeding back as equivalent input, nor is any lossless encode/decode pair described. Proposing any metamorphic relation would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "rename-session",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a tool that mutates a JSON file on disk and reads/writes external state (sessions.json, history.json, filesystem). None of the three metamorphic relation kinds apply cleanly: (1) No invariance can be safely proposed because the tool's output depends on mutable file state and random generation \u2014 two 'equivalent' inputs would still hit different filesystem states. (2) Idempotence cannot be proposed because the tool is a mutator (rename operation), not a normalizer/formatter, and the docs do not claim running it twice on its own output is meaningful or safe. (3) No round_trip/inverse tool is documented; the docs describe no lossless encode/decode pair. Proposing any of these would be a false accusation not grounded in the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "skill-policy-enforcer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a policy-enforcement tool that produces PASS/FAIL/PASS_WITH_WARNINGS verdicts based on scanning a skill folder against a policy. It does not describe any normalization (so no invariance candidates exist), does not state the tool is idempotent when run on its own output (the output is a report, not a skill folder, and feeding a report back as a skill folder would be meaningless), and does not describe any forward/inverse pair or claim the transform is reversible/round-trip-safe. No metamorphic relation is genuinely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "test1-232qe11",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a logging/appending workflow for markdown files and shell/JS hook scripts. None of the four tool files (activator.sh, error-detector.sh, extract-skill.sh, handler.js) are described as normalizers, canonicalizers, encoders/decoders, or idempotent transforms. The docs do not imply any two distinct inputs produce the same output, that running a tool on its own output reproduces it, or that any forward/inverse round-trip relationship exists. The tools are described as side-effecting scripts (injecting reminders, detecting errors, extracting skill scaffolding) with no documented equivalence classes, idempotence guarantees, or reversible transforms.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "thesis-workflow",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a multi-agent thesis workflow with one-way transforms (md2docx_strict.py: MD\u2192DOCX, explicitly no inverse), a validator (loop_self_check.py whose output is a pass/fail report, not a transformed file to feed back), a scheduler (orchestrator.py), and a state manager (state_manager.py). The docs do not document any input canonicalization/normalization (ruling out invariance), do not describe any tool as producing output in the same format as its input to be fed back (ruling out idempotence in the harness sense), and do not describe any reversible/round-trip-safe transform pair (ruling out round_trip). Proposing any of these relations would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "validator-tool",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not explicitly describe any canonicalization/normalization (invariance), idempotent output processing (idempotence), or reversible/round-trip-safe transforms (round_trip). The tool is a validator/linter that produces pass/fail reports \u2014 it does not normalize inputs to equivalent forms, its output is not a valid input to itself in any documented way, and no encode/decode or flatten/unflatten pair is described. Proposing any of the three relation kinds without clear documentary basis would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "xeonasr",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes installation scripts, workflow rules, API endpoints, and configuration conventions \u2014 but none of the documented tools (shell scripts, server.js) are described as normalizers, canonicalizers, idempotent transformers, or reversible encode/decode pairs. The scripts are side-effectful installers and service managers whose outputs are not defined in terms that allow asserting output(a)==output(b), f(f(x))==f(x), or inverse(forward(x))==x. No metamorphic relation is genuinely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    }
+  ]
+}

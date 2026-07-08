@@ -1,0 +1,389 @@
+{
+  "n": 40,
+  "results": [
+    {
+      "slug": "1-click-woa",
+      "verdict": "ABSTAIN",
+      "reason": "The script requires a credentials.json config file at a hardcoded path (~/.openclaw/agents/gzh-assistant/wechat/credentials.json) and also requires a cover image file to exist before it will reach any network call beyond token retrieval. It reads no credentials from environment variables. Additionally, reaching the draft submission network call requires a real cover image upload to succeed first, making a clean offline invocation of the full flow impossible without file-system setup that goes beyond simple env vars."
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "1688-item-title-optimizer",
+      "entry": "cli.py"
+    },
+    {
+      "slug": "1688-to-ozon",
+      "verdict": "ABSTAIN",
+      "reason": "no python entry"
+    },
+    {
+      "verdict": "WEAK",
+      "determinism": true,
+      "sensitivity": false,
+      "conformance": false,
+      "host_ok": true,
+      "path_ok": true,
+      "keys_ok": false,
+      "signed": true,
+      "claims_auth": true,
+      "captured_shape": {
+        "method": "POST",
+        "host": "api.3daistudio.com",
+        "path": "/v1/3d-models/tencent/generate/rapid/",
+        "param_keys": [],
+        "all_keys": []
+      },
+      "n_external_requests": 1,
+      "slug": "3daistudio-integration",
+      "entry": "3daistudio.py"
+    },
+    {
+      "slug": "550w-ai-subtitle-remover",
+      "verdict": "ABSTAIN",
+      "reason": "no python entry"
+    },
+    {
+      "slug": "backup-2-github",
+      "verdict": "ABSTAIN",
+      "reason": "The backup action requires actual local files to exist at /root/.openclaw/workspace/ to collect anything meaningful, and the restore action requires interactive confirmation input. The script calls GitHub's API via the PyGithub library with complex multi-step operations (get_repo, get_git_ref, create_git_blob, create_git_tree, create_git_commit, ref.edit) rather than a single documented HTTP endpoint with simple query parameters. There is no single documented request endpoint with simple argv-driven query/body parameters that can be meaningfully intercepted and compared between argv_a and argv_b."
+    },
+    {
+      "slug": "byted-kickart-subtitle-extractor",
+      "verdict": "ABSTAIN",
+      "reason": "plan.py accepts no CLI arguments whatsoever\u2014it is a zero-argument command that always calls RegisterArkClawCombo with an empty body. There is no user-supplied value to vary between argv_a and argv_b, so the two-invocation requirement cannot be satisfied."
+    },
+    {
+      "slug": "byted-kickart-video-subtitler",
+      "verdict": "ABSTAIN",
+      "reason": "The entry script requires --captions to be an existing local JSON file (os.path.isfile check exits with code -1 if missing). A network call cannot be reached without a real input file on disk."
+    },
+    {
+      "slug": "clawbus-facebook-pages",
+      "verdict": "ABSTAIN",
+      "reason": "constructor JSON parse: Extra data: line 17 column 1 (char 432)"
+    },
+    {
+      "verdict": "WEAK",
+      "determinism": true,
+      "sensitivity": false,
+      "conformance": false,
+      "host_ok": true,
+      "path_ok": true,
+      "keys_ok": false,
+      "signed": true,
+      "claims_auth": true,
+      "captured_shape": {
+        "method": "POST",
+        "host": "api.hunyuan.cloud.tencent.com",
+        "path": "/v1/chat/completions",
+        "param_keys": [],
+        "all_keys": []
+      },
+      "n_external_requests": 2,
+      "slug": "cnsdoce",
+      "entry": "scripts/llm_semantic_match.py"
+    },
+    {
+      "verdict": "RE-DERIVED",
+      "determinism": true,
+      "sensitivity": true,
+      "conformance": true,
+      "host_ok": true,
+      "path_ok": true,
+      "keys_ok": true,
+      "signed": false,
+      "claims_auth": false,
+      "captured_shape": {
+        "method": "GET",
+        "host": "www.ncbi.nlm.nih.gov",
+        "path": "/pmc/articles/PMC11110807/",
+        "param_keys": [
+          "format"
+        ],
+        "all_keys": [
+          "format"
+        ]
+      },
+      "n_external_requests": 1,
+      "slug": "deep-research-v50",
+      "entry": "scripts/extract-pmc.py"
+    },
+    {
+      "verdict": "RE-DERIVED",
+      "determinism": true,
+      "sensitivity": true,
+      "conformance": true,
+      "host_ok": true,
+      "path_ok": true,
+      "keys_ok": true,
+      "signed": true,
+      "claims_auth": true,
+      "captured_shape": {
+        "method": "GET",
+        "host": "web3.okx.com",
+        "path": "/api/v6/dex/aggregator/quote",
+        "param_keys": [
+          "amount",
+          "chainIndex",
+          "fromTokenAddress",
+          "swapMode",
+          "toTokenAddress"
+        ],
+        "all_keys": [
+          "amount",
+          "chainIndex",
+          "fromTokenAddress",
+          "swapMode",
+          "toTokenAddress"
+        ]
+      },
+      "n_external_requests": 1,
+      "slug": "dex-quote",
+      "entry": "scripts/dex_quote.py"
+    },
+    {
+      "verdict": "RE-DERIVED",
+      "determinism": true,
+      "sensitivity": true,
+      "conformance": true,
+      "host_ok": true,
+      "path_ok": true,
+      "keys_ok": true,
+      "signed": false,
+      "claims_auth": false,
+      "captured_shape": {
+        "method": "GET",
+        "host": "api.opendota.com",
+        "path": "/api/heroStats",
+        "param_keys": [],
+        "all_keys": []
+      },
+      "n_external_requests": 1,
+      "slug": "dota2-coach",
+      "entry": "scripts/fetch_hero.py"
+    },
+    {
+      "slug": "facebook-ads-library-search",
+      "verdict": "ABSTAIN",
+      "reason": "The script does not make a network call itself; it only prints a JavaScript snippet to stdout meant to be eval'd in a browser context via 'eval \"$(python scripts/search-ads.py ...)\"'. There is no HTTP request built or executed by the Python script, so there is nothing to intercept at the Python/network level."
+    },
+    {
+      "verdict": "RE-DERIVED",
+      "determinism": true,
+      "sensitivity": true,
+      "conformance": true,
+      "host_ok": true,
+      "path_ok": true,
+      "keys_ok": true,
+      "signed": true,
+      "claims_auth": true,
+      "captured_shape": {
+        "method": "GET",
+        "host": "ecs.cn-north-4.myhuaweicloud.com",
+        "path": "/v1/fake-project-id-001/servers",
+        "param_keys": [
+          "ip_address"
+        ],
+        "all_keys": [
+          "ip_address"
+        ]
+      },
+      "n_external_requests": 2,
+      "slug": "huawei-cloud-cce-network-failure-diagnoser",
+      "entry": "scripts/huawei_get_node_security_groups.py"
+    },
+    {
+      "slug": "jianying-editor-skill",
+      "verdict": "ABSTAIN",
+      "reason": "cloud_manager.py does not make a direct HTTP API request to a documented remote endpoint. It looks up assets in local CSV files and downloads from URLs stored in those CSVs. The network call is a file download to a URL from a local database (not a documented API), and without real CSV data files containing valid URLs, no network call will be reached. There is no documented API host/path to target."
+    },
+    {
+      "slug": "kalshalyst",
+      "verdict": "ABSTAIN",
+      "reason": "The auto_trader.py script does not accept command-line arguments for API keys or query parameters that would vary the network request in a testable way. It reads config from ~/.openclaw/auto_trader_config.json and ~/.openclaw/config.yaml, requires sibling skill imports (kalshi-command-center), and its network calls (Kalshi API, Anthropic API, Slack webhook) are driven entirely by the config file and internal pipeline logic \u2014 not by CLI arguments. There is no --query or similar argv that would produce two distinct, diffable network requests. Additionally, it imports from a sibling skill directory (kalshi-command-center/scripts) that is not present, making it impossible to reach a network call without a real file/service setup."
+    },
+    {
+      "slug": "kalshi-eth-gas-correlation-trader",
+      "verdict": "ABSTAIN",
+      "reason": "constructor JSON parse: Extra data: line 18 column 1 (char 402)"
+    },
+    {
+      "slug": "kipris-cli",
+      "verdict": "ABSTAIN",
+      "reason": "The entry script _xml2jsonl.py is a stdin-to-stdout XML converter utility, not a network-calling CLI. It reads XML from stdin and writes JSONL to stdout \u2014 it makes no HTTP requests itself. The actual network calls are made by the main kipris-cli entry point (not provided), which pipes its XML response through this helper. Running this script alone cannot reach any network endpoint."
+    },
+    {
+      "verdict": "WEAK",
+      "determinism": true,
+      "sensitivity": false,
+      "conformance": false,
+      "host_ok": true,
+      "path_ok": true,
+      "keys_ok": false,
+      "signed": true,
+      "claims_auth": true,
+      "captured_shape": {
+        "method": "POST",
+        "host": "api.lingzao.fake",
+        "path": "/api/v1/research/search-notes",
+        "param_keys": [],
+        "all_keys": []
+      },
+      "n_external_requests": 1,
+      "slug": "lingzao",
+      "entry": "scripts/lingzao_client.py"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "oasis-audio-pro",
+      "entry": "auth.py"
+    },
+    {
+      "slug": "openclaw-timebox",
+      "verdict": "ABSTAIN",
+      "reason": "The entry script is an interactive OAuth flow that opens a browser and waits for a callback redirect. It has no CLI arguments and cannot be driven to a network call without real user interaction in a browser."
+    },
+    {
+      "slug": "pairing-agent-core",
+      "verdict": "ABSTAIN",
+      "reason": "no python entry"
+    },
+    {
+      "slug": "quant-data-platform",
+      "verdict": "ABSTAIN",
+      "reason": "no python entry"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "s2-light-perception",
+      "entry": "light.py"
+    },
+    {
+      "slug": "safe-multisig",
+      "verdict": "ABSTAIN",
+      "reason": "no python entry"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "smyx-family-conflict-aftercare-suggest-analysis",
+      "entry": "scripts/smyx_family_conflict_aftercare_suggest_analysis.py"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "smyx-kitchen-stove-left-on-detection-analysis",
+      "entry": "scripts/smyx_kitchen_stove_left_on_detection_analysis.py"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "smyx-payment",
+      "entry": "scripts/recharge.py"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "smyx-pet-scratch-frequency-intensity-analysis",
+      "entry": "scripts/smyx_pet_scratch_frequency_intensity_analysis.py"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "smyx-pet-stool-morphology-recognition-analysis",
+      "entry": "scripts/smyx_pet_stool_morphology_recognition_analysis.py"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "smyx-plant-nutrition-diagnosis-analysis",
+      "entry": "scripts/plant_nutrition_diagnosis_analysis.py"
+    },
+    {
+      "slug": "text-toolkit",
+      "verdict": "ABSTAIN",
+      "reason": "no python entry"
+    },
+    {
+      "slug": "wake-meup-ai",
+      "verdict": "ABSTAIN",
+      "reason": "The script requires a --keypair argument pointing to a valid Solana keypair JSON file on disk. It reads and parses this file before making any network call, so no network request can be reached without a real input file."
+    },
+    {
+      "verdict": "WEAK",
+      "determinism": true,
+      "sensitivity": true,
+      "conformance": false,
+      "host_ok": false,
+      "path_ok": true,
+      "keys_ok": true,
+      "signed": true,
+      "claims_auth": true,
+      "captured_shape": {
+        "method": "GET",
+        "host": "wutrix.faketest.example.com",
+        "path": "/api/characters",
+        "param_keys": [
+          "universe"
+        ],
+        "all_keys": [
+          "universe"
+        ]
+      },
+      "n_external_requests": 1,
+      "slug": "wutrix",
+      "entry": "scripts/list_characters.py"
+    },
+    {
+      "slug": "x-twitter-by-altf1be",
+      "verdict": "ABSTAIN",
+      "reason": "no python entry"
+    },
+    {
+      "slug": "xby-review-code",
+      "verdict": "ABSTAIN",
+      "reason": "no python entry"
+    },
+    {
+      "verdict": "RE-DERIVED",
+      "determinism": true,
+      "sensitivity": true,
+      "conformance": true,
+      "host_ok": true,
+      "path_ok": true,
+      "keys_ok": true,
+      "signed": true,
+      "claims_auth": true,
+      "captured_shape": {
+        "method": "GET",
+        "host": "xclaw.network",
+        "path": "/v1/agents/discover",
+        "param_keys": [
+          "limit",
+          "query"
+        ],
+        "all_keys": [
+          "limit",
+          "query"
+        ]
+      },
+      "n_external_requests": 1,
+      "slug": "xclawskill",
+      "entry": "scripts/xclaw_skill.py"
+    },
+    {
+      "verdict": "ABSTAIN",
+      "reason": "no external request captured (exits before call / unsupported)",
+      "slug": "yaoyao-cloud-backup",
+      "entry": "scripts/sync_ima.py"
+    },
+    {
+      "slug": "yeeth-claw",
+      "verdict": "ABSTAIN",
+      "reason": "The hook reads all input from stdin (a JSON blob with tool_name/tool_input), not from argv. There are no CLI arguments to vary; the network call cannot be driven or differentiated via argv_a/argv_b."
+    }
+  ]
+}

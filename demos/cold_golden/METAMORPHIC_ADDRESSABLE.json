@@ -1,0 +1,266 @@
+{
+  "skills_dir": "/tmp/clawhub_addressable",
+  "model": "claude-sonnet-4-6",
+  "counts": {
+    "ABSTAIN": 17,
+    "HOLDS": 2,
+    "UNJUDGEABLE": 2
+  },
+  "verdicts": [
+    {
+      "slug": "93pct",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not describe any normalization, canonicalization, or equivalence between different inputs that would imply invariance, nor does it describe the tool as operating on its own output in a way that would imply idempotence. The tool generates suggestions based on unspecified 'context' (current state), and the docs give no basis to claim two different inputs produce identical output or that feeding output back as input reproduces it. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "abaddon",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes cron-seed.sh as a setup script that adds a cron job to ~/.openclaw/cron/jobs.json. The docs do not imply any normalization, canonicalization, or equivalence between different inputs, nor do they describe the tool as idempotent (in fact, running it twice might add duplicate entries or error). There is no documented relationship between two different inputs that should yield identical outputs, and no documented guarantee that feeding the tool's output back into itself reproduces that output. Without a genuine doc basis for either invariance or idempotence, proposing any relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "agent-namer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a stateful name-registry tool with mutating commands (add, kill) and read commands (check, list). No two different inputs to a single command are documented to produce identical outputs (no normalization/canonicalization), and no command is documented to be idempotent in the sense that its output can be fed back as its own input to reproduce that output. The read commands (check, list) are pure queries with no normalization behavior implied, and the write commands (add, kill) change external state rather than transforming input text.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "axiom-json-canonicalizer",
+      "verdict": "HOLDS",
+      "detail": "1 load-bearing relation(s) hold",
+      "n_relations": 4,
+      "relations": [
+        {
+          "kind": "invariance",
+          "tool": "axiom_json_canonicalizer.py",
+          "doc_basis": "Object keys sorted lexicographically (post-NFC); No insignificant whitespace; Output: UTF-8 bytes (byte-to-byte stable). Two JSON objects with the same keys/val",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.0
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_json_canonicalizer.py",
+          "doc_basis": "No insignificant whitespace; Output: UTF-8 bytes (byte-to-byte stable). JSON with extra whitespace/indentation is semantically equivalent to compact JSON.",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.0
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_json_canonicalizer.py",
+          "doc_basis": "Object keys sorted lexicographically (post-NFC); No insignificant whitespace; two equivalent JSON objects differing in both key order and whitespace must yield ",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.0
+        },
+        {
+          "kind": "idempotence",
+          "tool": "axiom_json_canonicalizer.py",
+          "doc_basis": "Convert any JSON to a deterministic, byte-to-byte identical canonical form; Determinism: Byte-to-byte stable. Applying canonicalization to already-canonical out",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.07692307692307693
+        }
+      ]
+    },
+    {
+      "slug": "axiom-url-canonicalizer",
+      "verdict": "HOLDS",
+      "detail": "6 load-bearing relation(s) hold",
+      "n_relations": 6,
+      "relations": [
+        {
+          "kind": "invariance",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Lowercases host \u2014 'HTTPS://Example.com:443/Path/?b=2&a=1&utm_source=tw' is shown as example; host casing differences must yield the same output.",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Sorts query parameters \u2014 'HTTPS://Example.com/?b=2&a=1' canonicalizes to 'https://example.com/?a=1&b=2'; different param orderings must yield identical output.",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Strips default ports (80, 443) \u2014 port 443 on HTTPS is default and must be stripped, so a URL with :443 equals the same URL without it.",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Strips default ports (80) \u2014 port 80 on HTTP is default and must be stripped.",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.18181818181818182
+        },
+        {
+          "kind": "invariance",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Lowercases host AND strips default ports AND sorts query params \u2014 combining all three normalisations, two differently-cased, port-included, param-shuffled URLs ",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        },
+        {
+          "kind": "idempotence",
+          "tool": "axiom_url_canonicalizer.py",
+          "doc_basis": "Determinism: Byte-to-byte stable \u2014 applying canonicalization to an already-canonical URL must reproduce the same URL.",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.09090909090909091
+        }
+      ]
+    },
+    {
+      "slug": "calctool",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a logging tool that records timestamped entries. Because every log entry includes a timestamp ('YYYY-MM-DD HH:MM|<value>'), no two runs of the tool with the same input will produce the same output (timestamps will differ). The tool has no normalization, canonicalization, or idempotent-by-design behaviour documented. The 'version' command might seem like a candidate for invariance/idempotence, but it takes no input variants to compare and re-running it on its own output is not documented as meaningful. No metamorphic relation the docs genuinely imply can be safely proposed without risking a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "comprehensive-divination-skill",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes four divination scripts that either (a) depend on the current time at invocation and random coin-toss simulation, making idempotence inapplicable, or (b) have no documented normalization/canonicalization step that would guarantee two distinct inputs produce identical outputs. The city-to-longitude equivalence (e.g., \u6210\u90fd \u2194 104.06\u00b0E) is mentioned illustratively but the docs explicitly note geocoding uses an API or cache whose precision may differ from the illustrative value, so asserting output equality would be a false accusation. No tool is documented to normalize equivalent forms of its own input, and no tool's output is a valid re-input for itself.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "daai-xianzun-persona",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a persona/chatbot tool that generates natural-language responses based on a character personality. The docs do not specify any normalization, canonicalization, or deterministic transformation that would guarantee two different inputs produce identical outputs, nor does it imply the tool is idempotent (running the output back through the tool would change the '--text' content and likely produce a different character response). There are no documented equivalence classes of inputs that must yield the same output, so no valid metamorphic relations can be proposed without risking a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "data-labeler",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all proposed relations errored",
+      "n_relations": 1,
+      "relations": [
+        {
+          "kind": "idempotence",
+          "tool": "script.sh",
+          "doc_basis": "data-labeler version \u2014 Show version (v2.0.0). A version command that simply prints a fixed version string is idempotent: running it on its own output (fed via s",
+          "status": "ERROR",
+          "detail": "exit 2: /tmp/clawhub_pool/data-labeler/scripts/script.sh: 4: set: Illegal option",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "eam",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a stateful enterprise asset management tool where outputs depend on the current state of persisted data (in ~/.eam/ JSONL files). The documented commands (add, list, search, remove, export, stats, config, status) are not described as normalizers, canonicalizers, or idempotent transformations of their inputs. There are no two documented inputs that the docs explicitly say yield the same output, and no command is documented to produce output that, when fed back as input, reproduces itself. Proposing invariance or idempotence relations here would be a false accusation unsupported by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "echarts-master",
+      "verdict": "ABSTAIN",
+      "detail": "The tool file 'echarts.min.js' is a static JavaScript library asset, not a command-line tool. The documentation describes it only as a local resource to be included via <script> tag, with no documented CLI input/output behavior, normalization, or idempotent transformation. No metamorphic relations can be derived from the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "gemini-watermark-remover",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not imply any invariance or idempotence relations that can be safely asserted. Idempotence does not hold because applying reverse alpha blending twice on the same region would doubly-invert pixel values (not reproduce the same output). No two distinct inputs are documented as guaranteed to produce identical outputs \u2014 '--force' bypasses detection but is not documented as equivalent to auto-detection for watermarked images, and the output path flag changes the destination but not the image content (which is not observable as a testable output relation via the harness). No relation can be proposed without risk of false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "jarvis-chief-of-ai-staff",
+      "verdict": "ABSTAIN",
+      "detail": "The two tools (deploy-workspace.sh and security-harden.sh) are setup/deployment scripts that mutate system state (copy files, configure firewall, generate certificates, etc.). The documentation describes no normalization, canonicalization, or equivalence classes of inputs that would imply invariance between two different inputs. Idempotence is not documented for either script \u2014 they are described as one-time setup steps, and re-running them on their own output is not a meaningful concept (they write to the filesystem, not stdout). The docs do not imply any relationship between two runs of these tools that could be tested as a metamorphic relation without predicting exact output bytes or making assumptions the docs do not support.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "obsidian-conversation-backup",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes shell scripts that perform file system operations, write markdown files to an Obsidian vault, and read session/tracking files from specific paths. None of the tools read from stdin or take file-content arguments that would allow constructing equivalent inputs in a self-contained harness. The scripts depend on external state (session JSONL files, tracking files, vault paths configured via install.sh), making it impossible to define invariance pairs or idempotence inputs purely from documented input/output relationships without access to that external state. Furthermore, the docs do not describe any normalization or canonicalization behavior that would make two different inputs produce identical outputs. No genuine metamorphic relation can be pinned from the documentation alone.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "popular-web-designs",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a code-generation tool that produces HTML/CSS files from templates. It does not document any normalization, canonicalization, case-insensitivity, or idempotent re-processing behaviour that would imply a metamorphic relation between two inputs yielding the same output, or that running the tool on its own output would reproduce that output. The tool generates files from template names and project names \u2014 there is no documented equivalence between distinct inputs, and feeding generated HTML/CSS back into the tool is not a documented use case. Proposing any relation here would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "rename-session",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not describe any normalizing/canonicalizing behavior that would make two different inputs produce the same output (invariance), nor does it describe the tool as idempotent \u2014 running the tool's output (a modified sessions.json) back through the tool would require a sessions.json fixture with a specific session key that the tool would then try to rename again, which is not documented as producing the same result. The --list output format is not specified precisely enough to assert equality between two equivalent inputs, and --random explicitly produces non-deterministic output. No metamorphic relation is reliably implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "skill-policy-enforcer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a policy-enforcement tool whose output (PASS/FAIL/PASS_WITH_WARNINGS) depends entirely on the content of the skill folder and policy file supplied by the caller. The docs do not describe any normalization, canonicalization, or equivalence transformation that would make two *different* inputs produce the *same* output. Idempotence also does not apply: the tool's output is a pass/fail report, not a skill folder; feeding the report back as input to the same tool is not a defined operation the docs describe. Without a documented equivalence or a documented 'running on own output reproduces it' property, proposing either relation would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "test1-232qe11",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not imply any normalization, canonicalization, or input equivalence for any of the tools (activator.sh, error-detector.sh, extract-skill.sh, handler.js). It also does not describe any of these tools as idempotent \u2014 running a tool's output back through the tool is not documented as producing the same result. Proposing such relations without documentary basis would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "thesis-workflow",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a multi-phase orchestration workflow with validators and converters, but does not imply any metamorphic relations I can pin with confidence. The bold-stripping in md2docx_strict.py is the closest candidate for invariance (input with **bold** vs without), but the docs only say the ** markers are removed \u2014 not that the resulting .docx bytes or structure are identical to a file that never had bold (run counts, XML structure may differ). loop_self_check.py is a pass/fail validator whose output is not a transformed version of its input, so idempotence does not apply. No other tool has documented normalization or equivalence-preserving behavior.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "validator-tool",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all proposed relations errored",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "idempotence",
+          "tool": "validate.py",
+          "doc_basis": "--json-output flag produces machine-readable JSON output; running the tool again on that JSON output (which is itself valid JSON) with --json validation should ",
+          "status": "ERROR",
+          "detail": "exit 1: ",
+          "killrate": null
+        },
+        {
+          "kind": "invariance",
+          "tool": "validate.py",
+          "doc_basis": "Validate IPv4 or IPv6 address \u2014 a valid IPv4 address should yield the same validation result regardless of whether it is written in dotted-decimal form; these t",
+          "status": "ERROR",
+          "detail": "a:exit 1:  b:exit 1: ",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "xeonasr",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes installation scripts, service management scripts, and a TTS workflow server. None of the tools are documented as normalizers, canonicalizers, or idempotent transformers. There is no documented equivalence between any two distinct inputs, and no tool is explicitly stated to be safe/idempotent to re-run on its own output. Proposing any relation would be a false accusation not grounded in the documentation.",
+      "n_relations": 0,
+      "relations": []
+    }
+  ]
+}

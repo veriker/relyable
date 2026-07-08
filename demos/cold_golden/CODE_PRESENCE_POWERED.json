@@ -1,0 +1,1474 @@
+{
+  "skills_dir": "/tmp/clawhub_powered",
+  "n": 242,
+  "ships_any_script": {
+    "k": 115,
+    "p": 0.47520661157024796,
+    "ci95": [
+      0.4131670844469998,
+      0.5380209976351216
+    ]
+  },
+  "declares_runnable_tool": {
+    "k": 115,
+    "p": 0.47520661157024796,
+    "ci95": [
+      0.4131670844469998,
+      0.5380209976351216
+    ]
+  },
+  "records": [
+    {
+      "slug": "12306-ticket-purchase-search",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['call_api.py', 'config.py', 'tools.py']"
+    },
+    {
+      "slug": "16-self-improving-agent-proactive-self-reflection",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "1688-item-select",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['cli.py', 'cmd.py', 'service.py']"
+    },
+    {
+      "slug": "2020117",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "20206-02-10-clawhub-summarize-1-0-0",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "3",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "3d-image-generator",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['balance.js', 'bootstrap.mjs', 'build-visual-brief.mjs', 'client.js', 'discover-models.mjs', 'doctor.mjs', 'ensure-ready.mjs', 'errors.js', 'model-registry.js', 'models-command.js', 'models.js', 'normalize-input.js', 'normalize.js', 'recommend-model.mjs', 'run-generate.mjs', 'setup.mjs', 'smoke-check.mjs', 'status.js', 'style-menu.mjs', 'submit-image.js', 'submit-text.js', 'validators.js', 'wait.js']"
+    },
+    {
+      "slug": "3dgs-engineering-guide",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "a-share-daily-report",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['analyzer.py', 'cache.py', 'data_fetcher.py', 'generate_report.py', 'helpers.py', 'logger.py', 'publisher.py', 'renderer.py', 'test_analyzer.py', 'test_data_fetcher.py', 'test_integration.py', 'test_renderer.py', 'trade_calendar.py', 'verify_data_sources.py', 'verify_data_truth.py']"
+    },
+    {
+      "slug": "a-share-market-researcher",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "a-share-market-sweep",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "a-share-short-decision",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['debug_utils.py', 'decision_eval.py', 'fusion_engine.py', 'generate_daily_recommendation.py', 'indicators.py', 'main.py', 'market_data.py', 'money_flow.py', 'optimize_from_aggressive.py', 'reporting.py', 'risk_control.py', 'sentiment.py', 'settings.py']"
+    },
+    {
+      "slug": "a2a-market-google-oauth",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "afrexai-food-truck",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "agent-code-no7-audit-eagle",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "agentic-atlas-frontend-design",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ai-09ed64",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ai-aquascaping",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ai-cheese",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ai-hair-styling",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ai-illustration-art",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ai-kujiale-design",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['createBitmapTask.js', 'createDesign.js', 'getBitmapTaskResult.js', 'getCandidateLayout.js', 'getFloorplanInfo.js', 'getLayoutResult.js', 'getRenderResult.js', 'getStyles.js', 'getTags.js', 'getUploadToken.js', 'searchPlan.js', 'trigger-render.js', 'triggerLayout.js', 'versionCheck.js']"
+    },
+    {
+      "slug": "ai-logistics-commander",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ai-official-doc",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ai-output-failure-triage",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "aios-self-improving-agent",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "alibabacloud-ecs-disaster-recovery-image",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "arabic-localization-reviewer-skill",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "archunit-architecture-guard",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['scan_packages.py']"
+    },
+    {
+      "slug": "arxiv-paper-diagram",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "automation-token-optimizer",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "axiom-luhn-check",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['axiom_luhn_check.py', 'test_axiom_luhn_check.py']"
+    },
+    {
+      "slug": "b2b-saas-positioning",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "baaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['extract.mjs', 'search.mjs']"
+    },
+    {
+      "slug": "background-delivery-sop",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "backtesting-framework",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "bili-ai-feed",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['daily_report.py']"
+    },
+    {
+      "slug": "book-nails",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "bye",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "cad-batch-processing",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['batch_export.py', 'batch_modify.py', 'cad_utils.py', 'generate_dwg.py']"
+    },
+    {
+      "slug": "cad-skill",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['cad_launcher.py', 'skill_runner.py']"
+    },
+    {
+      "slug": "cairn-cli",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "cb-customer-service-localizer",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['handler.py', 'test_handler.py']"
+    },
+    {
+      "slug": "cb-platform-selection-guide",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "china-tts",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "claw-land",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['autoplay.js', 'balance.js', 'common.js', 'link-wallet.js', 'mint-gems-sol.js', 'mint-gems.js', 'play.js', 'redeem.js', 'setup-wallet.js']"
+    },
+    {
+      "slug": "clawpenflow",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "cn-todo-tracker",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['todo.py']"
+    },
+    {
+      "slug": "codia-design-skills",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "company-headlines",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['render.js']"
+    },
+    {
+      "slug": "compound-eng-postgresql",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "crypto-2",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "cultural-intelligence-builder",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['handler.py', 'test_handler.py']"
+    },
+    {
+      "slug": "dad-jokes",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "daily-ai-brief-skill",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['api_fetcher.py', 'base_fetcher.py', 'config.py', 'fetcher_factory.py', 'main.py', 'orchestrator.py', 'report_generator.py', 'rss_fetcher.py', 'web_scraper.py', 'x_fetcher.py']"
+    },
+    {
+      "slug": "daily-ai-news",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['news.sh']"
+    },
+    {
+      "slug": "daily-brief",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['daily-brief.sh']"
+    },
+    {
+      "slug": "daily-cost-report",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['daily-cost-report-email.sh', 'daily-cost-report.sh', 'send-cost-report.sh']"
+    },
+    {
+      "slug": "daily-news-cn",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "daily-stock-analysis",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['calc_accuracy.py', 'report_manager.py']"
+    },
+    {
+      "slug": "data-labeling-studio",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['annotate_images.py', 'basic_usage.py', 'quality_check.py', 'test_labeling.py']"
+    },
+    {
+      "slug": "devrel-playbook",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "dont-be-scary",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['safe-update.sh']"
+    },
+    {
+      "slug": "dotfile",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['link-shared-ai-configs.sh']"
+    },
+    {
+      "slug": "download-guard",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "drivethru-odoo",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['ap.py', 'odoo_client.py', 'odoo_mcp.py', 'production.py', 'sales.py']"
+    },
+    {
+      "slug": "e2b-sandbox",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['e2b-core.mjs', 'e2b-mcp-server.mjs', 'e2b-sandbox.mjs', 'register-mcporter.mjs', 'run-e2b.sh']"
+    },
+    {
+      "slug": "eastmoney-stock-analysis",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "easy-testcase",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ec-price-monitor-pro-plus",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['price_monitor_pro.py']"
+    },
+    {
+      "slug": "ecloud-long-term-memory",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['memory.js', 'setup.js']"
+    },
+    {
+      "slug": "ecommerce-scraper-pro",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['data-scraper.py']"
+    },
+    {
+      "slug": "emaildesignskill",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "enterprise-due-diligence-plus",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "eval-repo",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['check_duplicate.py', 'doc_types.py', 'fetch_github.py', 'gitea_api.py', 'kb_common.py', 'kb_read.py', 'main.js', 'save_page.py', 'save_paper.py', 'setup.sh']"
+    },
+    {
+      "slug": "evolutionary-iteration",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "f5tts-monitor",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "fable-dev",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "facebook-fanpage-manager",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['check-connection.sh']"
+    },
+    {
+      "slug": "fact-check-verify",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "factoriago",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['factoriago-client.js']"
+    },
+    {
+      "slug": "failsafe-secureclaw",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "fairscale-solana",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['check_wallet.sh']"
+    },
+    {
+      "slug": "fairy-team-skills",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "fakerjs",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['script.sh']"
+    },
+    {
+      "slug": "free-web-search",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['setup.sh', 'web_search.py']"
+    },
+    {
+      "slug": "g0atbot-fitness-recipes",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['create_videos.py', 'daily_batch.py', 'elevenlabs_client.py', 'fal_client.py', 'generate_videos.py', 'run_pipeline.py', 'shotstack_client.py']"
+    },
+    {
+      "slug": "game-account-price-trends",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['fetch_mall_trade_data.py', 'generate_market_overview.py']"
+    },
+    {
+      "slug": "game-design-fogg-behavior-audit",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "game-servers",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "gen-z-lingo",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "get-public-ip",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "gingiris-growth-finder",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "gingiris-kol-outreach",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "gingiris-opensource",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "git-workflows-advanced",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['run.py']"
+    },
+    {
+      "slug": "glmv-pdf-to-web",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['crop.py', 'generate_web.py', 'pdf_to_images.py']"
+    },
+    {
+      "slug": "gocreative-llm",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "google-apps-script",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "google-workspace-admin",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "gstack-openclaw-skills",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['command_router.py', 'install.sh', 'state_manager.py']"
+    },
+    {
+      "slug": "gumtree-uk-pets",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['listing.js', 'search.js']"
+    },
+    {
+      "slug": "gworkspace",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "halaoluan-openclaw-restore",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['restore.sh', 'restore_encrypted.sh', 'restore_latest.sh']"
+    },
+    {
+      "slug": "heartflow-engine",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['adaptive-planner.js', 'agent-bridge.js', 'agent-commentary.js', 'agent-philosophy.js', 'agent-psychology.js', 'ai-self-positioning.js', 'assertions.js', 'associative-engine.js', 'atomic-write.js', 'auto-compaction-engine.js', 'autonomous-emotion.js', 'behavior-tracker.js', 'being-logic.js', 'blind-spot-breaker.js', 'bm25.js', 'boot-check.js', 'boundary-negotiation.js', 'breathing-exercise.js', 'bridge-identity.js', 'budget.js', 'causal-inference.js', 'chunk-detector.js', 'claim-extractor.js', 'code-engine.js', 'code-executor.js', 'code-planner.js', 'code-verifier.js', 'code-writer.js', 'cognitive-appraisal.js', 'cognitive-protocol.js', 'cognitive-restructuring.js', 'commonsense-engine.js', 'confidence-annotator.js', 'confidence-calibrator.js', 'conflict-resolver.js', 'constitutional-ai.js', 'context-builder.js', 'cooperative-arbitration.js', 'counterfactual-engine.js', 'cross-session-index.js', 'curiosity-engine.js', 'debate-analyzer.js', 'decision-verifier.js', 'decision.js', 'desire-engine.js', 'desire-system.js', 'digital-homeostasis.js', 'download-model.py', 'dream-consolidation.js', 'dream-loop.js', 'dream.js', 'embodied-core.js', 'emotional-check-in.js', 'emotional-growth.js', 'emotional-memory-bridge.js', 'empathy-detector.js', 'engine.js', 'entity-extractor.js', 'error-handler.js', 'execution-verifier.js', 'experience-collector.js', 'experience-replay.js', 'external-verifier.js', 'fact-checker.js', 'failure-analyzer.js', 'feedback-functions.js', 'followup-suggester.js', 'forgetting.js', 'global-workspace.js', 'goal-generator.js', 'goal-pursuer.js', 'goedel-engine.js', 'graph-of-thoughts.js', 'graph.js', 'grounding-technique.js', 'heart-logic.js', 'heartflow-engine.js', 'heartflow-memory-inject.js', 'heartflow-memory-inject.py', 'heartflow-memory-tool.js', 'heartflow-memory.js', 'heartflow.js', 'hf_judge.js', 'hooks-adapter.js', 'hybrid-search.js', 'hypothesis-tester.js', 'identity-core.js', 'identity-engine.js', 'identity-rules.js', 'implicit-need-detector.js', 'inference-chain.js', 'integration.test.js', 'intent-classifier.js', 'interactive-dream.js', 'judgment-injector.js', 'judgment.js', 'knowledge-base.js', 'knowledge-graph.js', 'language-honesty.js', 'learning-engine.js', 'lesson-bank.js', 'lesson-retrieval.js', 'lesson-storage.js', 'lexical-associator.js', 'llm-to-user.js', 'long-term-memory.js', 'loop.js', 'mcp-server-http.js', 'meaningful-memory.js', 'memory-index.js', 'memory.js', 'mental-effort-tracker.js', 'meta-engine.js', 'meta-learner.js', 'meta-learning.js', 'meta-position.js', 'meta-prompt-engine.js', 'metaMemory.js', 'metacognitive-executive.js', 'mind-space-guardian.js', 'mind-wanderer.js', 'mood-evolution.js', 'narrative-generator.js', 'narrative-retriever.js', 'observe.js', 'openalex-client.js', 'output-checker.js', 'output-checklist.js', 'pattern-detector.js', 'pattern-matcher.js', 'pause-and-reflect.js', 'pdca-engine.js', 'personality-tone.js', 'phenomenology-engine.js', 'philosophy-engine.js', 'philosophy-execution.js', 'policy-optimizer.js', 'preference-guard.js', 'project-context.js', 'psychology.js', 'quality-filter.js', 'quality-verifier.js', 'reasoning-integrator.js', 'reflection-loop.js', 'reflector.js', 'replan-trigger.js', 'response-compressor.js', 'response-interceptor.js', 'retrieval-anchor.js', 'retrieval-router.js', 'retry-util.js', 'rollback-manager.js', 'sage-guardian.js', 'search-trace.js', 'self-audit.js', 'self-compassion-script.js', 'self-correction-loop.js', 'self-diagnostic.js', 'self-evolution-core.js', 'self-healing-rl.js', 'self-healing.js', 'self-initiator.js', 'self-model.js', 'self-regulation-feedback.js', 'self-verifier.js', 'semantic-anchor.js', 'semantic-converger.js', 'semantic-search.js', 'session-memory.js', 'skill-generator.js', 'skill-verifier.js', 'slots.js', 'spontaneous-restraint.js', 'stability-guard.js', 'stance-detector.js', 'state-snapshot.js', 'strategy-adapter.js', 'strategy-selector.js', 'task-pipeline.js', 'temporal-planner.js', 'thought-chain.js', 'tone-analyzer.js', 'topic-scope.js', 'translation-pipeline.js', 'transmission-engine.js', 'triality-memory.js', 'uncertainty-handler.js', 'upgrade-proposal.js', 'user-to-llm.js', 'utils.js', 'v2_0_19.test.js', 'value-aligner.js', 'value-internalizer.js', 'verification-engine.js', 'version.js', 'wake-up-verifier.js', 'word-by-word-generator.js', 'workflow-switch.js', 'write-ahead-log.js']"
+    },
+    {
+      "slug": "highlevel-api",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "hot-product-analyzer",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ibkr-trader-toolkit",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['alerts_monitor.py', 'concentration.py', 'contracts.py', 'cost_basis.py', 'earnings_calendar.py', 'flex_import.py', 'ib_client.py', 'market_quote.py', 'options_analyzer.py', 'options_chain.py', 'options_daily.py', 'pnl_analytics.py', 'portfolio_positions.py', 'risk_simulator.py', 'technical_indicators.py', 'trade.py', 'wheel_tracker.py']"
+    },
+    {
+      "slug": "iblai-openclaw-router",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['install.sh', 'server.js', 'uninstall.sh']"
+    },
+    {
+      "slug": "icecube-diary",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['generate-diary.sh', 'generate.sh']"
+    },
+    {
+      "slug": "jail",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['script.sh']"
+    },
+    {
+      "slug": "jar-conflict-detector",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['detect_conflicts.py']"
+    },
+    {
+      "slug": "jasper-configguard",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['configguard.js', 'configguard.test.js', 'index.js']"
+    },
+    {
+      "slug": "jd-link-converter",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['jd_link_converter.py', 'test_converter.py']"
+    },
+    {
+      "slug": "k8s-backup",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "kai-business-blueprint",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['clarify.py', 'cli.py', 'conftest.py', 'convert_imports.py', 'diff_patcher.py', 'export_drawio.py', 'export_excalidraw.py', 'export_html.py', 'export_integrity.py', 'export_knowledge.py', 'export_mermaid.py', 'export_routes.py', 'export_svg.py', 'export_text.py', 'export_theme.py', 'generate.py', 'intent_resolver.py', 'knowledge_self_check.py', 'knowledge_validate.py', 'metrics.py', 'model.py', 'normalize.py', 'phase0_migration_test.py', 'phase1_accuracy_test.py', 'phase1_accuracy_test_fixed.py', 'phase3_ab_comparison.py', 'projection.py', 'prompt_generator.py', 'refine.py', 'renderers.py', 'rule_engine.py', 'test_architecture_skill_contract.py', 'test_clarify_knowledge.py', 'test_cli_cross_platform.py', 'test_cli_smoke.py', 'test_diff_patcher.py', 'test_e2e.py', 'test_export_integrity.py', 'test_export_knowledge.py', 'test_export_routes.py', 'test_exporters.py', 'test_freeflow_bezier.py', 'test_generate.py', 'test_knowledge_validate.py', 'test_normalize.py', 'test_projection.py', 'test_prompt_generation.py', 'test_refine.py', 'test_self_check.py', 'test_svg_quality.py', 'test_theme_and_cards.py', 'test_utils.py', 'test_validate.py', 'test_viewer.py', 'test_visual_enhancement.py', 'v1_to_v2.py', 'validate.py', 'viewer.py']"
+    },
+    {
+      "slug": "kaifaskillfz01",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "kalshalyst",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['auto_trader.py', 'brier_tracker.py', 'circuit_breaker.py', 'claude_estimator.py', 'kalshalyst.py', 'kelly_size.py', 'pnl_tracker.py', 'qwen_analyzer.py', 'sports_estimator.py', 'trade_ledger.py']"
+    },
+    {
+      "slug": "kubernetes-runbooks",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['call_api.py', 'config.py', 'tools.py']"
+    },
+    {
+      "slug": "lab2startup-ecosystem",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "linkfoxagent",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['lingxing.py', 'linkfox.py', 'upload_image.py']"
+    },
+    {
+      "slug": "lygo-resonance",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['gradio_app.py', 'llm_lyric_expander.py', 'lygo_profile.py', 'resonance_engine.py', 'video_resonance_engine.py']"
+    },
+    {
+      "slug": "m365-mailbox",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['create-draft.mjs', 'get-message.mjs', 'list-unread.mjs', 'search.mjs', 'send-draft.mjs', 'setup.mjs']"
+    },
+    {
+      "slug": "mac-remote-access",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "mac-wechat-sender",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['wechat_sender.py']"
+    },
+    {
+      "slug": "macaron-card-generator",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['generate_card.py']"
+    },
+    {
+      "slug": "machine-commander-query",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "macos",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "mactop",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "mem0-1-0-0",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['mem0-add.js', 'mem0-config.js', 'mem0-delete.js', 'mem0-list.js', 'mem0-search.js']"
+    },
+    {
+      "slug": "microsoft-to-do",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "mimo-ai-art-prompt",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "mimo-feishu-automation",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "mimo-web-search",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['index.js', 'test.js']"
+    },
+    {
+      "slug": "modesty-generate-customer-support-ad-creative-brief",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "morfeo-nano-banana-pro",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['generate_image.py']"
+    },
+    {
+      "slug": "moving-checklist",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['checklist.py']"
+    },
+    {
+      "slug": "mysql-database-skill",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "mysql-slow-query-analyzer",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['analyzer_parser.py', 'analyzer_suggestions.py', 'cli.py', 'mysql_slow_query_analyzer.py', 'test_mysql_slow_query_analyzer.py']"
+    },
+    {
+      "slug": "naif",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "nano-banana-2-direct",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['generate_image.py']"
+    },
+    {
+      "slug": "nano-pdf",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "nerua1-publishing-guide",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "nm-attune-war-room",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "nm-memory-palace-knowledge-locator",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "nuclei-analysis",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['nuclei_analyzer.py']"
+    },
+    {
+      "slug": "oauth-debugger",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "obscure-package-master",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['generate_mirror.py']"
+    },
+    {
+      "slug": "observability-lgtm",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['observability.py', 'register_app.sh']"
+    },
+    {
+      "slug": "obsidian-semantic-search",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ontology-bidir",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['ontology.py']"
+    },
+    {
+      "slug": "openclaw-fact-checker",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "package-skill",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['create.py', 'update.py']"
+    },
+    {
+      "slug": "pactflow",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "pager-triage",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['pager-triage.sh', 'smoke.sh']"
+    },
+    {
+      "slug": "pan-pac",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "path-alerts-main",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['gtfs-client.js', 'index.js', 'test.js']"
+    },
+    {
+      "slug": "ppt-generator-skill",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['analyze_content.py', 'analyze_template.py', 'chart_builder.py', 'check_env.py', 'generate_ppt.py', 'style_renderers.py', 'suggest_style.py', 'template_builder.py', 'validator.py']"
+    },
+    {
+      "slug": "prd-skill2026030303",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "prediction-market",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['tempmarket.js', 'vm.py']"
+    },
+    {
+      "slug": "pricing-tester",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "q",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['main.py', 'quality.py', 'quantum.py', 'query.py', 'quick.py']"
+    },
+    {
+      "slug": "qa-test-skills",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "qbo-automation",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "qbo-mileage",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['cache.py', 'email.py', 'pipeline.py', 'run.py', 'run_monthly.sh', 'test_personal_deduction.py', 'test_trip_builder.py', 'trip_builder.py']"
+    },
+    {
+      "slug": "qq-zone-photo",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['qzone_photos.py']"
+    },
+    {
+      "slug": "qqyougit-ai-art-prompt",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "qsr-audit-readiness-countdown",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "raai-content-master-pro",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['build.sh', 'install.sh', 'smoke-test.sh']"
+    },
+    {
+      "slug": "raci-analysis",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "read-pdf",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['call_api.py', 'config.py', 'tools.py']"
+    },
+    {
+      "slug": "redbook-daihuo",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "refinement-loop",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "restaurant-food-service",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "review-vague-fixes",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "room-418",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['auto-play.sh', 'check-battle.sh', 'join-queue.sh', 'leaderboard.sh', 'monitor.sh', 'play-auto.sh', 'play.sh', 'register.sh', 'rename.sh', 'setup-cron.sh', 'submit-turn.sh']"
+    },
+    {
+      "slug": "rpe-grafana",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['index.js']"
+    },
+    {
+      "slug": "rpsls-game",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "runapi-veo-3-1",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "secops-by-joes",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "settle-agent-invoice",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "shortvideo-hook",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['index.js', 'main.py', 'monitor.py', 'test.py']"
+    },
+    {
+      "slug": "skill-creator-promax",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "skillet-skillify",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "skills-security-check",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['install.sh', 'pre-check.sh', 'scan.sh']"
+    },
+    {
+      "slug": "smart-router",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['compactor.py', 'context_guard.py', 'dashboard.py', 'executor.py', 'log_decision.py', 'router_gateway.py', 'router_hook.py', 'semantic_router.py', 'state_manager.py']"
+    },
+    {
+      "slug": "smyx-aquarium-analysis",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['api_service.py', 'aquarium_analysis.py', 'base.py', 'config.py', 'dao.py', 'face_analysis.py', 'skill.py', 'util.py']"
+    },
+    {
+      "slug": "smyx-classroom-engagement-analysis-analysis",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['api_service.py', 'base.py', 'config.py', 'dao.py', 'skill.py', 'smyx_analysis.py', 'smyx_classroom_engagement_analysis_analysis.py', 'util.py']"
+    },
+    {
+      "slug": "smyx-elderly-long-term-immobility-analysis",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['api_service.py', 'base.py', 'config.py', 'dao.py', 'skill.py', 'smyx_analysis.py', 'smyx_elderly_long_term_immobility_analysis.py', 'util.py']"
+    },
+    {
+      "slug": "smyx-infant-sleep-monitoring-analysis",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['api_service.py', 'base.py', 'config.py', 'dao.py', 'infant_sleep_monitoring_analysis.py', 'skill.py', 'smyx_analysis.py', 'util.py']"
+    },
+    {
+      "slug": "smyx-phone-usage-monitoring-analysis",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['api_service.py', 'base.py', 'config.py', 'dao.py', 'face_analysis.py', 'phone_usage_monitoring_analysis.py', 'skill.py', 'util.py']"
+    },
+    {
+      "slug": "solana-token-distribution",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "speediance",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "stock-review-ai",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['analyze.py', 'check_env.py', 'config.py', 'fetch_data.py', 'generate_report.py', 'helpers.py', 'logger.py', 'main.py', 'post_to_blog.py', 'post_to_wechat.py']"
+    },
+    {
+      "slug": "story-long-scan",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['cdp-utils.js', 'ciweimao-rank-scraper.js', 'fanqie-rank-scraper.js', 'jjwxc-rank-scraper.js', 'qidian-rank-scraper.js', 'qimao-rank-scraper.js']"
+    },
+    {
+      "slug": "story-review",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['normalize-punctuation.js']"
+    },
+    {
+      "slug": "stress-manager",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "supermom-parenting-guide-0-12",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "supply-chain-logistics-hub",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "swarmrecall-dream",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "swipenode-2",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "telegram-api",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "travel-esim-compare",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['main.py']"
+    },
+    {
+      "slug": "trtc-ai-customer-service",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['TLSSigAPIv2.py', 'app.js', 'i18n.js', 'scaffold.py', 'start.sh']"
+    },
+    {
+      "slug": "typecho-ai-kb",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "uandai-ai",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "ue-datatable-editor",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['dt_discover.py', 'dt_import_ue.py', 'dt_modify.py', 'dt_search.py']"
+    },
+    {
+      "slug": "update-jamdesk",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "validator-correlated-judgment",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "validator-tool",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['validate.py']"
+    },
+    {
+      "slug": "valuemining-lengthybooks",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "vancouver",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "veo",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['generate_video.py']"
+    },
+    {
+      "slug": "volcengine-video",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['query_task.py', 'volcengine_video.py']"
+    },
+    {
+      "slug": "vwu-openai",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['vwu-chat.sh']"
+    },
+    {
+      "slug": "w3connect",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "wage-theft-defense",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "walkie-talkie-mode",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "wang-wei-perspective-v2",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "wanjie-openclaw-video-v2-0-1",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['hooks.js', 'veo_worker.py', 'video_interface.py']"
+    },
+    {
+      "slug": "web-browser",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['cdp-trace.js']"
+    },
+    {
+      "slug": "word-docx-formatting-repair-helper-180322",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "work-journal",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['classifier.py', 'formatter.py', 'llm.py', 'parser.py', 'quantifier.py', 'storage.py']"
+    },
+    {
+      "slug": "wrike-api",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "x-extract",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['extract.mjs']"
+    },
+    {
+      "slug": "x-openclaw",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "x-scraper",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "x-search-bwm",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['search.py', 'test_search.py']"
+    },
+    {
+      "slug": "x-search-x402",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['search.sh']"
+    },
+    {
+      "slug": "x-tweet-speedread-skill",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['run.js']"
+    },
+    {
+      "slug": "x-webmcp",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['ensure-links.sh', 'validate.sh']"
+    },
+    {
+      "slug": "xdrop",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['download.mjs', 'upload.mjs']"
+    },
+    {
+      "slug": "xeontts",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['configure_openclaw_integration.sh', 'install.sh', 'install_systemd_services.sh', 'self_check.sh', 'server.js', 'setup_env.sh', 'start_all.sh', 'start_tts_service.sh', 'stop_tts.sh']"
+    },
+    {
+      "slug": "xerg",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "xiaolongxia-deepseek",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['config.py', 'xiaolongxia.py']"
+    },
+    {
+      "slug": "yanpan-finance",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['server.py']"
+    },
+    {
+      "slug": "yes-md-zh",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "yield-farm-payment",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['check-configuration.js', 'cli.js', 'collateral-calculator.js', 'test-realistic-payment.js', 'transaction-confirmation.js', 'transaction-manager.js', 'yield-farm-payment.js']"
+    },
+    {
+      "slug": "yield-shark",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['alert.mjs', 'calculate.mjs', 'card.mjs', 'compare-tokens.mjs', 'compare.mjs', 'history.mjs', 'monitor.mjs', 'optimize.mjs', 'report.mjs']"
+    },
+    {
+      "slug": "yonghengrisheng-supplier-en",
+      "ships_any_script": false,
+      "declares_runnable_tool": false,
+      "detail": "prose / no entrypoint (OUT_OF_SCOPE_PROSE_SKILL)"
+    },
+    {
+      "slug": "zai-web-search",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['zai-search.js']"
+    },
+    {
+      "slug": "zettelkasten",
+      "ships_any_script": true,
+      "declares_runnable_tool": true,
+      "detail": "runnable entrypoint(s): ['install.sh', 'publish.sh', 'zettelkasten.py']"
+    }
+  ]
+}
