@@ -1,0 +1,11 @@
+{
+  "kind": "round_trip",
+  "contract_fn": {"forward": "flatten_obj", "inverse": "unflatten_obj"},
+  "inputs": [
+    [{"a": 1, "b": {"c": 2, "d": 3}}],
+    [{"x": {"y": {"z": "hi"}}}],
+    [{"name": "ada", "age": 36, "tags": {"k": "v"}}],
+    [{"k": [1, 2, 3]}],
+    [{"items": [{"m": 1}, {"m": 2}]}]
+  ]
+}

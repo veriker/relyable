@@ -1,0 +1,161 @@
+{
+  "skills_dir": "~/.openclaw/skills",
+  "model": "claude-sonnet-4-6",
+  "counts": {
+    "OUT_OF_SCOPE": 16,
+    "HOLDS": 1,
+    "ABSTAIN": 2
+  },
+  "verdicts": [
+    {
+      "slug": ".openclaw-install-backups",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "no SKILL.md",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "case-convert",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "clean-json-toolkit",
+      "verdict": "HOLDS",
+      "detail": "1 load-bearing relation(s) hold",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "round_trip",
+          "tool": "flatten.py",
+          "doc_basis": "flatten.py \u2014 flatten nested JSON into dot-notation keys. Reversible with --unflatten. Roundtrip-safe.",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.2222222222222222
+        },
+        {
+          "kind": "idempotence",
+          "tool": "flatten.py",
+          "doc_basis": "flatten.py \u2014 flatten nested JSON into dot-notation keys. The output of flatten is already a flat dot-notation map; flattening it again should produce the same f",
+          "status": "ERROR",
+          "detail": "exit 1: Empty input: input.json",
+          "killrate": null
+        }
+      ]
+    },
+    {
+      "slug": "convert-units",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "csv",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "csv-analyzer",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not describe any normalization/canonicalization (invariance), idempotency, or explicitly lossless round-trip behaviour for csv_analyze.py. The tool's subcommands (stats, filter, top, bottom, anomalies, group) are all analysis/transformation commands whose outputs are not documented as equivalent for different-but-equivalent inputs, self-reproducing when fed back, or reversible. Proposing any of the three relation kinds without a genuine doc basis would be a false accusation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "data-format-converter",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "expanso-csv-to-json",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "image",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "json",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "json-formatter",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "json-linter",
+      "verdict": "ABSTAIN",
+      "detail": "The tool is a JSON linter/scanner that produces a report with a timestamp (`scanned_at`) that changes on every run, making idempotence and invariance assertions unreliable. The docs describe no normalization of equivalent inputs, no round-trip/inverse operation, and no input transformation that the tool is documented to treat as equivalent. The only outputs guaranteed to be stable across runs are counts and error arrays \u2014 but even those depend on the filesystem state, not on user-supplied inputs that could be varied in a controlled way. No metamorphic relation is safely implied by the documentation.",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "markdown",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "markdown-converter",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "markdown-table-generator",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "pandoc-convert-openclaw",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "scrape",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "sql",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    },
+    {
+      "slug": "sql-toolkit",
+      "verdict": "OUT_OF_SCOPE",
+      "detail": "OUT_OF_SCOPE_PROSE_SKILL",
+      "n_relations": 0,
+      "relations": []
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "skills_dir": "~/.openclaw/skills",
+  "model": "claude-sonnet-4-6",
+  "counts": {
+    "HOLDS": 1
+  },
+  "verdicts": [
+    {
+      "slug": "clean-json-toolkit",
+      "verdict": "HOLDS",
+      "detail": "1 load-bearing relation(s) hold",
+      "n_relations": 2,
+      "relations": [
+        {
+          "kind": "round_trip",
+          "tool": "flatten.py",
+          "doc_basis": "scripts/flatten.py \u2014 flatten nested JSON into dot-notation keys. Reversible with --unflatten. Roundtrip-safe.",
+          "status": "HOLD",
+          "detail": "",
+          "killrate": 0.2222222222222222
+        },
+        {
+          "kind": "idempotence",
+          "tool": "flatten.py",
+          "doc_basis": "scripts/flatten.py \u2014 flatten nested JSON into dot-notation keys. Roundtrip-safe. A flat (already dot-notation) map flattened again should produce the same flat ",
+          "status": "ERROR",
+          "detail": "exit 1: Empty input: input.json",
+          "killrate": null
+        }
+      ]
+    }
+  ]
+}

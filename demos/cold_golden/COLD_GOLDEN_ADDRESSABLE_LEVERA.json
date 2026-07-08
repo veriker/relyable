@@ -1,0 +1,424 @@
+{
+  "skills_dir": "/tmp/clawhub_addressable",
+  "model": "claude-sonnet-4-6",
+  "n_skills": 21,
+  "counts": {
+    "ABSTAIN": 16,
+    "UNJUDGEABLE": 4,
+    "PASS": 1
+  },
+  "verdicts": [
+    {
+      "slug": "93pct",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a planning/autocomplete tool that generates dynamic suggestions based on context (current state, stack, etc.). The output is entirely runtime-dependent and not deterministically pinned by the docs \u2014 there are no fixed outputs documented for any specific inputs. The docs describe output *fields* (Shannon score, Effort, Blocker, Job ID, command) but give no example values or deterministic rules that would let me predict exact stdout for any invocation. Abstaining is correct here.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "abaddon",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes what cron-seed.sh does (adds a cron entry to ~/.openclaw/cron/jobs.json) but does not pin any specific stdout output. There is no documented success message, format, or any other string guaranteed to appear in stdout, so no test case with a reliable expected_stdout can be constructed.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "agent-namer",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all 6 goldens errored (non-det / bad invocation)",
+      "n_goldens": 6,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 6,
+      "mutation_killrate": null,
+      "goldens": [
+        {
+          "note": "check an active name returns unavailable indicator",
+          "tool": "manage_name.py",
+          "ok": false,
+          "reason": "exit 1: Traceback (most recent call last):\n  File \"/tmp/clawhub_pool/agent-namer/scripts/manage_name.py\", line 14, in <module>\n    USED_NAMES = json.load(open(\"scripts/used_names.json\", \"r\", encoding=\"utf-8\")",
+          "expected": "\u274c",
+          "actual": ""
+        },
+        {
+          "note": "check a brand new name returns available indicator",
+          "tool": "manage_name.py",
+          "ok": false,
+          "reason": "exit 1: Traceback (most recent call last):\n  File \"/tmp/clawhub_pool/agent-namer/scripts/manage_name.py\", line 14, in <module>\n    USED_NAMES = json.load(open(\"scripts/used_names.json\", \"r\", encoding=\"utf-8\")",
+          "expected": "\u2705",
+          "actual": ""
+        },
+        {
+          "note": "list shows all active agent names including \u8d27\u53c8\u661f",
+          "tool": "manage_name.py",
+          "ok": false,
+          "reason": "exit 1: Traceback (most recent call last):\n  File \"/tmp/clawhub_pool/agent-namer/scripts/manage_name.py\", line 14, in <module>\n    USED_NAMES = json.load(open(\"scripts/used_names.json\", \"r\", encoding=\"utf-8\")",
+          "expected": "\u8d27\u53c8\u661f",
+          "actual": ""
+        },
+        {
+          "note": "list shows all active agent names including \u8d27\u5341\u4e09",
+          "tool": "manage_name.py",
+          "ok": false,
+          "reason": "exit 1: Traceback (most recent call last):\n  File \"/tmp/clawhub_pool/agent-namer/scripts/manage_name.py\", line 14, in <module>\n    USED_NAMES = json.load(open(\"scripts/used_names.json\", \"r\", encoding=\"utf-8\")",
+          "expected": "\u8d27\u5341\u4e09",
+          "actual": ""
+        },
+        {
+          "note": "check active name \u8d27\u53c8\u661f returns already-used message",
+          "tool": "manage_name.py",
+          "ok": false,
+          "reason": "exit 1: Traceback (most recent call last):\n  File \"/tmp/clawhub_pool/agent-namer/scripts/manage_name.py\", line 14, in <module>\n    USED_NAMES = json.load(open(\"scripts/used_names.json\", \"r\", encoding=\"utf-8\")",
+          "expected": "\u5df2\u88ab\u4f7f\u7528",
+          "actual": ""
+        },
+        {
+          "note": "add a new name then kill it, then check shows \u53ef\u590d\u6d3b",
+          "tool": "manage_name.py",
+          "ok": false,
+          "reason": "exit 1: Traceback (most recent call last):\n  File \"/tmp/clawhub_pool/agent-namer/scripts/manage_name.py\", line 14, in <module>\n    USED_NAMES = json.load(open(\"scripts/used_names.json\", \"r\", encoding=\"utf-8\")",
+          "expected": "\u8d27\u5c0f\u661f",
+          "actual": ""
+        }
+      ]
+    },
+    {
+      "slug": "axiom-json-canonicalizer",
+      "verdict": "ABSTAIN",
+      "detail": "no goldens",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "axiom-url-canonicalizer",
+      "verdict": "PASS",
+      "detail": "5/5 cold goldens reproduced",
+      "n_goldens": 5,
+      "n_pass": 5,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": 0.2727272727272727,
+      "goldens": [
+        {
+          "note": "Lowercase host and sort query params (from Python doc example)",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": true,
+          "reason": "",
+          "expected": "https://example.com/?a=1&b=2",
+          "actual": "Original:  HTTPS://Example.com/?b=2&a=1\nCanonical: https://example.com/?a=1&b=2\n"
+        },
+        {
+          "note": "Strip default HTTPS port 443 and lowercase host",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": true,
+          "reason": "",
+          "expected": "https://example.com/Path/",
+          "actual": "Original:  HTTPS://Example.com:443/Path/\nCanonical: https://example.com/Path/\n"
+        },
+        {
+          "note": "Strip default HTTP port 80 and lowercase host",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": true,
+          "reason": "",
+          "expected": "http://example.com/page",
+          "actual": "Original:  HTTP://Example.com:80/page\nCanonical: http://example.com/page\n"
+        },
+        {
+          "note": "Sort params and lowercase host with multiple params",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": true,
+          "reason": "",
+          "expected": "https://example.com/Path/?a=1&b=2&utm_source=tw",
+          "actual": "Original:  HTTPS://Example.com:443/Path/?b=2&a=1&utm_source=tw\nCanonical: https://example.com/Path/?a=1&b=2&utm_source=tw\n"
+        },
+        {
+          "note": "Strip tracking params with --strip-tracking flag",
+          "tool": "axiom_url_canonicalizer.py",
+          "ok": true,
+          "reason": "",
+          "expected": "https://example.com/?a=1&b=2",
+          "actual": "Original:  HTTPS://Example.com/?b=2&a=1&utm_source=tw\nCanonical: https://example.com/?a=1&b=2\n"
+        }
+      ]
+    },
+    {
+      "slug": "calctool",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all 1 goldens errored (non-det / bad invocation)",
+      "n_goldens": 1,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 1,
+      "mutation_killrate": null,
+      "goldens": [
+        {
+          "note": "version command outputs the documented version string 2.0.0",
+          "tool": "script.sh",
+          "ok": false,
+          "reason": "exit 2: /tmp/clawhub_pool/calctool/scripts/script.sh: 4: set: Illegal option -o pipefail",
+          "expected": "2.0.0",
+          "actual": ""
+        }
+      ]
+    },
+    {
+      "slug": "comprehensive-divination-skill",
+      "verdict": "ABSTAIN",
+      "detail": "constructor emitted unparseable JSON",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "daai-xianzun-persona",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact stdout output for any specific input. The example outputs shown are illustrative of 'normal mode', 'when speaking to host', and 'when refusing others', but the docs do not specify which --target values trigger which modes, what the exact invocation is that produces each output, or whether the output is wrapped in labels/formatting. Without knowing the target_id values that correspond to 'host' vs 'others', and without the full output format being pinned, any test case would require guessing.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "data-labeler",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all 6 goldens errored (non-det / bad invocation)",
+      "n_goldens": 6,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 6,
+      "mutation_killrate": null,
+      "goldens": [
+        {
+          "note": "version command should output v2.0.0",
+          "tool": "script.sh",
+          "ok": false,
+          "reason": "exit 2: /tmp/clawhub_pool/data-labeler/scripts/script.sh: 4: set: Illegal option -o pipefail",
+          "expected": "v2.0.0",
+          "actual": ""
+        },
+        {
+          "note": "help command should mention available commands",
+          "tool": "script.sh",
+          "ok": false,
+          "reason": "exit 2: /tmp/clawhub_pool/data-labeler/scripts/script.sh: 4: set: Illegal option -o pipefail",
+          "expected": "ingest",
+          "actual": ""
+        },
+        {
+          "note": "ingest command with input records a new entry and output contains the input value",
+          "tool": "script.sh",
+          "ok": false,
+          "reason": "exit 2: /tmp/clawhub_pool/data-labeler/scripts/script.sh: 4: set: Illegal option -o pipefail",
+          "expected": "test_dataset_001.csv 100 rows",
+          "actual": ""
+        },
+        {
+          "note": "stats command shows entry counts per category",
+          "tool": "script.sh",
+          "ok": false,
+          "reason": "exit 2: /tmp/clawhub_pool/data-labeler/scripts/script.sh: 4: set: Illegal option -o pipefail",
+          "expected": "ingest",
+          "actual": ""
+        },
+        {
+          "note": "status command shows version v2.0.0",
+          "tool": "script.sh",
+          "ok": false,
+          "reason": "exit 2: /tmp/clawhub_pool/data-labeler/scripts/script.sh: 4: set: Illegal option -o pipefail",
+          "expected": "v2.0.0",
+          "actual": ""
+        },
+        {
+          "note": "search command finds previously ingested term",
+          "tool": "script.sh",
+          "ok": false,
+          "reason": "exit 2: /tmp/clawhub_pool/data-labeler/scripts/script.sh: 4: set: Illegal option -o pipefail",
+          "expected": "",
+          "actual": ""
+        }
+      ]
+    },
+    {
+      "slug": "eam",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact output format for any command (status, list, version, stats, help, etc.). The version command exists but the version string format and surrounding label text are not specified in a way that allows unambiguous prediction. The list/status/stats commands have no documented output format at all. Without knowing the exact stdout produced by any command, no test case can be constructed without guessing.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "echarts-master",
+      "verdict": "ABSTAIN",
+      "detail": "The documented tool is an AI skill for generating ECharts visualizations that runs as an agent/LLM pipeline, not a deterministic CLI program with pinned stdout output. The tool filenames only include 'echarts.min.js' which is a JavaScript library, not a CLI executable. There is no documented command-line interface with specific arguments that produce specific stdout output. The documentation describes a workflow involving file generation, HTTP servers, and AI-driven chart selection \u2014 none of which has unambiguously pinned stdout values that could be tested deterministically.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "gemini-watermark-remover",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes the tool's purpose and algorithm but does not pin any stdout output format, labels, or messages. There is no documented example of what the tool prints to stdout for any given input, so I cannot construct test cases with unambiguously expected output.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "jarvis-chief-of-ai-staff",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes two shell scripts (deploy-workspace.sh and security-harden.sh) that interact with system services (systemctl, docker, ollama, openclaw) and the filesystem (~/.openclaw/workspace/). The docs do not pin any specific stdout output for either script in isolation \u2014 they only describe what the scripts do (create files, configure services, set firewall rules, etc.). There are no documented exact output strings, formats, or values for either script's stdout that I could use to construct unambiguous test cases. The prerequisite check commands shown are example bash snippets, not invocations of the provided tools. Without pinned output for the actual tool filenames, I cannot construct any golden test cases without guessing.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "obsidian-conversation-backup",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes high-level behaviour (hourly snapshots, full snapshots, incremental backups, Telegram notifications) but does not pin any exact stdout output for any of the four shell scripts. All scripts depend on external state (session files, tracking files, Obsidian vault path, cron environment, config files) that cannot be reliably set up from the docs alone, and the docs do not specify what these scripts print to stdout under any deterministic input condition. Without knowing the exact stdout produced by any invocation, no test case can be constructed with a pinned expected output.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "popular-web-designs",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation does not pin the exact stdout output of any CLI invocation in a way that is unambiguous enough to write reliable test cases. The only full example shown is the 'load stripe-style' command, but the exact bytes of its output (spacing, unicode checkmarks, directory tree formatting, etc.) are not formally specified \u2014 they appear illustrative. The tool filenames (catalog.py, cli.py, setup.py) don't correspond to a documented subcommand interface with pinned outputs. There is no documented 'version', 'list', or other simple query whose exact stdout is specified. Reproducing the example verbatim would be copying a docs example, which is prohibited. There is insufficient information to construct novel test cases with unambiguously pinned outputs.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "rename-session",
+      "verdict": "ABSTAIN",
+      "detail": "constructor emitted unparseable JSON",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "skill-policy-enforcer",
+      "verdict": "UNJUDGEABLE",
+      "detail": "all 4 goldens errored (non-det / bad invocation)",
+      "n_goldens": 4,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 4,
+      "mutation_killrate": null,
+      "goldens": [
+        {
+          "note": "Skill folder with a forbidden secret path (.env) should produce FAIL under default policy",
+          "tool": "enforce_skill_policy.py",
+          "ok": false,
+          "reason": "exit 1: ",
+          "expected": "FAIL",
+          "actual": "# Skill policy result: testskill\n\nPolicy: `default-conservative-skill-policy`\nStatus: `FAIL`\n\n## deny\n- `forbidden_paths:.env` /tmp/cold-golden-bje917rb/testskill/.env - path is forbidden by policy.\n"
+        },
+        {
+          "note": "Skill folder with dangerous shell pattern (rm -rf) should produce FAIL under default policy",
+          "tool": "enforce_skill_policy.py",
+          "ok": false,
+          "reason": "exit 1: ",
+          "expected": "FAIL",
+          "actual": "# Skill policy result: dangerskill\n\nPolicy: `default-conservative-skill-policy`\nStatus: `FAIL`\n\n## deny\n- `forbidden_patterns:rm\\s+-rf\\s+(/|\\$HOME|~)` /tmp/cold-golden-547ga0m3/dangerskill/run.sh:2 - content matches a forbidden pattern.\n"
+        },
+        {
+          "note": "Skill folder with a private key file should produce FAIL under default policy (forbidden secret paths include private keys)",
+          "tool": "enforce_skill_policy.py",
+          "ok": false,
+          "reason": "exit 1: ",
+          "expected": "FAIL",
+          "actual": "# Skill policy result: keyskill\n\nPolicy: `default-conservative-skill-policy`\nStatus: `FAIL`\n\n## deny\n- `forbidden_paths:id_rsa` /tmp/cold-golden-qs5af2zp/keyskill/id_rsa - path is forbidden by policy.\n"
+        },
+        {
+          "note": "Skill folder with shell pipe install pattern (curl | bash) should produce FAIL",
+          "tool": "enforce_skill_policy.py",
+          "ok": false,
+          "reason": "exit 1: ",
+          "expected": "FAIL",
+          "actual": "# Skill policy result: pipeskill\n\nPolicy: `default-conservative-skill-policy`\nStatus: `FAIL`\n\n## deny\n- `allow_network:false` /tmp/cold-golden-mj7ztmf2/pipeskill/setup.sh:2 - network access or URL reference is disallowed.\n- `forbidden_patterns:curl\\s+[^\\n|]+\\|\\s*(sh|bash)` /tmp/cold-golden-mj7ztmf2/pipeskill/setup.sh:2 - content matches a forbidden pattern.\n"
+        }
+      ]
+    },
+    {
+      "slug": "test1-232qe11",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes the purpose and invocation of each script (activator.sh, error-detector.sh, extract-skill.sh, handler.js) but never pins their exact stdout output. The activator prints 'a learning evaluation reminder' (~50-100 tokens overhead) but the exact text is not shown. The error-detector 'triggers on command errors' but its output format is unspecified. The extract-skill.sh --dry-run invocation is shown but no expected output is documented. handler.js has no documented output at all. Without pinned output text, any expected_stdout would be a guess, risking false accusations.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "thesis-workflow",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes the purpose and invocation syntax of each script but never pins the exact stdout format, labels, or content for any specific input. The guardrail check results, orchestrator decisions, state manager output, and install script output are all described behaviorally but without example stdout that would allow constructing unambiguous golden tests. Guessing output format (pass/fail messages, JSON shape, label text) would risk false accusations.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "validator-tool",
+      "verdict": "ABSTAIN",
+      "detail": "no goldens",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    },
+    {
+      "slug": "xeonasr",
+      "verdict": "ABSTAIN",
+      "detail": "The documentation describes a skill's behaviour, workflows, and configuration conventions, but does not pin the exact stdout output of any of the listed shell scripts or server.js. The scripts (install.sh, self_check.sh, start_all.sh, stop_tts.sh, etc.) are installation/management utilities whose exact console output is not documented anywhere in SKILL.md. The documentation only describes high-level behaviour (what services are started, what configs are written, what ports are used) without specifying any exact stdout strings, formats, or values that would allow constructing unambiguous test cases.",
+      "n_goldens": 0,
+      "n_pass": 0,
+      "n_fail": 0,
+      "n_error": 0,
+      "mutation_killrate": null,
+      "goldens": []
+    }
+  ]
+}

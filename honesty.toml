@@ -1,0 +1,32 @@
+# honesty.toml — the gate's pinned policy for THIS package (also the worked
+# example). The gate is evaluated against this file; an agent does not author it.
+# After editing it deliberately, re-pin the anchor:  relyable anchor
+
+[test]
+# The command that PRODUCES the verdict. The gate runs exactly this — an agent
+# cannot swap it for `echo pass` without tripping the config anchor.
+command = ["python", "-m", "pytest", "-q", "--junitxml=report.xml"]
+report_path = "report.xml"   # where `command` writes its JUnit XML
+timeout_seconds = 600
+max_reruns = 0               # gate-owned flaky budget; 0 = strict
+
+[baseline]
+path = ".honesty/baseline.json"   # snapshot the ratchets compare against
+
+[ratchets]
+no_shrink = true             # test count + previously-passing set + coverage floor
+no_new_skip = true           # no test may newly become skipped vs baseline
+# no_new_skip = { allow = ["pkg::test_known_slow"] }   # allowlist form
+
+# diff_coverage — added/changed lines must clear a coverage floor. Left OFF for
+# this package's own gate (it would require [test].command emit a Cobertura XML).
+# To enable: point [test].command at a coverage run (pytest --cov --cov-report=xml)
+# and uncomment:
+# diff_coverage = { enabled = true, min_percent = 90, coverage_xml = "coverage.xml", base_ref = "origin/main" }
+
+# mutation — drive a REAL mutation engine; fail if survivors exceed the floor.
+# Opt-in and SLOW (minutes): wire it as a CI-nightly / pre-merge gate, not an
+# inner-loop check. Default OFF for this package's own fast dogfood. mutmut takes
+# its source paths from [mutmut] source_paths; Stryker uses `paths` as --mutate.
+# mutation = { enabled = true, engine = "mutmut", max_survivors = 0, timeout_seconds = 1800 }
+# mutation = { enabled = true, engine = "stryker", max_survivors = 0, paths = ["src"], timeout_seconds = 1800 }
